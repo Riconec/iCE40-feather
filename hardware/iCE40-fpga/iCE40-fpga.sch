@@ -178,17 +178,6 @@ $EndComp
 Wire Wire Line
 	7675 5175 7750 5175
 $Comp
-L power:GND #PWR041
-U 1 1 5D6DEE19
-P 7050 5500
-F 0 "#PWR041" H 7050 5250 50  0001 C CNN
-F 1 "GND" H 7055 5327 50  0000 C CNN
-F 2 "" H 7050 5500 50  0001 C CNN
-F 3 "" H 7050 5500 50  0001 C CNN
-	1    7050 5500
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 5D6FEC3A
 P 6375 5075
@@ -210,19 +199,6 @@ F 3 "~" H 6050 5250 50  0001 C CNN
 	1    6050 5250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C17
-U 1 1 5D70B1D1
-P 5675 5250
-F 0 "C17" H 5790 5296 50  0000 L CNN
-F 1 "10u" H 5790 5205 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5713 5100 50  0001 C CNN
-F 3 "~" H 5675 5250 50  0001 C CNN
-	1    5675 5250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5675 5100 5675 5075
 Wire Wire Line
 	5675 5075 6050 5075
 Wire Wire Line
@@ -230,15 +206,6 @@ Wire Wire Line
 Connection ~ 6050 5075
 Wire Wire Line
 	6050 5075 6225 5075
-Wire Wire Line
-	6050 5400 6050 5425
-Wire Wire Line
-	6050 5425 5675 5425
-Wire Wire Line
-	5675 5425 5675 5400
-Wire Wire Line
-	6050 5425 6050 5450
-Connection ~ 6050 5425
 $Comp
 L power:GND #PWR040
 U 1 1 5D73FC89
@@ -263,7 +230,6 @@ F 3 "" H 5675 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5675 5050 5675 5075
-Connection ~ 5675 5075
 $Comp
 L josh-symbols:ICE40UP5K-SG48ITR U6
 U 4 1 5D7B18BA
@@ -342,19 +308,6 @@ Wire Wire Line
 Wire Wire Line
 	7325 4450 7650 4450
 Wire Wire Line
-	7050 5200 7050 5175
-$Comp
-L Device:C C21
-U 1 1 5D6DE6FE
-P 7050 5350
-F 0 "C21" H 7165 5396 50  0000 L CNN
-F 1 "100n" H 7165 5305 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 7088 5200 50  0001 C CNN
-F 3 "~" H 7050 5350 50  0001 C CNN
-	1    7050 5350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	7050 5175 7375 5175
 $Comp
 L power:GND #PWR038
@@ -386,190 +339,81 @@ Wire Notes Line
 $Comp
 L josh-symbols:LED_RGBA D6
 U 1 1 5DF3E79D
-P 10625 1900
-F 0 "D6" V 10850 2200 50  0000 C CNN
-F 1 "LED_RGBA" V 10775 2100 50  0000 C CNN
-F 2 "josh-footprints:ARGB_PLCC4_1210_LED" H 10625 1850 50  0001 C CNN
-F 3 "~" H 10625 1850 50  0001 C CNN
-	1    10625 1900
+P 10725 1725
+F 0 "D6" V 10950 2025 50  0000 C CNN
+F 1 "LTST-C19HE1WT" V 10875 2050 50  0000 C CNN
+F 2 "josh-footprints:0606LED" H 10725 1675 50  0001 C CNN
+F 3 "~" H 10725 1675 50  0001 C CNN
+	1    10725 1725
 	0    -1   -1   0   
 $EndComp
 $Comp
 L power:+3V3 #PWR050
 U 1 1 5DF529F3
-P 10625 1675
-F 0 "#PWR050" H 10625 1525 50  0001 C CNN
-F 1 "+3V3" H 10640 1848 50  0000 C CNN
-F 2 "" H 10625 1675 50  0001 C CNN
-F 3 "" H 10625 1675 50  0001 C CNN
-	1    10625 1675
+P 10725 1500
+F 0 "#PWR050" H 10725 1350 50  0001 C CNN
+F 1 "+3V3" H 10740 1673 50  0000 C CNN
+F 2 "" H 10725 1500 50  0001 C CNN
+F 3 "" H 10725 1500 50  0001 C CNN
+	1    10725 1500
 	-1   0    0    -1  
 $EndComp
-$Comp
-L Device:R R9
-U 1 1 5DF75A18
-P 10425 2250
-F 0 "R9" V 10350 2250 50  0000 C CNN
-F 1 "1K" V 10425 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10355 2250 50  0001 C CNN
-F 3 "~" H 10425 2250 50  0001 C CNN
-	1    10425 2250
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R10
-U 1 1 5DF886DC
-P 10625 2250
-F 0 "R10" V 10550 2250 50  0000 C CNN
-F 1 "1K" V 10625 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10555 2250 50  0001 C CNN
-F 3 "~" H 10625 2250 50  0001 C CNN
-	1    10625 2250
-	1    0    0    1   
-$EndComp
-$Comp
-L Device:R R12
-U 1 1 5DF99DBC
-P 10825 2250
-F 0 "R12" V 10750 2250 50  0000 C CNN
-F 1 "1K" V 10825 2250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 10755 2250 50  0001 C CNN
-F 3 "~" H 10825 2250 50  0001 C CNN
-	1    10825 2250
-	1    0    0    1   
-$EndComp
 Wire Wire Line
-	10825 2400 10825 2875
-Text Label 10825 2875 1    50   ~ 0
+	10875 2400 10875 2875
+Text Label 10875 2875 1    50   ~ 0
 nLED_BLUE
 Wire Wire Line
-	10625 2400 10625 2875
-Text Label 10625 2875 1    50   ~ 0
+	10675 2400 10675 2875
+Text Label 10675 2875 1    50   ~ 0
 nLED_GREEN
 Wire Wire Line
-	10425 2400 10425 2875
-Text Label 10425 2875 1    50   ~ 0
+	10575 2400 10575 2875
+Text Label 10575 2875 1    50   ~ 0
 nLED_RED
-$Comp
-L Switch:SW_Push SW1
-U 1 1 5E04FA4D
-P 8075 3775
-F 0 "SW1" H 8075 4060 50  0000 C CNN
-F 1 "SW_Push" H 8075 3969 50  0000 C CNN
-F 2 "josh-footprints:Small_Tact_Switch" H 8075 3975 50  0001 C CNN
-F 3 "~" H 8075 3975 50  0001 C CNN
-	1    8075 3775
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7875 3775 7850 3775
-Wire Wire Line
-	7850 3775 7850 3800
-$Comp
-L power:GND #PWR049
-U 1 1 5E0638D4
-P 7850 3800
-F 0 "#PWR049" H 7850 3550 50  0001 C CNN
-F 1 "GND" H 7855 3627 50  0000 C CNN
-F 2 "" H 7850 3800 50  0001 C CNN
-F 3 "" H 7850 3800 50  0001 C CNN
-	1    7850 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8275 3775 8375 3775
-Text Label 8925 3775 2    50   ~ 0
-nICE_CRESET
-$Comp
-L Device:R R11
-U 1 1 5E0AD3F5
-P 8375 3600
-F 0 "R11" H 8445 3646 50  0000 L CNN
-F 1 "10K" H 8445 3555 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 8305 3600 50  0001 C CNN
-F 3 "~" H 8375 3600 50  0001 C CNN
-	1    8375 3600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8375 3750 8375 3775
-Wire Wire Line
-	8375 3775 8925 3775
-$Comp
-L power:+3V3 #PWR051
-U 1 1 5E0C120A
-P 8375 3425
-F 0 "#PWR051" H 8375 3275 50  0001 C CNN
-F 1 "+3V3" H 8225 3500 50  0000 C CNN
-F 2 "" H 8375 3425 50  0001 C CNN
-F 3 "" H 8375 3425 50  0001 C CNN
-	1    8375 3425
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8375 3425 8375 3450
-Text Notes 7825 3100 0    79   ~ 0
-iCE RESET Button
-Text Notes 10325 1375 0    79   ~ 0
+Text Notes 10025 1375 0    79   ~ 0
 RGB LED
-$Comp
-L josh-symbols:AT25SF081-SSHD-X U4
-U 1 1 5E1133F3
-P 4300 5275
-F 0 "U4" H 4300 5842 50  0000 C CNN
-F 1 "AT25SF081-SSHD-X" H 4300 5751 50  0000 C CNN
-F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4300 4675 50  0001 C CNN
-F 3 "https://www.adestotech.com/wp-content/uploads/DS-AT25SF081_045.pdf" H 4300 5275 50  0001 C CNN
-	1    4300 5275
-	1    0    0    -1  
-$EndComp
 Text Notes 3800 4425 0    118  ~ 0
 SPI Flash
 $Comp
 L Device:C C7
 U 1 1 5E13AD65
-P 4975 5250
-F 0 "C7" H 5000 5350 50  0000 L CNN
-F 1 "100n" H 5000 5150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 5013 5100 50  0001 C CNN
-F 3 "~" H 4975 5250 50  0001 C CNN
-	1    4975 5250
+P 4475 5175
+F 0 "C7" H 4500 5275 50  0000 L CNN
+F 1 "100n" H 4500 5075 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4513 5025 50  0001 C CNN
+F 3 "~" H 4475 5175 50  0001 C CNN
+	1    4475 5175
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 5025 4975 5025
+	4400 4975 4475 4975
 Wire Wire Line
-	4975 5025 4975 5100
+	4475 4975 4475 5025
 Wire Wire Line
-	4975 5400 4975 5475
+	4475 5325 4475 5375
 Wire Wire Line
-	4975 5475 4900 5475
-Wire Wire Line
-	4975 5475 4975 5500
-Connection ~ 4975 5475
-Wire Wire Line
-	4975 5025 4975 5000
-Connection ~ 4975 5025
+	4475 4975 4475 4950
+Connection ~ 4475 4975
 $Comp
 L power:+3V3 #PWR031
 U 1 1 5E189B67
-P 4975 5000
-F 0 "#PWR031" H 4975 4850 50  0001 C CNN
-F 1 "+3V3" H 4990 5173 50  0000 C CNN
-F 2 "" H 4975 5000 50  0001 C CNN
-F 3 "" H 4975 5000 50  0001 C CNN
-	1    4975 5000
+P 4475 4950
+F 0 "#PWR031" H 4475 4800 50  0001 C CNN
+F 1 "+3V3" H 4490 5123 50  0000 C CNN
+F 2 "" H 4475 4950 50  0001 C CNN
+F 3 "" H 4475 4950 50  0001 C CNN
+	1    4475 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR032
 U 1 1 5E18A045
-P 4975 5500
-F 0 "#PWR032" H 4975 5250 50  0001 C CNN
-F 1 "GND" H 4980 5327 50  0000 C CNN
-F 2 "" H 4975 5500 50  0001 C CNN
-F 3 "" H 4975 5500 50  0001 C CNN
-	1    4975 5500
+P 4475 5500
+F 0 "#PWR032" H 4475 5250 50  0001 C CNN
+F 1 "GND" H 4480 5327 50  0000 C CNN
+F 2 "" H 4475 5500 50  0001 C CNN
+F 3 "" H 4475 5500 50  0001 C CNN
+	1    4475 5500
 	1    0    0    -1  
 $EndComp
 Text Label 2575 5075 0    50   ~ 0
@@ -582,25 +426,6 @@ Text Label 2575 5275 0    50   ~ 0
 FLASH_MISO|IO1
 Wire Wire Line
 	2575 5175 3700 5175
-Wire Wire Line
-	2575 4975 3225 4975
-Wire Wire Line
-	2575 5275 3700 5275
-Wire Wire Line
-	3700 5375 3425 5375
-Wire Wire Line
-	3700 5475 3525 5475
-$Comp
-L Device:R_Pack04 RN1
-U 1 1 5E2BD3AD
-P 3425 4725
-F 0 "RN1" H 3613 4771 50  0000 L CNN
-F 1 "10K" H 3613 4680 50  0000 L CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3700 4725 50  0001 C CNN
-F 3 "~" H 3425 4725 50  0001 C CNN
-	1    3425 4725
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3425 4525 3425 4475
 Wire Wire Line
@@ -626,28 +451,6 @@ F 3 "" H 3225 4425 50  0001 C CNN
 	1    3225 4425
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2575 5075 3325 5075
-Wire Wire Line
-	3225 4925 3225 4975
-Connection ~ 3225 4975
-Wire Wire Line
-	3225 4975 3700 4975
-Wire Wire Line
-	3325 4925 3325 5075
-Connection ~ 3325 5075
-Wire Wire Line
-	3325 5075 3700 5075
-Wire Wire Line
-	3425 4925 3425 5375
-Connection ~ 3425 5375
-Wire Wire Line
-	3425 5375 2575 5375
-Wire Wire Line
-	3525 4925 3525 5475
-Connection ~ 3525 5475
-Wire Wire Line
-	3525 5475 2575 5475
 Text Label 2575 5375 0    50   ~ 0
 FLASH_nWP|IO2
 Text Label 2575 5475 0    50   ~ 0
@@ -816,16 +619,16 @@ $EndComp
 Text Notes 6675 700  0    118  ~ 0
 iCE40UP5K FPGA IO
 Wire Wire Line
-	6900 2600 6200 2600
-Text Label 6200 2600 0    50   ~ 0
+	6900 2600 6425 2600
+Text Label 6425 2600 0    50   ~ 0
 nLED_BLUE
 Wire Wire Line
-	6900 2700 6200 2700
-Text Label 6200 2700 0    50   ~ 0
+	6900 2700 6425 2700
+Text Label 6425 2700 0    50   ~ 0
 nLED_GREEN
 Wire Wire Line
-	6900 2800 6200 2800
-Text Label 6200 2800 0    50   ~ 0
+	6900 2800 6425 2800
+Text Label 6425 2800 0    50   ~ 0
 nLED_RED
 $Comp
 L power:GND #PWR034
@@ -897,8 +700,8 @@ F 3 "" H 9775 750 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	6200 2100 6900 2100
-Text Label 6200 2100 0    50   ~ 0
+	6425 2100 6900 2100
+Text Label 6425 2100 0    50   ~ 0
 ICE_CLK
 $Comp
 L Device:LED D7
@@ -943,7 +746,7 @@ Text Label 10050 1050 0    50   ~ 0
 nLED
 Wire Wire Line
 	10050 1050 10275 1050
-Text Label 8750 2025 0    50   ~ 0
+Text Label 6625 3375 0    50   ~ 0
 nLED
 $Comp
 L power:VBUS #PWR06
@@ -956,7 +759,7 @@ F 3 "" H 1150 1150 50  0001 C CNN
 	1    1150 1150
 	1    0    0    -1  
 $EndComp
-Text Label 9025 1300 2    50   ~ 0
+Text Label 9025 1200 2    50   ~ 0
 nICE_CRESET
 Wire Wire Line
 	3575 1350 4300 1350
@@ -981,19 +784,17 @@ ICE_CDONE
 Wire Wire Line
 	3575 1900 4300 1900
 Text Label 4300 1900 2    50   ~ 0
-ICE_CRESET
+nICE_CRESET
 Text Label 2075 2175 0    50   ~ 0
 ICE_CLK
 Text Label 4300 2200 2    50   ~ 0
 TX_FPGA
 Text Label 4300 2125 2    50   ~ 0
 RX_FPGA
-Text Label 8750 2150 0    50   ~ 0
+Text Label 9150 1950 2    50   ~ 0
 TX_FPGA
-Text Label 8750 2250 0    50   ~ 0
+Text Label 6425 1300 0    50   ~ 0
 RX_FPGA
-Wire Wire Line
-	9025 1300 8525 1300
 Wire Wire Line
 	8575 1050 8525 1050
 $Comp
@@ -1042,7 +843,7 @@ F 3 "" H 9500 2200 50  0001 C CNN
 	1    9500 2200
 	-1   0    0    -1  
 $EndComp
-Text Label 9025 1200 2    50   ~ 0
+Text Label 9025 1300 2    50   ~ 0
 ICE_CDONE
 Text Notes 10175 700  0    118  ~ 0
 User LED
@@ -1050,8 +851,6 @@ Wire Wire Line
 	9500 1750 9500 1800
 Wire Wire Line
 	9225 1800 9500 1800
-Wire Wire Line
-	9225 1200 9225 1800
 Connection ~ 9500 1800
 Wire Wire Line
 	9500 1800 9500 1850
@@ -1303,56 +1102,6 @@ F 3 "" H 3100 3400 50  0001 C CNN
 	1    3100 3400
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3475 3150 3475 3175
-$Comp
-L power:+3V3 #PWR024
-U 1 1 5D3DBBE4
-P 3475 3150
-F 0 "#PWR024" H 3475 3000 50  0001 C CNN
-F 1 "+3V3" H 3490 3323 50  0000 C CNN
-F 2 "" H 3475 3150 50  0001 C CNN
-F 3 "" H 3475 3150 50  0001 C CNN
-	1    3475 3150
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR025
-U 1 1 5D3970D6
-P 3475 3850
-F 0 "#PWR025" H 3475 3600 50  0001 C CNN
-F 1 "GND" H 3480 3677 50  0000 C CNN
-F 2 "" H 3475 3850 50  0001 C CNN
-F 3 "" H 3475 3850 50  0001 C CNN
-	1    3475 3850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3475 3825 3475 3850
-Wire Wire Line
-	3475 3525 3475 3475
-$Comp
-L Device:LED D3
-U 1 1 5D383EA7
-P 3475 3675
-F 0 "D3" V 3550 3550 50  0000 C CNN
-F 1 "GRN" V 3475 3525 50  0000 C CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 3475 3675 50  0001 C CNN
-F 3 "~" H 3475 3675 50  0001 C CNN
-	1    3475 3675
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R5
-U 1 1 5D37A12B
-P 3475 3325
-F 0 "R5" H 3350 3250 50  0000 C CNN
-F 1 "2K2" H 3325 3325 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3405 3325 50  0001 C CNN
-F 3 "~" H 3475 3325 50  0001 C CNN
-	1    3475 3325
-	-1   0    0    1   
-$EndComp
 Wire Notes Line
 	5225 2575 5225 4150
 Wire Notes Line
@@ -1421,7 +1170,7 @@ F 3 "~" H 1250 6675 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 Wire Wire Line
-	10625 1675 10625 1700
+	10725 1500 10725 1525
 Wire Notes Line
 	10000 1225 11200 1225
 Wire Notes Line
@@ -1430,15 +1179,6 @@ Wire Notes Line
 	11200 2925 10000 2925
 Wire Notes Line
 	10000 2925 10000 1225
-Connection ~ 8375 3775
-Wire Notes Line
-	7750 2925 8950 2925
-Wire Notes Line
-	8950 2925 8950 4125
-Wire Notes Line
-	8950 4125 7750 4125
-Wire Notes Line
-	7750 4125 7750 2925
 $Comp
 L power:+5V #PWR043
 U 1 1 61998B32
@@ -1686,10 +1426,9 @@ $EndComp
 Wire Wire Line
 	11075 4625 11075 4650
 Wire Wire Line
-	8525 1200 9225 1200
+	8525 1300 9225 1300
 Wire Wire Line
 	7050 5175 7050 5025
-Connection ~ 7050 5175
 $Comp
 L power:+3V3 #PWR0101
 U 1 1 5D14F5C8
@@ -1865,21 +1604,336 @@ Wire Wire Line
 	7650 4450 7650 4975
 Wire Wire Line
 	2075 2175 2425 2175
-$Comp
-L Connector_Generic:Conn_01x05 J4
-U 1 1 5D1BFEA8
-P 10100 4450
-F 0 "J4" V 10025 4725 50  0000 L CNN
-F 1 "Bonus_Row" V 10100 4725 50  0000 L CNN
-F 2 "josh-footprints:PinSocket_1x05_P2.54mm_Vertical_No_Markings" H 10100 4450 50  0001 C CNN
-F 3 "~" H 10100 4450 50  0001 C CNN
-	1    10100 4450
-	0    1    1    0   
-$EndComp
 Wire Notes Line
 	8975 4150 8975 2925
 Wire Notes Line
 	8975 2925 9975 2925
 Wire Notes Line
 	9975 2925 9975 500 
+Connection ~ 7050 5175
+Wire Wire Line
+	7050 5200 7050 5175
+$Comp
+L Device:C C21
+U 1 1 5D6DE6FE
+P 7050 5350
+F 0 "C21" H 7165 5396 50  0000 L CNN
+F 1 "100n" H 7165 5305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 7088 5200 50  0001 C CNN
+F 3 "~" H 7050 5350 50  0001 C CNN
+	1    7050 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR041
+U 1 1 5D6DEE19
+P 7050 5500
+F 0 "#PWR041" H 7050 5250 50  0001 C CNN
+F 1 "GND" H 7055 5327 50  0000 C CNN
+F 2 "" H 7050 5500 50  0001 C CNN
+F 3 "" H 7050 5500 50  0001 C CNN
+	1    7050 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 5400 6050 5450
+$Comp
+L Device:R_Pack04 RN3
+U 1 1 5D3F5C6B
+P 10775 2200
+F 0 "RN3" H 10963 2246 50  0000 L CNN
+F 1 "1K" H 10963 2155 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 11050 2200 50  0001 C CNN
+F 3 "~" H 10775 2200 50  0001 C CNN
+	1    10775 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10525 1925 10525 1975
+Wire Wire Line
+	10525 1975 10575 1975
+Wire Wire Line
+	10575 1975 10575 2000
+Wire Wire Line
+	10725 1925 10675 1925
+Wire Wire Line
+	10675 1925 10675 2000
+Wire Wire Line
+	10925 1975 10925 1925
+Wire Wire Line
+	8525 2650 9175 2650
+Text Label 9175 2650 2    50   ~ 0
+ICE_SCK
+Wire Wire Line
+	8525 2450 9175 2450
+Text Label 9175 2450 2    50   ~ 0
+FLASH_MOSI|IO0
+Wire Wire Line
+	8525 2550 9175 2550
+Text Label 9175 2550 2    50   ~ 0
+FLASH_MISO|IO1
+Text Label 9175 2750 2    50   ~ 0
+ICE_SS
+Wire Wire Line
+	9175 2750 8525 2750
+Wire Wire Line
+	9225 1300 9225 1800
+Wire Wire Line
+	8525 1200 9050 1200
+$Comp
+L Device:R R5
+U 1 1 5D1D8818
+P 9200 1200
+F 0 "R5" V 9125 1200 50  0000 C CNN
+F 1 "10K" V 9200 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9130 1200 50  0001 C CNN
+F 3 "~" H 9200 1200 50  0001 C CNN
+	1    9200 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9350 1200 9400 1200
+Wire Wire Line
+	9400 1200 9400 1125
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5D1FDF28
+P 9400 1125
+F 0 "#PWR0106" H 9400 975 50  0001 C CNN
+F 1 "+3V3" H 9415 1298 50  0000 C CNN
+F 2 "" H 9400 1125 50  0001 C CNN
+F 3 "" H 9400 1125 50  0001 C CNN
+	1    9400 1125
+	-1   0    0    -1  
+$EndComp
+$Comp
+L josh-symbols:W25Q32JVZP U2
+U 1 1 5D231D5E
+P 4200 5175
+F 0 "U2" H 4050 5642 50  0000 C CNN
+F 1 "W25Q32JVZP" H 4050 5551 50  0000 C CNN
+F 2 "josh-footprints:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm" H 4200 5175 50  0001 C CNN
+F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 4200 5175 50  0001 C CNN
+	1    4200 5175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 5375 4475 5375
+Connection ~ 4475 5375
+Wire Wire Line
+	4400 5475 4475 5475
+Connection ~ 4475 5475
+Wire Wire Line
+	4475 5475 4475 5500
+Wire Wire Line
+	4475 5375 4475 5475
+Wire Wire Line
+	10925 1975 10875 1975
+Wire Wire Line
+	10875 1975 10875 2000
+NoConn ~ 10775 2000
+NoConn ~ 10775 2400
+Wire Wire Line
+	2575 5475 3700 5475
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5E2BD3AD
+P 3425 4725
+F 0 "RN1" H 3613 4771 50  0000 L CNN
+F 1 "10K" H 3613 4680 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3700 4725 50  0001 C CNN
+F 3 "~" H 3425 4725 50  0001 C CNN
+	1    3425 4725
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3525 4925 3525 4975
+Connection ~ 3525 4975
+Wire Wire Line
+	3525 4975 3700 4975
+Wire Wire Line
+	2575 5275 3700 5275
+Wire Wire Line
+	3425 5375 2575 5375
+Wire Wire Line
+	3700 5375 3425 5375
+Connection ~ 3425 5375
+Wire Wire Line
+	3425 4925 3425 5375
+Wire Wire Line
+	2575 4975 3525 4975
+Wire Wire Line
+	2575 5075 3225 5075
+Wire Wire Line
+	3225 4925 3225 5075
+Connection ~ 3225 5075
+Wire Wire Line
+	3225 5075 3700 5075
+NoConn ~ 3325 4925
+Wire Wire Line
+	6425 1300 6900 1300
+Wire Wire Line
+	9150 1950 8525 1950
+Text Label 10900 5725 2    50   ~ 0
+IO0
+Wire Wire Line
+	10900 5725 10625 5725
+Text Label 10900 5625 2    50   ~ 0
+IO1
+Wire Wire Line
+	10900 5625 10625 5625
+Text Label 10900 5525 2    50   ~ 0
+IO2
+Wire Wire Line
+	10900 5525 10625 5525
+Text Label 10900 5425 2    50   ~ 0
+IO3
+Wire Wire Line
+	10900 5425 10625 5425
+Text Label 6425 1200 0    50   ~ 0
+IO0
+Wire Wire Line
+	6425 1200 6900 1200
+Text Label 6425 1500 0    50   ~ 0
+IO1
+Wire Wire Line
+	6425 1500 6900 1500
+Text Label 6425 1400 0    50   ~ 0
+IO2
+Wire Wire Line
+	6425 1400 6900 1400
+Text Label 6425 1600 0    50   ~ 0
+IO3
+Wire Wire Line
+	6425 1600 6900 1600
+Text Label 10900 5325 2    50   ~ 0
+IO4
+Wire Wire Line
+	10900 5325 10625 5325
+Text Label 10900 5225 2    50   ~ 0
+IO5
+Wire Wire Line
+	10900 5225 10625 5225
+Text Label 6425 1700 0    50   ~ 0
+IO4
+Wire Wire Line
+	6425 1700 6900 1700
+Text Label 6425 1800 0    50   ~ 0
+IO5
+Wire Wire Line
+	6425 1800 6900 1800
+Text Label 6425 2200 0    50   ~ 0
+IO6
+Wire Wire Line
+	6425 2200 6900 2200
+Text Label 10900 5125 2    50   ~ 0
+IO6
+Wire Wire Line
+	10900 5125 10625 5125
+Text Label 10900 5025 2    50   ~ 0
+IO7
+Wire Wire Line
+	10900 5025 10625 5025
+Text Label 6425 2000 0    50   ~ 0
+IO7
+Wire Wire Line
+	6425 2000 6900 2000
+Text Label 9300 5425 0    50   ~ 0
+IO19
+Wire Wire Line
+	9300 5425 9575 5425
+Text Label 9300 5325 0    50   ~ 0
+IO18
+Wire Wire Line
+	9300 5325 9575 5325
+Text Label 9300 5225 0    50   ~ 0
+IO17
+Wire Wire Line
+	9300 5225 9575 5225
+Text Label 9300 5125 0    50   ~ 0
+IO16
+Wire Wire Line
+	9300 5125 9575 5125
+Text Label 9300 5025 0    50   ~ 0
+IO15
+Wire Wire Line
+	9300 5025 9575 5025
+Text Label 9300 4925 0    50   ~ 0
+IO14
+Wire Wire Line
+	9300 4925 9575 4925
+Text Label 9300 4825 0    50   ~ 0
+IO13
+Wire Wire Line
+	9300 4825 9575 4825
+Text Label 9300 4725 0    50   ~ 0
+IO12
+Wire Wire Line
+	9300 4725 9575 4725
+Text Label 9300 4625 0    50   ~ 0
+IO11
+Wire Wire Line
+	9300 4625 9575 4625
+Text Label 10900 4925 2    50   ~ 0
+IO8
+Wire Wire Line
+	10900 4925 10625 4925
+Text Label 10900 4825 2    50   ~ 0
+IO9
+Wire Wire Line
+	10900 4825 10625 4825
+Text Label 10900 4725 2    50   ~ 0
+IO10
+Wire Wire Line
+	10900 4725 10625 4725
+Text Label 8800 1850 2    50   ~ 0
+IO19
+Wire Wire Line
+	8800 1850 8525 1850
+Text Label 8800 1750 2    50   ~ 0
+IO18
+Wire Wire Line
+	8800 1750 8525 1750
+Text Label 8800 1650 2    50   ~ 0
+IO17
+Wire Wire Line
+	8800 1650 8525 1650
+Text Label 8800 1550 2    50   ~ 0
+IO16
+Wire Wire Line
+	8800 1550 8525 1550
+Text Label 8800 1450 2    50   ~ 0
+IO15
+Wire Wire Line
+	8800 1450 8525 1450
+Text Label 6625 3875 0    50   ~ 0
+IO14
+Wire Wire Line
+	6625 3875 6900 3875
+Text Label 6625 3975 0    50   ~ 0
+IO13
+Wire Wire Line
+	6625 3975 6900 3975
+Text Label 6625 3775 0    50   ~ 0
+IO12
+Wire Wire Line
+	6625 3775 6900 3775
+Text Label 6625 3575 0    50   ~ 0
+IO11
+Wire Wire Line
+	6625 3575 6900 3575
+Text Label 6425 2300 0    50   ~ 0
+IO8
+Text Label 6625 3675 0    50   ~ 0
+IO9
+Wire Wire Line
+	6625 3675 6900 3675
+Text Label 6625 3475 0    50   ~ 0
+IO10
+Wire Wire Line
+	6625 3475 6900 3475
+Wire Wire Line
+	6425 2300 6900 2300
+Wire Wire Line
+	6625 3375 6900 3375
 $EndSCHEMATC

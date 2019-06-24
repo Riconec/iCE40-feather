@@ -108,60 +108,13 @@ Text Label 2925 5475 0    50   ~ 0
 FT_EECLK
 Text Label 2925 5575 0    50   ~ 0
 FT_EEDATA
-$Comp
-L Device:R_Pack04 RN?
-U 1 1 5EDD474C
-P 2725 5125
-AR Path="/5EDD474C" Ref="RN?"  Part="1" 
-AR Path="/5ED7AB6B/5EDD474C" Ref="RN2"  Part="1" 
-F 0 "RN2" H 2913 5171 50  0000 L CNN
-F 1 "10K" H 2913 5080 50  0000 L CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3000 5125 50  0001 C CNN
-F 3 "~" H 2725 5125 50  0001 C CNN
-	1    2725 5125
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2525 5325 2525 5375
 Connection ~ 2525 5375
 Wire Wire Line
 	2525 5375 4025 5375
-Wire Wire Line
-	2625 5325 2625 5475
 Connection ~ 2625 5475
 Wire Wire Line
 	2625 5475 4025 5475
-Wire Wire Line
-	2725 5325 2725 5575
 Connection ~ 2725 5575
-NoConn ~ 2825 5325
-Wire Wire Line
-	2725 4925 2725 4875
-Wire Wire Line
-	2725 4875 2625 4875
-Wire Wire Line
-	2525 4875 2525 4925
-Wire Wire Line
-	2625 4875 2625 4925
-Connection ~ 2625 4875
-Wire Wire Line
-	2625 4875 2525 4875
-Wire Wire Line
-	2525 4875 2525 4825
-Connection ~ 2525 4875
-$Comp
-L power:+3V3 #PWR?
-U 1 1 5EDD4764
-P 2525 4825
-AR Path="/5EDD4764" Ref="#PWR?"  Part="1" 
-AR Path="/5ED7AB6B/5EDD4764" Ref="#PWR058"  Part="1" 
-F 0 "#PWR058" H 2525 4675 50  0001 C CNN
-F 1 "+3V3" H 2540 4998 50  0000 C CNN
-F 2 "" H 2525 4825 50  0001 C CNN
-F 3 "" H 2525 4825 50  0001 C CNN
-	1    2525 4825
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R?
 U 1 1 5EDD476A
@@ -721,11 +674,6 @@ Wire Wire Line
 	6425 3475 6600 3475
 NoConn ~ 6425 6375
 NoConn ~ 6425 6475
-Wire Wire Line
-	2725 4875 2825 4875
-Wire Wire Line
-	2825 4875 2825 4925
-Connection ~ 2725 4875
 $Comp
 L josh-symbols:93C46B U7
 U 1 1 61FB4482
@@ -741,4 +689,56 @@ Wire Wire Line
 	3625 1800 4400 1800
 Wire Wire Line
 	3625 1525 3975 1525
+Wire Wire Line
+	2725 5250 2725 5575
+Wire Wire Line
+	2625 5250 2625 5475
+Wire Wire Line
+	2525 5250 2525 5375
+Connection ~ 2625 4800
+Wire Wire Line
+	2725 4800 2725 4850
+Wire Wire Line
+	2625 4800 2725 4800
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5EDD4764
+P 2425 4750
+AR Path="/5EDD4764" Ref="#PWR?"  Part="1" 
+AR Path="/5ED7AB6B/5EDD4764" Ref="#PWR058"  Part="1" 
+F 0 "#PWR058" H 2425 4600 50  0001 C CNN
+F 1 "+3V3" H 2440 4923 50  0000 C CNN
+F 2 "" H 2425 4750 50  0001 C CNN
+F 3 "" H 2425 4750 50  0001 C CNN
+	1    2425 4750
+	1    0    0    -1  
+$EndComp
+Connection ~ 2425 4800
+Wire Wire Line
+	2425 4800 2425 4750
+Wire Wire Line
+	2525 4800 2425 4800
+Connection ~ 2525 4800
+Wire Wire Line
+	2525 4800 2525 4850
+Wire Wire Line
+	2425 4800 2425 4850
+Wire Wire Line
+	2625 4800 2525 4800
+Wire Wire Line
+	2625 4850 2625 4800
+NoConn ~ 2425 5250
+$Comp
+L Device:R_Pack04 RN?
+U 1 1 5EDD474C
+P 2625 5050
+AR Path="/5EDD474C" Ref="RN?"  Part="1" 
+AR Path="/5ED7AB6B/5EDD474C" Ref="RN2"  Part="1" 
+F 0 "RN2" H 2813 5096 50  0000 L CNN
+F 1 "10K" H 2813 5005 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2900 5050 50  0001 C CNN
+F 3 "~" H 2625 5050 50  0001 C CNN
+	1    2625 5050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
