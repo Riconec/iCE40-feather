@@ -395,15 +395,15 @@ U 1 1 60207C83
 P 5225 4675
 F 0 "U8" H 4200 6850 50  0000 C CNN
 F 1 "FT2232H" H 4325 6775 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias" H 5225 4675 50  0001 C CNN
+F 2 "josh-footprints:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias" H 5225 4675 50  0001 C CNN
 F 3 "http://www.ftdichip.com/Products/ICs/FT2232H.html" H 5225 4675 50  0001 C CNN
 	1    5225 4675
 	1    0    0    -1  
 $EndComp
 Text HLabel 3875 3775 0    50   Input ~ 0
-USB_DM
+USB_N
 Text HLabel 3875 3875 0    50   Input ~ 0
-USB_DP
+USB_P
 Wire Wire Line
 	5525 2425 5425 2425
 Wire Wire Line
@@ -454,35 +454,21 @@ Wire Wire Line
 Connection ~ 5125 2450
 Wire Wire Line
 	5125 2450 5225 2450
-Connection ~ 2600 1525
+Connection ~ 3200 1525
 Wire Wire Line
 	4400 1800 4725 1800
 Connection ~ 4400 1800
 Wire Wire Line
 	4400 1850 4400 1800
-Wire Wire Line
-	3975 1525 3200 1525
 Connection ~ 3975 1525
 Wire Wire Line
 	3975 1850 3975 1525
-Wire Wire Line
-	3575 1800 4400 1800
-Connection ~ 3575 1800
-Wire Wire Line
-	3575 1850 3575 1800
-Wire Wire Line
-	3200 1525 3025 1525
-Connection ~ 3200 1525
-Wire Wire Line
-	3200 1850 3200 1525
 Wire Wire Line
 	4825 1525 3975 1525
 Wire Wire Line
 	4825 2475 4825 1525
 Wire Wire Line
 	4725 1800 4725 2475
-Wire Wire Line
-	3025 1800 3575 1800
 $Comp
 L power:GND #PWR?
 U 1 1 5EDD4814
@@ -497,20 +483,10 @@ F 3 "" H 4400 2200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3975 2175 3575 2175
-Connection ~ 3975 2175
-Wire Wire Line
 	3975 2150 3975 2175
-Wire Wire Line
-	3575 2175 3200 2175
-Connection ~ 3575 2175
-Wire Wire Line
-	3575 2150 3575 2175
 Wire Wire Line
 	4400 2175 4400 2200
 Connection ~ 4400 2175
-Wire Wire Line
-	3200 2175 3200 2150
 Wire Wire Line
 	4400 2175 3975 2175
 Wire Wire Line
@@ -541,79 +517,51 @@ F 3 "~" H 3975 2000 50  0001 C CNN
 	1    3975 2000
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:C C?
-U 1 1 5EDD47F7
-P 3575 2000
-AR Path="/5EDD47F7" Ref="C?"  Part="1" 
-AR Path="/5ED7AB6B/5EDD47F7" Ref="C29"  Part="1" 
-F 0 "C29" H 3690 2091 50  0000 L CNN
-F 1 "4u7" H 3690 2000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3613 1850 50  0001 C CNN
-F 3 "~" H 3575 2000 50  0001 C CNN
-F 4 "DNP" H 3690 1909 50  0000 L CNN "DNP"
-	1    3575 2000
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5EDD47F0
-P 3200 2000
-AR Path="/5EDD47F0" Ref="C?"  Part="1" 
-AR Path="/5ED7AB6B/5EDD47F0" Ref="C27"  Part="1" 
-F 0 "C27" H 3315 2091 50  0000 L CNN
-F 1 "4u7" H 3315 2000 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3238 1850 50  0001 C CNN
-F 3 "~" H 3200 2000 50  0001 C CNN
-F 4 "DNP" H 3315 1909 50  0000 L CNN "DNP"
-	1    3200 2000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	2600 1800 2600 1525
+	3200 1800 3200 1525
 Wire Wire Line
-	2725 1800 2600 1800
+	3325 1800 3200 1800
 $Comp
 L josh-symbols:Ferrite_Bead_PWR FB?
 U 1 1 5EDD47E7
-P 2875 1800
+P 3475 1800
 AR Path="/5EDD47E7" Ref="FB?"  Part="1" 
 AR Path="/5ED7AB6B/5EDD47E7" Ref="FB3"  Part="1" 
-F 0 "FB3" V 2825 1675 50  0000 C CNN
-F 1 "600R " V 2950 1950 50  0000 C CNN
-F 2 "josh-footprints:BEADC1608X95N" V 2805 1800 50  0001 C CNN
-F 3 "~" H 2875 1800 50  0001 C CNN
-	1    2875 1800
+F 0 "FB3" V 3425 1675 50  0000 C CNN
+F 1 "600R " V 3550 1950 50  0000 C CNN
+F 2 "josh-footprints:BEADC1608X95N" V 3405 1800 50  0001 C CNN
+F 3 "~" H 3475 1800 50  0001 C CNN
+	1    3475 1800
 	0    1    1    0   
 $EndComp
 $Comp
 L josh-symbols:Ferrite_Bead_PWR FB?
 U 1 1 5EDD47E1
-P 2875 1525
+P 3475 1525
 AR Path="/5EDD47E1" Ref="FB?"  Part="1" 
 AR Path="/5ED7AB6B/5EDD47E1" Ref="FB2"  Part="1" 
-F 0 "FB2" V 2825 1400 50  0000 C CNN
-F 1 "600R " V 2950 1700 50  0000 C CNN
-F 2 "josh-footprints:BEADC1608X95N" V 2805 1525 50  0001 C CNN
-F 3 "~" H 2875 1525 50  0001 C CNN
-	1    2875 1525
+F 0 "FB2" V 3425 1400 50  0000 C CNN
+F 1 "600R " V 3550 1700 50  0000 C CNN
+F 2 "josh-footprints:BEADC1608X95N" V 3405 1525 50  0001 C CNN
+F 3 "~" H 3475 1525 50  0001 C CNN
+	1    3475 1525
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 1525 2725 1525
+	3200 1525 3325 1525
 Wire Wire Line
-	2600 1475 2600 1525
+	3200 1475 3200 1525
 $Comp
 L power:+3V3 #PWR?
 U 1 1 5EDD47D9
-P 2600 1475
+P 3200 1475
 AR Path="/5EDD47D9" Ref="#PWR?"  Part="1" 
 AR Path="/5ED7AB6B/5EDD47D9" Ref="#PWR059"  Part="1" 
-F 0 "#PWR059" H 2600 1325 50  0001 C CNN
-F 1 "+3V3" H 2615 1648 50  0000 C CNN
-F 2 "" H 2600 1475 50  0001 C CNN
-F 3 "" H 2600 1475 50  0001 C CNN
-	1    2600 1475
+F 0 "#PWR059" H 3200 1325 50  0001 C CNN
+F 1 "+3V3" H 3215 1648 50  0000 C CNN
+F 2 "" H 3200 1475 50  0001 C CNN
+F 3 "" H 3200 1475 50  0001 C CNN
+	1    3200 1475
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -789,4 +737,8 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 2075 5575 
 	1    2075 5575
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3625 1800 4400 1800
+Wire Wire Line
+	3625 1525 3975 1525
 $EndSCHEMATC
