@@ -746,7 +746,7 @@ Text Label 10050 1050 0    50   ~ 0
 nLED
 Wire Wire Line
 	10050 1050 10275 1050
-Text Label 6625 3375 0    50   ~ 0
+Text Label 6625 3575 0    50   ~ 0
 nLED
 $Comp
 L power:VBUS #PWR06
@@ -1814,30 +1814,22 @@ Text Label 10900 5225 2    50   ~ 0
 IO5
 Wire Wire Line
 	10900 5225 10625 5225
-Text Label 6425 1700 0    50   ~ 0
+Text Label 6425 2300 0    50   ~ 0
 IO4
 Wire Wire Line
-	6425 1700 6900 1700
-Text Label 6425 1800 0    50   ~ 0
+	6425 2300 6900 2300
+Text Label 6425 1700 0    50   ~ 0
 IO5
 Wire Wire Line
-	6425 1800 6900 1800
-Text Label 6425 2200 0    50   ~ 0
+	6425 1700 6900 1700
+Text Label 6425 2000 0    50   ~ 0
 IO6
 Wire Wire Line
-	6425 2200 6900 2200
+	6425 2000 6900 2000
 Text Label 10900 5125 2    50   ~ 0
 IO6
 Wire Wire Line
 	10900 5125 10625 5125
-Text Label 10900 5025 2    50   ~ 0
-IO7
-Wire Wire Line
-	10900 5025 10625 5025
-Text Label 6425 2000 0    50   ~ 0
-IO7
-Wire Wire Line
-	6425 2000 6900 2000
 Text Label 9300 5425 0    50   ~ 0
 IO19
 Wire Wire Line
@@ -1882,10 +1874,6 @@ Text Label 10900 4825 2    50   ~ 0
 IO9
 Wire Wire Line
 	10900 4825 10625 4825
-Text Label 10900 4725 2    50   ~ 0
-IO10
-Wire Wire Line
-	10900 4725 10625 4725
 Text Label 8800 1850 2    50   ~ 0
 IO19
 Wire Wire Line
@@ -1918,22 +1906,34 @@ Text Label 6625 3775 0    50   ~ 0
 IO12
 Wire Wire Line
 	6625 3775 6900 3775
-Text Label 6625 3575 0    50   ~ 0
+Text Label 6625 3375 0    50   ~ 0
 IO11
 Wire Wire Line
-	6625 3575 6900 3575
-Text Label 6425 2300 0    50   ~ 0
+	6625 3375 6900 3375
+Text Label 6425 1800 0    50   ~ 0
 IO8
-Text Label 6625 3675 0    50   ~ 0
+Text Label 6625 2200 0    50   ~ 0
 IO9
 Wire Wire Line
-	6625 3675 6900 3675
+	6625 2200 6900 2200
+Wire Wire Line
+	6425 1800 6900 1800
+Wire Wire Line
+	6625 3575 6900 3575
+Wire Wire Line
+	10900 4725 10625 4725
+Text Label 10900 4725 2    50   ~ 0
+IO10
+Wire Wire Line
+	10900 5025 10625 5025
+Text Label 10900 5025 2    50   ~ 0
+IO7
+Wire Wire Line
+	6625 3475 6900 3475
 Text Label 6625 3475 0    50   ~ 0
 IO10
 Wire Wire Line
-	6625 3475 6900 3475
-Wire Wire Line
-	6425 2300 6900 2300
-Wire Wire Line
-	6625 3375 6900 3375
+	6425 3675 6900 3675
+Text Label 6425 3675 0    50   ~ 0
+IO7
 $EndSCHEMATC
