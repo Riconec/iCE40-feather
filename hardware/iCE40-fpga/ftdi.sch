@@ -338,7 +338,7 @@ Connection ~ 5025 6900
 Wire Wire Line
 	5025 6900 5125 6900
 Wire Wire Line
-	4625 6900 4825 6900
+	4625 6900 4725 6900
 Wire Wire Line
 	3975 6900 4625 6900
 Connection ~ 3375 5575
@@ -741,4 +741,9 @@ F 3 "~" H 2625 5050 50  0001 C CNN
 	1    2625 5050
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4725 6875 4725 6900
+Connection ~ 4725 6900
+Wire Wire Line
+	4725 6900 4825 6900
 $EndSCHEMATC

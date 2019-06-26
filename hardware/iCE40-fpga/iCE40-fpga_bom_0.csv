@@ -1,0 +1,48 @@
+Component,Description,Part,References,Value,Footprint,Quantity Per PCB,Datasheet,MPN
+1,Unpolarized capacitor,C,C3 C7 C8 C11 C16 C19 C21 C22 C24 C26 C30 C31 C32 C33 C34 C35 C36,100n,C_0603_1608Metric,17,~,
+2,Unpolarized capacitor,C,C1 C2 C4 C10 C18,10u,C_0603_1608Metric,5,~,
+3,Unpolarized capacitor,C,C5 C6,1u,C_0603_1608Metric,2,~,
+4,Unpolarized capacitor,C,C28,4u7,C_0603_1608Metric,1,~,
+5,Light emitting diode,LED,D5,BLU,LED_0603_1608Metric,1,~,
+6,Diode,D,D4,CDBU0520,D_SOD-523,1,~,
+7,Light emitting diode,LED,D7,LED,LED_0603_1608Metric,1,~,
+8,"RGB LED, anode/red/green/blue",LED_RGBA,D6,LTST-C19HE1WT,0606LED,1,~,
+9,Schottky diode,D_Schottky,D2,MBR120,D_SOD-123F,1,~,
+10,Light emitting diode,LED,D1,ORG,LED_0603_1608Metric,1,~,
+11,"Resettable fuse, polymeric positive temperature coefficient",Polyfuse,F1,500mA,Fuse_0805_2012Metric,1,~,
+12,Ferrite bead,Ferrite_Bead_PWR,FB1 FB2 FB3,600R ,BEADC1608X95N,3,~,
+13,,Feather,J3,Feather,PCB_FeatherWing,1,,
+14,"Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)",Conn_01x02_Male,J2,JST_PH,JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal,1,~,
+15,USB Micro Type B connector,USB_B_Micro,J1,USB_B_Micro,MicroUSB_Aliexpress,1,~,
+16,"P-MOSFET transistor, gate/source/drain",Q_PMOS_GSD,Q1,DMP2045U,SOT-23,1,~,
+17,Resistor,R,R1 R4,100K,R_0603_1608Metric,2,~,
+18,Resistor,R,R6,100R,R_0603_1608Metric,1,~,
+19,Resistor,R,R3 R5 R14,10K,R_0603_1608Metric,3,~,
+20,Resistor,R,R15,12K,R_0603_1608Metric,1,~,
+21,Resistor,R,R8,1K,R_0603_1608Metric,1,~,
+22,Resistor,R,R2 R7 R13,2K2,R_0603_1608Metric,3,~,
+23,"4 resistor network, parallel topology, DIP package",R_Pack04,RN1 RN2,10K,R_Array_Convex_4x0402,2,~,
+24,"4 resistor network, parallel topology, DIP package",R_Pack04,RN3,1K,R_Array_Convex_4x0402,1,~,
+25,"Serial EEPROM, 93 Series, 5.0V, DIP-8/SOIC-8",93C46B,U7,93C46B,SOT-23-6,1,http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf,
+26,"600mA low dropout linear regulator, with enable pin, 2.5V-6V input voltage range, 1.2V fixed positive output, SOT-23-5 package",AP2112K-1.2,U5,AP2112K-1.2,SOT-23-5,1,https://www.diodes.com/assets/Datasheets/AP2112.pdf,
+27,"600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5 package",AP2112K-3.3,U3,AP2112K-3.3,SOT-23-5,1,https://www.diodes.com/assets/Datasheets/AP2112.pdf,
+28,"FT2232Hx, Hi Speed Double Channel USB UART/FIFO, LQFP/QFN-64",FT2232H,U8,FT2232H,QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias,1,http://www.ftdichip.com/Products/ICs/FT2232H.html,
+29,"iCE40 UltraPlus FPGA, 5280 LUTs, 1.2V, 48-pin QFN",ICE40UP5K-SG48ITR,U6,ICE40UP5K-SG48ITR,QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias,1,http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra,
+30,"Single cell, Li-Ion/Li-Po charge management controller, 4.20V, Tri-State Status Output, in SOT23-5 package",MCP73831-2-OT,U1,MCP73831-2-OT,SOT-23-5,1,http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf,
+31,"32Mb Serial Flash Memory, Standard/Dual/Quad SPI, DFN-8",W25Q32JVZP,U2,W25Q32JVZP,WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm,1,http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf,
+32,MEMS OSC 12MHz,DSC6101CI1A,X1,DSC6101CI1A,CDFN_3.2x2.5mm_XO,1,,DSC6101CI1A-012.0000T
+
+
+
+
+
+Component Groups:,32
+Component Count:,61
+Fitted Components:,61
+Number of PCBs:,1
+Total components:,61
+Schematic Version:,0
+Schematic Date:,2019-06-24
+BoM Date:,25/06/2019 12:15:57
+Schematic Source:,C:\Users\Josh Johnson\Dropbox\Projects\iCE40-fpga\hardware\iCE40-fpga\iCE40-fpga.sch
+KiCad Version:,Eeschema (5.1.2)-1

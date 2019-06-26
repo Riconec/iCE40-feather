@@ -1,0 +1,660 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Switch:SW_DIP_x08 SW1
+U 1 1 5D11CCFE
+P 2075 2550
+F 0 "SW1" H 2225 3175 50  0000 R CNN
+F 1 "SW_DIP_x08" H 2225 3100 50  0000 R CNN
+F 2 "Button_Switch_THT:SW_DIP_SPSTx08_Slide_9.78x22.5mm_W7.62mm_P2.54mm" H 2075 2550 50  0001 C CNN
+F 3 "~" H 2075 2550 50  0001 C CNN
+	1    2075 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 2250 1725 2350
+Connection ~ 1725 2250
+Wire Wire Line
+	1775 2250 1725 2250
+Wire Wire Line
+	1725 2350 1725 2450
+Connection ~ 1725 2350
+Wire Wire Line
+	1775 2350 1725 2350
+Wire Wire Line
+	1725 2450 1725 2550
+Connection ~ 1725 2450
+Wire Wire Line
+	1775 2450 1725 2450
+Wire Wire Line
+	1725 2550 1725 2650
+Connection ~ 1725 2550
+Wire Wire Line
+	1775 2550 1725 2550
+Wire Wire Line
+	1725 2650 1725 2750
+Connection ~ 1725 2650
+Wire Wire Line
+	1775 2650 1725 2650
+Wire Wire Line
+	1725 2750 1725 2850
+Connection ~ 1725 2750
+Wire Wire Line
+	1775 2750 1725 2750
+Connection ~ 1725 2150
+Wire Wire Line
+	1725 2850 1775 2850
+Wire Wire Line
+	1725 2150 1725 2250
+$Comp
+L power:+3V3 #PWR01
+U 1 1 5D123C66
+P 1725 2050
+F 0 "#PWR01" H 1725 1900 50  0001 C CNN
+F 1 "+3V3" H 1740 2223 50  0000 C CNN
+F 2 "" H 1725 2050 50  0001 C CNN
+F 3 "" H 1725 2050 50  0001 C CNN
+	1    1725 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1725 2150 1725 2050
+Wire Wire Line
+	1775 2150 1725 2150
+Text Label 3650 2150 2    50   ~ 0
+DIP_1
+Text Label 3650 2250 2    50   ~ 0
+DIP_2
+Wire Wire Line
+	2375 2350 3100 2350
+Text Label 3650 2350 2    50   ~ 0
+DIP_3
+Text Label 3650 2450 2    50   ~ 0
+DIP_4
+Wire Wire Line
+	2375 2550 2725 2550
+Text Label 3650 2550 2    50   ~ 0
+DIP_5
+Wire Wire Line
+	2375 2650 2625 2650
+Text Label 3650 2650 2    50   ~ 0
+DIP_6
+Wire Wire Line
+	2375 2750 2525 2750
+Text Label 3650 2750 2    50   ~ 0
+DIP_7
+Wire Wire Line
+	2375 2850 2425 2850
+Text Label 3650 2850 2    50   ~ 0
+DIP_8
+$Comp
+L Device:R_Pack04 RN1
+U 1 1 5D1284D8
+P 2525 3175
+F 0 "RN1" H 2700 3200 50  0000 L CNN
+F 1 "10K" H 2700 3125 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 2800 3175 50  0001 C CNN
+F 3 "~" H 2525 3175 50  0001 C CNN
+	1    2525 3175
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2425 3375 2425 3400
+Wire Wire Line
+	2425 3400 2525 3400
+Wire Wire Line
+	2725 3400 2725 3375
+Wire Wire Line
+	2625 3400 2625 3375
+Connection ~ 2625 3400
+Wire Wire Line
+	2625 3400 2725 3400
+Wire Wire Line
+	2525 3400 2525 3375
+Connection ~ 2525 3400
+Wire Wire Line
+	2525 3400 2625 3400
+Wire Wire Line
+	2725 3400 2725 3425
+Connection ~ 2725 3400
+$Comp
+L power:GND #PWR02
+U 1 1 5D12AA30
+P 2725 3425
+F 0 "#PWR02" H 2725 3175 50  0001 C CNN
+F 1 "GND" H 2730 3252 50  0000 C CNN
+F 2 "" H 2725 3425 50  0001 C CNN
+F 3 "" H 2725 3425 50  0001 C CNN
+	1    2725 3425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2425 2975 2425 2850
+Connection ~ 2425 2850
+Wire Wire Line
+	2425 2850 3650 2850
+Connection ~ 2525 2750
+Wire Wire Line
+	2525 2750 3650 2750
+Wire Wire Line
+	2525 2750 2525 2975
+Wire Wire Line
+	2625 2975 2625 2650
+Connection ~ 2625 2650
+Wire Wire Line
+	2625 2650 3650 2650
+Wire Wire Line
+	2725 2975 2725 2550
+Connection ~ 2725 2550
+Connection ~ 3100 2350
+Wire Wire Line
+	3300 2150 3650 2150
+Connection ~ 3300 2150
+Wire Wire Line
+	3200 2250 3650 2250
+Connection ~ 3200 2250
+Wire Wire Line
+	2375 2150 3300 2150
+Wire Wire Line
+	2375 2250 3200 2250
+Wire Wire Line
+	3300 2975 3300 2150
+Wire Wire Line
+	3200 2250 3200 2350
+$Comp
+L power:GND #PWR03
+U 1 1 5D12BDD8
+P 3300 3425
+F 0 "#PWR03" H 3300 3175 50  0001 C CNN
+F 1 "GND" H 3305 3252 50  0000 C CNN
+F 2 "" H 3300 3425 50  0001 C CNN
+F 3 "" H 3300 3425 50  0001 C CNN
+	1    3300 3425
+	1    0    0    -1  
+$EndComp
+Connection ~ 3300 3400
+Wire Wire Line
+	3300 3400 3300 3425
+Wire Wire Line
+	3100 3400 3200 3400
+Connection ~ 3100 3400
+Wire Wire Line
+	3100 3400 3100 3375
+Wire Wire Line
+	3200 3400 3300 3400
+Connection ~ 3200 3400
+Wire Wire Line
+	3200 3400 3200 3375
+Wire Wire Line
+	3300 3400 3300 3375
+Wire Wire Line
+	3000 3400 3100 3400
+Wire Wire Line
+	3000 3375 3000 3400
+$Comp
+L Device:R_Pack04 RN2
+U 1 1 5D12BDC7
+P 3100 3175
+F 0 "RN2" H 2675 3200 50  0000 L CNN
+F 1 "10K" H 2675 3125 50  0000 L CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 3375 3175 50  0001 C CNN
+F 3 "~" H 3100 3175 50  0001 C CNN
+	1    3100 3175
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3100 2450 3650 2450
+Wire Wire Line
+	3200 2350 3200 2975
+$Comp
+L josh-symbols:LTD-5623Ax U1
+U 1 1 5D14A9DA
+P 8675 2325
+F 0 "U1" H 8225 2950 50  0000 C CNN
+F 1 "LTD-5623Ax" H 8400 2875 50  0000 C CNN
+F 2 "Display_7Segment:DA56-11SURKWA" H 8675 1725 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-1589EN" H 8455 2425 50  0001 C CNN
+	1    8675 2325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8075 2275 8050 2275
+Wire Wire Line
+	8050 2275 8050 2325
+Wire Wire Line
+	8050 2375 8075 2375
+Connection ~ 8050 2325
+Wire Wire Line
+	8050 2325 8050 2375
+Wire Wire Line
+	8075 2475 8050 2475
+Wire Wire Line
+	8050 2575 8075 2575
+Wire Wire Line
+	8075 2675 8050 2675
+Wire Wire Line
+	8050 2775 8075 2775
+Text Label 7275 3725 0    50   ~ 0
+SEG_C
+Wire Wire Line
+	8075 2875 8050 2875
+Wire Wire Line
+	8050 2975 8075 2975
+Text Label 7275 2725 0    50   ~ 0
+SEG_D
+Wire Wire Line
+	8075 3075 8050 3075
+Wire Wire Line
+	8050 3175 8075 3175
+Wire Wire Line
+	8075 3275 8050 3275
+Wire Wire Line
+	8050 3375 8075 3375
+Wire Wire Line
+	8075 3475 8050 3475
+Wire Wire Line
+	8050 3575 8075 3575
+Text Label 7275 3325 0    50   ~ 0
+SEG_G
+Wire Wire Line
+	8075 3675 8050 3675
+Wire Wire Line
+	8050 3775 8075 3775
+$Comp
+L josh-symbols:Feather J1
+U 1 1 5D163790
+P 5375 2825
+F 0 "J1" H 5400 3790 50  0000 C CNN
+F 1 "Feather" H 5400 3699 50  0000 C CNN
+F 2 "josh-footprints:PCB_FeatherWing" H 5575 1875 50  0001 C CNN
+F 3 "" H 5575 1875 50  0001 C CNN
+	1    5375 2825
+	1    0    0    -1  
+$EndComp
+Text Notes 2975 1150 0    197  ~ 0
+7 Segment / DIP Switch Feather Wing
+Wire Wire Line
+	3100 2350 3100 2450
+Wire Wire Line
+	3100 2350 3200 2350
+Wire Wire Line
+	2725 2550 3650 2550
+Wire Wire Line
+	2375 2450 3000 2450
+Wire Wire Line
+	3000 2450 3000 2975
+Connection ~ 3000 2450
+Wire Wire Line
+	3000 2450 3100 2450
+NoConn ~ 5925 3625
+NoConn ~ 5925 3425
+$Comp
+L power:GND #PWR06
+U 1 1 5D18BE69
+P 6375 3375
+F 0 "#PWR06" H 6375 3125 50  0001 C CNN
+F 1 "GND" H 6380 3202 50  0000 C CNN
+F 2 "" H 6375 3375 50  0001 C CNN
+F 3 "" H 6375 3375 50  0001 C CNN
+	1    6375 3375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 3325 6375 3325
+Wire Wire Line
+	6375 3325 6375 3375
+$Comp
+L power:+3V3 #PWR04
+U 1 1 5D190B5E
+P 6050 3525
+F 0 "#PWR04" H 6050 3375 50  0001 C CNN
+F 1 "+3V3" H 6175 3600 50  0000 C CNN
+F 2 "" H 6050 3525 50  0001 C CNN
+F 3 "" H 6050 3525 50  0001 C CNN
+	1    6050 3525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 3525 6050 3525
+$Comp
+L power:GND #PWR05
+U 1 1 5D19ACC2
+P 6375 2175
+F 0 "#PWR05" H 6375 1925 50  0001 C CNN
+F 1 "GND" H 6380 2002 50  0000 C CNN
+F 2 "" H 6375 2175 50  0001 C CNN
+F 3 "" H 6375 2175 50  0001 C CNN
+	1    6375 2175
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5925 2125 6375 2125
+Wire Wire Line
+	6375 2125 6375 2175
+NoConn ~ 4875 3225
+NoConn ~ 4875 3125
+NoConn ~ 4875 3025
+Wire Wire Line
+	7550 3725 7275 3725
+Wire Wire Line
+	7550 2725 7275 2725
+Wire Wire Line
+	7550 3325 7275 3325
+Wire Wire Line
+	10175 2275 10250 2275
+Wire Wire Line
+	10250 2275 10250 2175
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5D1EC5BF
+P 10250 2175
+F 0 "#PWR0101" H 10250 2025 50  0001 C CNN
+F 1 "+3V3" H 10265 2348 50  0000 C CNN
+F 2 "" H 10250 2175 50  0001 C CNN
+F 3 "" H 10250 2175 50  0001 C CNN
+	1    10250 2175
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	10175 2575 10250 2575
+Wire Wire Line
+	10250 2575 10250 2650
+$Comp
+L power:GND #PWR0102
+U 1 1 5D20FC31
+P 10250 2650
+F 0 "#PWR0102" H 10250 2400 50  0001 C CNN
+F 1 "GND" H 10255 2477 50  0000 C CNN
+F 2 "" H 10250 2650 50  0001 C CNN
+F 3 "" H 10250 2650 50  0001 C CNN
+	1    10250 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10175 2375 10600 2375
+Wire Wire Line
+	10175 2475 10600 2475
+Text Label 10600 2375 2    50   ~ 0
+ANODE_1
+Text Label 10600 2475 2    50   ~ 0
+ANODE_2
+Text Label 4550 2125 0    50   ~ 0
+DIP_1
+Text Label 4550 2225 0    50   ~ 0
+DIP_2
+Text Label 4550 2325 0    50   ~ 0
+DIP_3
+Text Label 4550 2425 0    50   ~ 0
+DIP_4
+Text Label 4550 2525 0    50   ~ 0
+DIP_5
+Text Label 4550 2625 0    50   ~ 0
+DIP_6
+Text Label 4550 2725 0    50   ~ 0
+DIP_7
+Text Label 4550 2825 0    50   ~ 0
+DIP_8
+Wire Wire Line
+	4875 2625 4550 2625
+Wire Wire Line
+	4875 2125 4550 2125
+Wire Wire Line
+	4875 2225 4550 2225
+Wire Wire Line
+	4875 2425 4550 2425
+Wire Wire Line
+	4875 2325 4550 2325
+Wire Wire Line
+	4875 2525 4550 2525
+Wire Wire Line
+	4875 2725 4550 2725
+Wire Wire Line
+	4875 2825 4550 2825
+Text Label 6250 2625 2    50   ~ 0
+SEG_A
+Text Label 6250 2725 2    50   ~ 0
+SEG_B
+Text Label 6250 2825 2    50   ~ 0
+SEG_C
+Text Label 6250 2925 2    50   ~ 0
+SEG_D
+Text Label 6250 2225 2    50   ~ 0
+SEG_E
+Text Label 6250 2325 2    50   ~ 0
+SEG_F
+Text Label 6250 2425 2    50   ~ 0
+SEG_G
+Text Label 6250 2525 2    50   ~ 0
+SEG_DP
+Wire Wire Line
+	6250 2625 5925 2625
+Wire Wire Line
+	5925 2725 6250 2725
+Wire Wire Line
+	5925 2825 6250 2825
+Wire Wire Line
+	5925 2925 6250 2925
+Wire Wire Line
+	6250 2225 5925 2225
+Wire Wire Line
+	5925 2325 6250 2325
+Wire Wire Line
+	5925 2425 6250 2425
+Wire Wire Line
+	5925 2525 6250 2525
+Wire Wire Line
+	5925 3025 6275 3025
+Wire Wire Line
+	5925 3125 6275 3125
+Text Label 6275 3025 2    50   ~ 0
+ANODE_1
+Text Label 6275 3125 2    50   ~ 0
+ANODE_2
+$Comp
+L josh-symbols:74LVC2G17 U2
+U 1 1 5D1F9FB5
+P 9925 2425
+F 0 "U2" H 9950 2800 50  0000 C CNN
+F 1 "74LVC2G17" H 9950 2709 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 9875 2675 197 0001 C CNN
+F 3 "" H 9875 2675 197 0001 C CNN
+	1    9925 2425
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9625 2375 9450 2375
+Wire Wire Line
+	9450 2375 9450 2475
+Wire Wire Line
+	9450 2475 9275 2475
+Wire Wire Line
+	9550 2475 9550 2425
+Wire Wire Line
+	9550 2425 9350 2425
+Wire Wire Line
+	9350 2425 9350 2375
+Wire Wire Line
+	9350 2375 9275 2375
+Wire Wire Line
+	9550 2475 9625 2475
+Wire Wire Line
+	7950 2325 8050 2325
+Wire Wire Line
+	7950 3725 8050 3725
+Wire Wire Line
+	7950 2725 8050 2725
+Wire Wire Line
+	8050 3075 8050 3125
+Wire Wire Line
+	8050 3275 8050 3325
+Wire Wire Line
+	8050 3475 8050 3525
+Wire Wire Line
+	7950 3325 8050 3325
+Wire Wire Line
+	7950 3525 8050 3525
+Connection ~ 8050 3125
+Wire Wire Line
+	8050 3125 8050 3175
+Connection ~ 8050 3325
+Wire Wire Line
+	8050 3325 8050 3375
+Connection ~ 8050 3525
+Wire Wire Line
+	8050 3525 8050 3575
+$Comp
+L josh-symbols:RN RN4
+U 2 1 5D3F3214
+P 7750 3325
+F 0 "RN4" V 7675 3325 50  0000 C CNN
+F 1 "330R" V 7750 3325 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 3325 50  0001 C CNN
+F 3 "~" H 7750 3325 50  0001 C CNN
+	2    7750 3325
+	0    1    1    0   
+$EndComp
+$Comp
+L josh-symbols:RN RN3
+U 2 1 5D3A93B0
+P 7750 3725
+F 0 "RN3" V 7675 3725 50  0000 C CNN
+F 1 "330R" V 7750 3725 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 3725 50  0001 C CNN
+F 3 "~" H 7750 3725 50  0001 C CNN
+	2    7750 3725
+	0    1    1    0   
+$EndComp
+$Comp
+L josh-symbols:RN RN3
+U 1 1 5D39AACC
+P 7750 2725
+F 0 "RN3" V 7675 2725 50  0000 C CNN
+F 1 "330R" V 7750 2725 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 2725 50  0001 C CNN
+F 3 "~" H 7750 2725 50  0001 C CNN
+	1    7750 2725
+	0    1    1    0   
+$EndComp
+Text Label 7275 3525 0    50   ~ 0
+SEG_B
+Wire Wire Line
+	7550 3525 7275 3525
+$Comp
+L josh-symbols:RN RN3
+U 3 1 5D3AA440
+P 7750 3525
+F 0 "RN3" V 7675 3525 50  0000 C CNN
+F 1 "330R" V 7750 3525 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 3525 50  0001 C CNN
+F 3 "~" H 7750 3525 50  0001 C CNN
+	3    7750 3525
+	0    1    1    0   
+$EndComp
+Text Label 7275 2925 0    50   ~ 0
+SEG_A
+Wire Wire Line
+	7275 2925 7550 2925
+$Comp
+L josh-symbols:RN RN3
+U 4 1 5D3AAE3C
+P 7750 2925
+F 0 "RN3" V 7675 2925 50  0000 C CNN
+F 1 "330R" V 7750 2925 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 2925 50  0001 C CNN
+F 3 "~" H 7750 2925 50  0001 C CNN
+	4    7750 2925
+	0    1    1    0   
+$EndComp
+Text Label 7275 2325 0    50   ~ 0
+SEG_F
+Wire Wire Line
+	7550 2325 7275 2325
+$Comp
+L josh-symbols:RN RN4
+U 3 1 5D3F321A
+P 7750 2325
+F 0 "RN4" V 7675 2325 50  0000 C CNN
+F 1 "330R" V 7750 2325 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 2325 50  0001 C CNN
+F 3 "~" H 7750 2325 50  0001 C CNN
+	3    7750 2325
+	0    1    1    0   
+$EndComp
+$Comp
+L josh-symbols:RN RN4
+U 1 1 5D3F320E
+P 7750 3125
+F 0 "RN4" V 7675 3125 50  0000 C CNN
+F 1 "330R" V 7750 3125 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 3125 50  0001 C CNN
+F 3 "~" H 7750 3125 50  0001 C CNN
+	1    7750 3125
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7550 3125 7275 3125
+Text Label 7275 3125 0    50   ~ 0
+SEG_DP
+Connection ~ 8050 2525
+Wire Wire Line
+	8050 2525 8050 2575
+Wire Wire Line
+	8050 2475 8050 2525
+Wire Wire Line
+	7275 2525 7550 2525
+$Comp
+L josh-symbols:RN RN4
+U 4 1 5D3F3220
+P 7750 2525
+F 0 "RN4" V 7675 2525 50  0000 C CNN
+F 1 "330R" V 7750 2525 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7750 2525 50  0001 C CNN
+F 3 "~" H 7750 2525 50  0001 C CNN
+	4    7750 2525
+	0    1    1    0   
+$EndComp
+Text Label 7275 2525 0    50   ~ 0
+SEG_E
+Wire Wire Line
+	7950 2525 8050 2525
+Wire Wire Line
+	8050 2875 8050 2925
+Wire Wire Line
+	8050 3675 8050 3725
+Wire Wire Line
+	8050 2675 8050 2725
+Connection ~ 8050 2725
+Wire Wire Line
+	8050 2725 8050 2775
+Connection ~ 8050 3725
+Wire Wire Line
+	8050 3725 8050 3775
+Wire Wire Line
+	7950 2925 8050 2925
+Connection ~ 8050 2925
+Wire Wire Line
+	8050 2925 8050 2975
+Wire Wire Line
+	7950 3125 8050 3125
+NoConn ~ 5925 3225
+NoConn ~ 4875 2925
+Connection ~ 3100 2450
+Wire Wire Line
+	3100 2450 3100 2975
+Connection ~ 3200 2350
+Wire Wire Line
+	3200 2350 3650 2350
+$EndSCHEMATC
