@@ -748,17 +748,6 @@ Wire Wire Line
 	10050 1050 10275 1050
 Text Label 6625 3575 0    50   ~ 0
 nLED
-$Comp
-L power:VBUS #PWR06
-U 1 1 6009B446
-P 1150 1150
-F 0 "#PWR06" H 1150 1000 50  0001 C CNN
-F 1 "VBUS" H 1165 1323 50  0000 C CNN
-F 2 "" H 1150 1150 50  0001 C CNN
-F 3 "" H 1150 1150 50  0001 C CNN
-	1    1150 1150
-	1    0    0    -1  
-$EndComp
 Text Label 9025 1200 2    50   ~ 0
 nICE_CRESET
 Wire Wire Line
@@ -791,7 +780,7 @@ Text Label 4300 2200 2    50   ~ 0
 TX_FPGA
 Text Label 4300 2125 2    50   ~ 0
 RX_FPGA
-Text Label 9150 1950 2    50   ~ 0
+Text Label 9025 1950 2    50   ~ 0
 TX_FPGA
 Text Label 6425 1300 0    50   ~ 0
 RX_FPGA
@@ -939,8 +928,6 @@ F 3 "~" H 1175 3100 50  0001 C CNN
 	1    1175 3100
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	975  3100 625  3100
 Connection ~ 625  3100
 Wire Wire Line
 	625  3100 625  3425
@@ -1043,7 +1030,7 @@ LDO_EN
 Wire Wire Line
 	9575 4500 9250 4500
 Wire Wire Line
-	1750 3425 2350 3425
+	1750 3425 2075 3425
 Connection ~ 1750 3425
 $Comp
 L power:GND #PWR017
@@ -1551,10 +1538,7 @@ F 3 "~" H 1775 1200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1150 1150 1150 1200
-Wire Wire Line
 	1150 1200 1150 1475
-Connection ~ 1150 1200
 Wire Wire Line
 	1150 1200 1200 1200
 $Comp
@@ -1733,8 +1717,6 @@ Wire Wire Line
 	10875 1975 10875 2000
 NoConn ~ 10775 2000
 NoConn ~ 10775 2400
-Wire Wire Line
-	2575 5475 3700 5475
 $Comp
 L Device:R_Pack04 RN1
 U 1 1 5E2BD3AD
@@ -1754,13 +1736,6 @@ Wire Wire Line
 Wire Wire Line
 	2575 5275 3700 5275
 Wire Wire Line
-	3425 5375 2575 5375
-Wire Wire Line
-	3700 5375 3425 5375
-Connection ~ 3425 5375
-Wire Wire Line
-	3425 4925 3425 5375
-Wire Wire Line
 	2575 4975 3525 4975
 Wire Wire Line
 	2575 5075 3225 5075
@@ -1769,11 +1744,10 @@ Wire Wire Line
 Connection ~ 3225 5075
 Wire Wire Line
 	3225 5075 3700 5075
-NoConn ~ 3325 4925
 Wire Wire Line
 	6425 1300 6900 1300
 Wire Wire Line
-	9150 1950 8525 1950
+	9025 1950 8525 1950
 Text Label 10900 4600 2    50   ~ 0
 IO0
 Wire Wire Line
@@ -1874,26 +1848,26 @@ Text Label 10900 3700 2    50   ~ 0
 IO9
 Wire Wire Line
 	10900 3700 10625 3700
-Text Label 8800 1850 2    50   ~ 0
+Text Label 9025 1850 2    50   ~ 0
 IO19
 Wire Wire Line
-	8800 1850 8525 1850
-Text Label 8800 1750 2    50   ~ 0
+	9025 1850 8525 1850
+Text Label 9025 1750 2    50   ~ 0
 IO18
 Wire Wire Line
-	8800 1750 8525 1750
-Text Label 8800 1650 2    50   ~ 0
+	9025 1750 8525 1750
+Text Label 9025 1650 2    50   ~ 0
 IO17
 Wire Wire Line
-	8800 1650 8525 1650
-Text Label 8800 1550 2    50   ~ 0
+	9025 1650 8525 1650
+Text Label 9025 1550 2    50   ~ 0
 IO16
 Wire Wire Line
-	8800 1550 8525 1550
-Text Label 8800 1450 2    50   ~ 0
+	9025 1550 8525 1550
+Text Label 9025 1450 2    50   ~ 0
 IO15
 Wire Wire Line
-	8800 1450 8525 1450
+	9025 1450 8525 1450
 Text Label 6625 3875 0    50   ~ 0
 IO14
 Wire Wire Line
@@ -1912,10 +1886,10 @@ Wire Wire Line
 	6625 3375 6900 3375
 Text Label 6425 1800 0    50   ~ 0
 IO8
-Text Label 6625 2200 0    50   ~ 0
+Text Label 6425 2200 0    50   ~ 0
 IO9
 Wire Wire Line
-	6625 2200 6900 2200
+	6425 2200 6900 2200
 Wire Wire Line
 	6425 1800 6900 1800
 Wire Wire Line
@@ -1933,8 +1907,8 @@ Wire Wire Line
 Text Label 6625 3475 0    50   ~ 0
 IO10
 Wire Wire Line
-	6425 3675 6900 3675
-Text Label 6425 3675 0    50   ~ 0
+	6625 3675 6900 3675
+Text Label 6625 3675 0    50   ~ 0
 IO7
 $Comp
 L Device:LED D8
@@ -2019,4 +1993,44 @@ NoConn ~ 10000 5950
 NoConn ~ 10000 6150
 NoConn ~ 10400 6150
 NoConn ~ 10400 5950
+NoConn ~ 6900 1900
+NoConn ~ 6900 2400
+NoConn ~ 6900 2500
+NoConn ~ 8525 2350
+NoConn ~ 8525 2250
+NoConn ~ 8525 2150
+NoConn ~ 8525 2050
+NoConn ~ 6900 3275
+Wire Wire Line
+	625  3100 975  3100
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D253666
+P 2075 3400
+F 0 "#FLG0101" H 2075 3475 50  0001 C CNN
+F 1 "PWR_FLAG" H 2075 3573 50  0000 C CNN
+F 2 "" H 2075 3400 50  0001 C CNN
+F 3 "~" H 2075 3400 50  0001 C CNN
+	1    2075 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2075 3400 2075 3425
+Connection ~ 2075 3425
+Wire Wire Line
+	2075 3425 2350 3425
+Wire Wire Line
+	2575 5475 3425 5475
+Wire Wire Line
+	2575 5375 3325 5375
+Wire Wire Line
+	3325 4925 3325 5375
+Connection ~ 3325 5375
+Wire Wire Line
+	3325 5375 3700 5375
+Wire Wire Line
+	3425 4925 3425 5475
+Connection ~ 3425 5475
+Wire Wire Line
+	3425 5475 3700 5475
 $EndSCHEMATC
