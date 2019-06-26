@@ -214,17 +214,6 @@ F 3 "~" H 3950 3150 50  0001 C CNN
 	1    3950 3150
 	-1   0    0    -1  
 $EndComp
-$Comp
-L 7seg-dip-wing-rescue:LTD-5623Ax-josh-symbols-7seg-dip-wing-rescue U1
-U 1 1 5D14A9DA
-P 8175 2175
-F 0 "U1" H 7725 2800 50  0000 C CNN
-F 1 "LTD-5623Ax" H 7900 2725 50  0000 C CNN
-F 2 "Display_7Segment:DA56-11SURKWA" H 8175 1575 50  0001 C CNN
-F 3 "https://docs.broadcom.com/docs/AV02-1589EN" H 7955 2275 50  0001 C CNN
-	1    8175 2175
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7575 2125 7550 2125
 Wire Wire Line
@@ -242,13 +231,13 @@ Wire Wire Line
 	7575 2525 7550 2525
 Wire Wire Line
 	7550 2625 7575 2625
-Text Label 6775 3575 0    50   ~ 0
+Text Label 6775 2575 0    50   ~ 0
 SEG_C
 Wire Wire Line
 	7575 2725 7550 2725
 Wire Wire Line
 	7550 2825 7575 2825
-Text Label 6775 2575 0    50   ~ 0
+Text Label 6775 2775 0    50   ~ 0
 SEG_D
 Wire Wire Line
 	7575 2925 7550 2925
@@ -262,23 +251,12 @@ Wire Wire Line
 	7575 3325 7550 3325
 Wire Wire Line
 	7550 3425 7575 3425
-Text Label 6775 3175 0    50   ~ 0
+Text Label 6775 3375 0    50   ~ 0
 SEG_G
 Wire Wire Line
 	7575 3525 7550 3525
 Wire Wire Line
 	7550 3625 7575 3625
-$Comp
-L 7seg-dip-wing-rescue:Feather-josh-symbols-7seg-dip-wing-rescue J1
-U 1 1 5D163790
-P 5375 2825
-F 0 "J1" H 5400 3790 50  0000 C CNN
-F 1 "Feather" H 5400 3699 50  0000 C CNN
-F 2 "josh-connectors:featherwing" H 5575 1875 50  0001 C CNN
-F 3 "" H 5575 1875 50  0001 C CNN
-	1    5375 2825
-	1    0    0    -1  
-$EndComp
 Text Notes 2975 1150 0    197  ~ 0
 7 Segment / DIP Switch Feather Wing
 Wire Wire Line
@@ -384,21 +362,21 @@ Text Label 10100 2225 2    50   ~ 0
 ANODE_1
 Text Label 10100 2325 2    50   ~ 0
 ANODE_2
-Text Label 6250 2625 2    50   ~ 0
-SEG_A
-Text Label 6250 2725 2    50   ~ 0
-SEG_B
-Text Label 6250 2825 2    50   ~ 0
-SEG_C
-Text Label 6250 2925 2    50   ~ 0
-SEG_D
-Text Label 6250 2225 2    50   ~ 0
-SEG_E
 Text Label 6250 2325 2    50   ~ 0
-SEG_F
-Text Label 6250 2425 2    50   ~ 0
-SEG_G
+SEG_A
+Text Label 6250 2225 2    50   ~ 0
+SEG_B
+Text Label 6250 2925 2    50   ~ 0
+SEG_C
+Text Label 6250 2625 2    50   ~ 0
+SEG_D
 Text Label 6250 2525 2    50   ~ 0
+SEG_E
+Text Label 6250 2425 2    50   ~ 0
+SEG_F
+Text Label 6250 2725 2    50   ~ 0
+SEG_G
+Text Label 6250 2825 2    50   ~ 0
 SEG_DP
 Wire Wire Line
 	6250 2625 5925 2625
@@ -424,17 +402,6 @@ Text Label 6275 3025 2    50   ~ 0
 ANODE_1
 Text Label 6275 3125 2    50   ~ 0
 ANODE_2
-$Comp
-L 7seg-dip-wing-rescue:74LVC2G17-josh-symbols-7seg-dip-wing-rescue U2
-U 1 1 5D1F9FB5
-P 9425 2275
-F 0 "U2" H 9450 2650 50  0000 C CNN
-F 1 "74LVC2G17" H 9450 2559 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 9375 2525 197 0001 C CNN
-F 3 "" H 9375 2525 197 0001 C CNN
-	1    9425 2275
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	9125 2225 8950 2225
 Wire Wire Line
@@ -476,98 +443,19 @@ Wire Wire Line
 Connection ~ 7550 3375
 Wire Wire Line
 	7550 3375 7550 3425
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN4
-U 2 1 5D3F3214
-P 7250 3175
-F 0 "RN4" V 7175 3175 50  0000 C CNN
-F 1 "330R" V 7250 3175 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 3175 50  0001 C CNN
-F 3 "~" H 7250 3175 50  0001 C CNN
-	2    7250 3175
-	0    1    1    0   
-$EndComp
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN3
-U 2 1 5D3A93B0
-P 7250 3575
-F 0 "RN3" V 7175 3575 50  0000 C CNN
-F 1 "330R" V 7250 3575 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 3575 50  0001 C CNN
-F 3 "~" H 7250 3575 50  0001 C CNN
-	2    7250 3575
-	0    1    1    0   
-$EndComp
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN3
-U 1 1 5D39AACC
-P 7250 2575
-F 0 "RN3" V 7175 2575 50  0000 C CNN
-F 1 "330R" V 7250 2575 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 2575 50  0001 C CNN
-F 3 "~" H 7250 2575 50  0001 C CNN
-	1    7250 2575
-	0    1    1    0   
-$EndComp
-Text Label 6775 3375 0    50   ~ 0
+Text Label 6775 2375 0    50   ~ 0
 SEG_B
 Wire Wire Line
 	7050 3375 6775 3375
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN3
-U 3 1 5D3AA440
-P 7250 3375
-F 0 "RN3" V 7175 3375 50  0000 C CNN
-F 1 "330R" V 7250 3375 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 3375 50  0001 C CNN
-F 3 "~" H 7250 3375 50  0001 C CNN
-	3    7250 3375
-	0    1    1    0   
-$EndComp
-Text Label 6775 2775 0    50   ~ 0
+Text Label 6775 2175 0    50   ~ 0
 SEG_A
 Wire Wire Line
 	6775 2775 7050 2775
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN3
-U 4 1 5D3AAE3C
-P 7250 2775
-F 0 "RN3" V 7175 2775 50  0000 C CNN
-F 1 "330R" V 7250 2775 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 2775 50  0001 C CNN
-F 3 "~" H 7250 2775 50  0001 C CNN
-	4    7250 2775
-	0    1    1    0   
-$EndComp
-Text Label 6775 2175 0    50   ~ 0
+Text Label 6775 3175 0    50   ~ 0
 SEG_F
 Wire Wire Line
-	7050 2175 6775 2175
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN4
-U 3 1 5D3F321A
-P 7250 2175
-F 0 "RN4" V 7175 2175 50  0000 C CNN
-F 1 "330R" V 7250 2175 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 2175 50  0001 C CNN
-F 3 "~" H 7250 2175 50  0001 C CNN
-	3    7250 2175
-	0    1    1    0   
-$EndComp
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN4
-U 1 1 5D3F320E
-P 7250 2975
-F 0 "RN4" V 7175 2975 50  0000 C CNN
-F 1 "330R" V 7250 2975 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 2975 50  0001 C CNN
-F 3 "~" H 7250 2975 50  0001 C CNN
-	1    7250 2975
-	0    1    1    0   
-$EndComp
-Wire Wire Line
 	7050 2975 6775 2975
-Text Label 6775 2975 0    50   ~ 0
+Text Label 6775 3575 0    50   ~ 0
 SEG_DP
 Connection ~ 7550 2375
 Wire Wire Line
@@ -576,18 +464,7 @@ Wire Wire Line
 	7550 2325 7550 2375
 Wire Wire Line
 	6775 2375 7050 2375
-$Comp
-L 7seg-dip-wing-rescue:RN-josh-symbols-7seg-dip-wing-rescue RN4
-U 4 1 5D3F3220
-P 7250 2375
-F 0 "RN4" V 7175 2375 50  0000 C CNN
-F 1 "330R" V 7250 2375 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" H 7250 2375 50  0001 C CNN
-F 3 "~" H 7250 2375 50  0001 C CNN
-	4    7250 2375
-	0    1    1    0   
-$EndComp
-Text Label 6775 2375 0    50   ~ 0
+Text Label 6775 2975 0    50   ~ 0
 SEG_E
 Wire Wire Line
 	7450 2375 7550 2375
@@ -668,4 +545,127 @@ Wire Wire Line
 	3950 2325 3950 2950
 Wire Wire Line
 	4050 2225 4050 2950
+$Comp
+L josh-connector:Feather J1
+U 1 1 5D175B15
+P 5375 2825
+F 0 "J1" H 5400 3790 50  0000 C CNN
+F 1 "Feather" H 5400 3699 50  0000 C CNN
+F 2 "josh-connectors:featherwing" H 5575 1875 50  0001 C CNN
+F 3 "" H 5575 1875 50  0001 C CNN
+	1    5375 2825
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-led:LTD-5623Ax U1
+U 1 1 5D176950
+P 8175 2175
+F 0 "U1" H 8175 2842 50  0000 C CNN
+F 1 "LTD-5623Ax" H 8175 2751 50  0000 C CNN
+F 2 "Display_7Segment:DA56-11SEKWA" H 8175 1575 50  0001 C CNN
+F 3 "https://docs.broadcom.com/docs/AV02-1589EN" H 7955 2275 50  0001 C CNN
+	1    8175 2175
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-logic:74LVC2G17 U2
+U 1 1 5D177631
+P 9425 2275
+F 0 "U2" H 9450 2650 50  0000 C CNN
+F 1 "74LVC2G17" H 9450 2559 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 9375 2525 197 0001 C CNN
+F 3 "" H 9375 2525 197 0001 C CNN
+	1    9425 2275
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6775 2175 7050 2175
+$Comp
+L josh-passive:RN RN3
+U 1 1 5D230879
+P 7250 2975
+F 0 "RN3" H 7250 3050 50  0000 C CNN
+F 1 "330R" H 7250 2975 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 2975 50  0001 C CNN
+F 3 "~" V 7250 2975 50  0001 C CNN
+	1    7250 2975
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN3
+U 2 1 5D230E31
+P 7250 3175
+F 0 "RN3" H 7250 3250 50  0000 C CNN
+F 1 "330R" H 7250 3175 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 3175 50  0001 C CNN
+F 3 "~" V 7250 3175 50  0001 C CNN
+	2    7250 3175
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN3
+U 3 1 5D2314FF
+P 7250 2175
+F 0 "RN3" H 7250 2250 50  0000 C CNN
+F 1 "330R" H 7250 2175 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 2175 50  0001 C CNN
+F 3 "~" V 7250 2175 50  0001 C CNN
+	3    7250 2175
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN3
+U 4 1 5D231D9A
+P 7250 2375
+F 0 "RN3" H 7250 2450 50  0000 C CNN
+F 1 "330R" H 7250 2375 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 2375 50  0001 C CNN
+F 3 "~" V 7250 2375 50  0001 C CNN
+	4    7250 2375
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN4
+U 1 1 5D243933
+P 7250 2575
+F 0 "RN4" H 7250 2650 50  0000 C CNN
+F 1 "330R" H 7250 2575 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 2575 50  0001 C CNN
+F 3 "~" V 7250 2575 50  0001 C CNN
+	1    7250 2575
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN4
+U 2 1 5D243939
+P 7250 3575
+F 0 "RN4" H 7250 3650 50  0000 C CNN
+F 1 "330R" H 7250 3575 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 3575 50  0001 C CNN
+F 3 "~" V 7250 3575 50  0001 C CNN
+	2    7250 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN4
+U 3 1 5D24393F
+P 7250 3375
+F 0 "RN4" H 7250 3450 50  0000 C CNN
+F 1 "330R" H 7250 3375 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 3375 50  0001 C CNN
+F 3 "~" V 7250 3375 50  0001 C CNN
+	3    7250 3375
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:RN RN4
+U 4 1 5D243945
+P 7250 2775
+F 0 "RN4" H 7250 2850 50  0000 C CNN
+F 1 "330R" H 7250 2775 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 7250 2775 50  0001 C CNN
+F 3 "~" V 7250 2775 50  0001 C CNN
+	4    7250 2775
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

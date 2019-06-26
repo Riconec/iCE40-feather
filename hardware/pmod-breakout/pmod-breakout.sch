@@ -341,8 +341,8 @@ NoConn ~ 4825 2275
 NoConn ~ 4825 2375
 NoConn ~ 3775 2875
 $Comp
-L josh-mechnanical:Feather J1
-U 1 1 5D167D65
+L josh-connector:Feather J1
+U 1 1 5D2CB6BF
 P 4275 2775
 F 0 "J1" H 4300 3740 50  0000 C CNN
 F 1 "Feather" H 4300 3649 50  0000 C CNN
