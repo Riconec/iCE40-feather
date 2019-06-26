@@ -342,17 +342,6 @@ Wire Wire Line
 Wire Wire Line
 	3975 6900 4625 6900
 Connection ~ 3375 5575
-$Comp
-L josh-symbols:FT2232H U8
-U 1 1 60207C83
-P 5225 4675
-F 0 "U8" H 4200 6850 50  0000 C CNN
-F 1 "FT2232H" H 4325 6775 50  0000 C CNN
-F 2 "josh-footprints:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias" H 5225 4675 50  0001 C CNN
-F 3 "http://www.ftdichip.com/Products/ICs/FT2232H.html" H 5225 4675 50  0001 C CNN
-	1    5225 4675
-	1    0    0    -1  
-$EndComp
 Text HLabel 3875 3775 0    50   Input ~ 0
 USB_N
 Text HLabel 3875 3875 0    50   Input ~ 0
@@ -474,32 +463,6 @@ Wire Wire Line
 	3200 1800 3200 1525
 Wire Wire Line
 	3325 1800 3200 1800
-$Comp
-L josh-symbols:Ferrite_Bead_PWR FB?
-U 1 1 5EDD47E7
-P 3475 1800
-AR Path="/5EDD47E7" Ref="FB?"  Part="1" 
-AR Path="/5ED7AB6B/5EDD47E7" Ref="FB3"  Part="1" 
-F 0 "FB3" V 3425 1675 50  0000 C CNN
-F 1 "600R " V 3550 1950 50  0000 C CNN
-F 2 "josh-footprints:BEADC1608X95N" V 3405 1800 50  0001 C CNN
-F 3 "~" H 3475 1800 50  0001 C CNN
-	1    3475 1800
-	0    1    1    0   
-$EndComp
-$Comp
-L josh-symbols:Ferrite_Bead_PWR FB?
-U 1 1 5EDD47E1
-P 3475 1525
-AR Path="/5EDD47E1" Ref="FB?"  Part="1" 
-AR Path="/5ED7AB6B/5EDD47E1" Ref="FB2"  Part="1" 
-F 0 "FB2" V 3425 1400 50  0000 C CNN
-F 1 "600R " V 3550 1700 50  0000 C CNN
-F 2 "josh-footprints:BEADC1608X95N" V 3405 1525 50  0001 C CNN
-F 3 "~" H 3475 1525 50  0001 C CNN
-	1    3475 1525
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	3200 1525 3325 1525
 Wire Wire Line
@@ -674,17 +637,6 @@ Wire Wire Line
 	6425 3475 6600 3475
 NoConn ~ 6425 6375
 NoConn ~ 6425 6475
-$Comp
-L josh-symbols:93C46B U7
-U 1 1 61FB4482
-P 2075 5575
-F 0 "U7" H 2075 6000 50  0000 C CNN
-F 1 "93C46B" H 2075 5909 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2075 5575 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 2075 5575 50  0001 C CNN
-	1    2075 5575
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3625 1800 4400 1800
 Wire Wire Line
@@ -746,4 +698,48 @@ Wire Wire Line
 Connection ~ 4725 6900
 Wire Wire Line
 	4725 6900 4825 6900
+$Comp
+L josh-memory:93C46B U6
+U 1 1 5D14D3ED
+P 2075 5525
+F 0 "U6" H 2325 5850 50  0000 C CNN
+F 1 "93C46B" H 2225 5775 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2075 5475 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf" H 2075 5475 50  0001 C CNN
+	1    2075 5525
+	-1   0    0    -1  
+$EndComp
+$Comp
+L josh-ic:FT2232H U7
+U 1 1 5D152328
+P 5225 4675
+F 0 "U7" H 4200 6850 50  0000 C CNN
+F 1 "FT2232H" H 4325 6775 50  0000 C CNN
+F 2 "josh-dfn-qfn:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias" H 5225 4675 50  0001 C CNN
+F 3 "" H 5225 4675 50  0001 C CNN
+	1    5225 4675
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:Ferrite_Bead_PWR FB2
+U 1 1 5D1534FB
+P 3475 1525
+F 0 "FB2" H 3600 1475 50  0000 C CNN
+F 1 "600R" H 3325 1575 50  0000 C CNN
+F 2 "josh-passives-smt:Ferrite_Bead_0603" H 3475 1455 50  0001 C CNN
+F 3 "~" V 3475 1525 50  0001 C CNN
+	1    3475 1525
+	-1   0    0    1   
+$EndComp
+$Comp
+L josh-passive:Ferrite_Bead_PWR FB3
+U 1 1 5D153B32
+P 3475 1800
+F 0 "FB3" H 3600 1750 50  0000 C CNN
+F 1 "600R" H 3325 1875 50  0000 C CNN
+F 2 "josh-passives-smt:Ferrite_Bead_0603" H 3475 1730 50  0001 C CNN
+F 3 "~" V 3475 1800 50  0001 C CNN
+	1    3475 1800
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

@@ -15,23 +15,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L josh-symbols:Feather J1
-U 1 1 5D133E2D
-P 4275 2775
-F 0 "J1" H 4300 3740 50  0000 C CNN
-F 1 "Feather" H 4300 3649 50  0000 C CNN
-F 2 "josh-footprints:PCB_FeatherWing" H 4475 1825 50  0001 C CNN
-F 3 "" H 4475 1825 50  0001 C CNN
-	1    4275 2775
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_02x06_Top_Bottom J2
 U 1 1 5D13969D
 P 6300 2300
 F 0 "J2" H 6350 2717 50  0000 C CNN
 F 1 "PMOD" H 6350 2626 50  0000 C CNN
-F 2 "josh-footprints:PMOD_HOST" H 6300 2300 50  0001 C CNN
+F 2 "josh-connectors:PMOD_HOST" H 6300 2300 50  0001 C CNN
 F 3 "~" H 6300 2300 50  0001 C CNN
 	1    6300 2300
 	1    0    0    -1  
@@ -152,7 +141,7 @@ U 1 1 5D13FDD1
 P 6325 3650
 F 0 "J3" H 6375 4067 50  0000 C CNN
 F 1 "PMOD" H 6375 3976 50  0000 C CNN
-F 2 "josh-footprints:PMOD_HOST" H 6325 3650 50  0001 C CNN
+F 2 "josh-connectors:PMOD_HOST" H 6325 3650 50  0001 C CNN
 F 3 "~" H 6325 3650 50  0001 C CNN
 	1    6325 3650
 	1    0    0    -1  
@@ -351,4 +340,15 @@ NoConn ~ 4825 2175
 NoConn ~ 4825 2275
 NoConn ~ 4825 2375
 NoConn ~ 3775 2875
+$Comp
+L josh-mechnanical:Feather J1
+U 1 1 5D167D65
+P 4275 2775
+F 0 "J1" H 4300 3740 50  0000 C CNN
+F 1 "Feather" H 4300 3649 50  0000 C CNN
+F 2 "josh-connectors:featherwing" H 4475 1825 50  0001 C CNN
+F 3 "" H 4475 1825 50  0001 C CNN
+	1    4275 2775
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

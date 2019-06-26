@@ -159,7 +159,7 @@ U 1 1 5D581101
 P 825 1675
 F 0 "J1" H 882 2142 50  0000 C CNN
 F 1 "USB_B_Micro" H 882 2051 50  0000 C CNN
-F 2 "josh-footprints:MicroUSB_Aliexpress" H 975 1625 50  0001 C CNN
+F 2 "josh-connectors:USB_Micro_Aliexpress" H 975 1625 50  0001 C CNN
 F 3 "~" H 975 1625 50  0001 C CNN
 	1    825  1675
 	1    0    0    -1  
@@ -230,17 +230,6 @@ F 3 "" H 5675 5050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	5675 5050 5675 5075
-$Comp
-L josh-symbols:ICE40UP5K-SG48ITR U6
-U 4 1 5D7B18BA
-P 8150 5075
-F 0 "U6" V 8517 5075 50  0000 C CNN
-F 1 "ICE40UP5K-SG48ITR" V 8426 5075 50  0000 C CNN
-F 2 "josh-footprints:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 8150 3725 50  0001 C CNN
-F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 7750 6075 50  0001 C CNN
-	4    8150 5075
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	6525 5075 7750 5075
 $Comp
@@ -336,17 +325,6 @@ Wire Notes Line
 	8975 5725 8975 4175
 Wire Notes Line
 	8975 4175 5250 4175
-$Comp
-L josh-symbols:LED_RGBA D6
-U 1 1 5DF3E79D
-P 10725 1725
-F 0 "D6" V 10950 2025 50  0000 C CNN
-F 1 "LTST-C19HE1WT" V 10875 2050 50  0000 C CNN
-F 2 "josh-footprints:0606LED" H 10725 1675 50  0001 C CNN
-F 3 "~" H 10725 1675 50  0001 C CNN
-	1    10725 1725
-	0    -1   -1   0   
-$EndComp
 $Comp
 L power:+3V3 #PWR050
 U 1 1 5DF529F3
@@ -569,51 +547,6 @@ F 1 "GND" H 2755 6377 50  0000 C CNN
 F 2 "" H 2750 6550 50  0001 C CNN
 F 3 "" H 2750 6550 50  0001 C CNN
 	1    2750 6550
-	1    0    0    -1  
-$EndComp
-$Comp
-L josh-symbols:DSC6101CI1A X1
-U 1 1 5D21E955
-P 3575 6700
-F 0 "X1" H 3575 7115 50  0000 C CNN
-F 1 "DSC6101CI1A" H 3575 7024 50  0000 C CNN
-F 2 "josh-footprints:CDFN_3.2x2.5mm_XO" H 3475 7300 100 0001 C CNN
-F 3 "" H 3475 7300 100 0001 C CNN
-F 4 "DSC6101CI1A-012.0000T" H 3475 7300 100 0001 C CNN "MPN"
-	1    3575 6700
-	1    0    0    -1  
-$EndComp
-$Comp
-L josh-symbols:ICE40UP5K-SG48ITR U6
-U 1 1 5D956843
-P 7300 1800
-F 0 "U6" H 6975 2700 50  0000 L CNN
-F 1 "ICE40UP5K-SG48ITR" V 7550 1400 50  0000 L CNN
-F 2 "josh-footprints:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 7300 450 50  0001 C CNN
-F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 6900 2800 50  0001 C CNN
-	1    7300 1800
-	1    0    0    -1  
-$EndComp
-$Comp
-L josh-symbols:ICE40UP5K-SG48ITR U6
-U 2 1 5D957FE6
-P 8025 1850
-F 0 "U6" H 7700 2800 50  0000 C CNN
-F 1 "ICE40UP5K-SG48ITR" V 8350 1850 50  0000 C CNN
-F 2 "josh-footprints:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 8025 500 50  0001 C CNN
-F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 7625 2850 50  0001 C CNN
-	2    8025 1850
-	-1   0    0    -1  
-$EndComp
-$Comp
-L josh-symbols:ICE40UP5K-SG48ITR U6
-U 3 1 5D9593F0
-P 7300 3475
-F 0 "U6" H 7000 3975 50  0000 L CNN
-F 1 "ICE40UP5K-SG48ITR" V 7550 3075 50  0000 L CNN
-F 2 "josh-footprints:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 7300 2125 50  0001 C CNN
-F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 6900 4475 50  0001 C CNN
-	3    7300 3475
 	1    0    0    -1  
 $EndComp
 Text Notes 6675 700  0    118  ~ 0
@@ -851,17 +784,6 @@ Wire Notes Line
 	8975 4150 5250 4150
 Wire Notes Line
 	5250 4150 5250 500 
-$Comp
-L iCE40-fpga-rescue:Feather-josh-symbols J3
-U 1 1 60FEA732
-P 10075 4200
-F 0 "J3" H 9725 5050 50  0000 C CNN
-F 1 "Feather" H 10400 5050 50  0000 C CNN
-F 2 "josh-footprints:PCB_FeatherWing" H 10075 5150 50  0001 C CNN
-F 3 "" H 10075 5150 50  0001 C CNN
-	1    10075 4200
-	1    0    0    -1  
-$EndComp
 Text Notes 9325 3200 0    118  ~ 0
 Feather Footprint
 $Comp
@@ -1151,7 +1073,7 @@ U 1 1 617F1813
 P 1250 6675
 F 0 "J2" H 1250 6375 50  0000 C CNN
 F 1 "JST_PH" H 1350 6450 50  0000 C CNN
-F 2 "josh-footprints:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 1250 6675 50  0001 C CNN
+F 2 "josh-connectors:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 1250 6675 50  0001 C CNN
 F 3 "~" H 1250 6675 50  0001 C CNN
 	1    1250 6675
 	1    0    0    1   
@@ -1318,17 +1240,6 @@ F 1 "+5V" H 1415 4898 50  0000 C CNN
 F 2 "" H 1400 4725 50  0001 C CNN
 F 3 "" H 1400 4725 50  0001 C CNN
 	1    1400 4725
-	1    0    0    -1  
-$EndComp
-$Comp
-L josh-symbols:MCP73831-2-OT U1
-U 1 1 61B3FFEE
-P 1400 5050
-F 0 "U1" H 1100 5300 50  0000 L CNN
-F 1 "MCP73831-2-OT" H 1400 5300 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1450 4800 50  0001 L CIN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 1250 5000 50  0001 C CNN
-	1    1400 5050
 	1    0    0    -1  
 $EndComp
 Text Notes 625  6000 0    118  ~ 0
@@ -1526,17 +1437,6 @@ F 3 "" H 1950 1175 50  0001 C CNN
 	1    1950 1175
 	1    0    0    -1  
 $EndComp
-$Comp
-L josh-symbols:Ferrite_Bead_PWR FB1
-U 1 1 5D6790C3
-P 1775 1200
-F 0 "FB1" V 1725 1075 50  0000 C CNN
-F 1 "600R " V 1850 1375 50  0000 C CNN
-F 2 "josh-footprints:BEADC1608X95N" V 1705 1200 50  0001 C CNN
-F 3 "~" H 1775 1200 50  0001 C CNN
-	1    1775 1200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	1150 1200 1150 1475
 Wire Wire Line
@@ -1547,7 +1447,7 @@ U 1 1 5D2D3867
 P 1350 1200
 F 0 "F1" V 1250 1200 50  0000 C CNN
 F 1 "500mA" V 1450 1200 50  0000 C CNN
-F 2 "josh-footprints:Fuse_0805_2012Metric" H 1400 1000 50  0001 L CNN
+F 2 "josh-passives-smt:Fuse_0805_2012Metric" H 1400 1000 50  0001 L CNN
 F 3 "~" H 1350 1200 50  0001 C CNN
 	1    1350 1200
 	0    1    1    0   
@@ -1639,10 +1539,6 @@ Wire Wire Line
 Wire Wire Line
 	10575 1975 10575 2000
 Wire Wire Line
-	10725 1925 10675 1925
-Wire Wire Line
-	10675 1925 10675 2000
-Wire Wire Line
 	10925 1975 10925 1925
 Wire Wire Line
 	8525 2650 9175 2650
@@ -1689,17 +1585,6 @@ F 2 "" H 9400 1125 50  0001 C CNN
 F 3 "" H 9400 1125 50  0001 C CNN
 	1    9400 1125
 	-1   0    0    -1  
-$EndComp
-$Comp
-L josh-symbols:W25Q32JVZP U2
-U 1 1 5D231D5E
-P 4200 5175
-F 0 "U2" H 4050 5642 50  0000 C CNN
-F 1 "W25Q32JVZP" H 4050 5551 50  0000 C CNN
-F 2 "josh-footprints:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm" H 4200 5175 50  0001 C CNN
-F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 4200 5175 50  0001 C CNN
-	1    4200 5175
-	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4400 5375 4475 5375
@@ -2033,4 +1918,119 @@ Wire Wire Line
 Connection ~ 3425 5475
 Wire Wire Line
 	3425 5475 3700 5475
+$Comp
+L josh-ic:ICE40UP5K-SG48ITR U4
+U 1 1 5D149515
+P 7300 1800
+F 0 "U4" H 7000 2700 50  0000 L CNN
+F 1 "ICE40UP5K-SG48ITR" V 7550 1400 50  0000 L CNN
+F 2 "josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 7300 450 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 6900 2800 50  0001 C CNN
+	1    7300 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-ic:ICE40UP5K-SG48ITR U4
+U 2 1 5D14A139
+P 8025 1850
+F 0 "U4" H 7700 2800 50  0000 C CNN
+F 1 "ICE40UP5K-SG48ITR" V 8325 1900 50  0000 C CNN
+F 2 "josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 8025 500 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 7625 2850 50  0001 C CNN
+	2    8025 1850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L josh-ic:ICE40UP5K-SG48ITR U4
+U 4 1 5D14D4D9
+P 8150 5075
+F 0 "U4" V 8517 5075 50  0000 C CNN
+F 1 "ICE40UP5K-SG48ITR" V 8426 5075 50  0000 C CNN
+F 2 "josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 8150 3725 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 7750 6075 50  0001 C CNN
+	4    8150 5075
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10725 1925 10675 1925
+Wire Wire Line
+	10675 1925 10675 2000
+$Comp
+L josh-ic:ICE40UP5K-SG48ITR U4
+U 3 1 5D14B5D1
+P 7300 3475
+F 0 "U4" H 7000 3975 50  0000 L CNN
+F 1 "ICE40UP5K-SG48ITR" V 7550 3075 50  0000 L CNN
+F 2 "josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.3x5.3mm_ThermalVias" H 7300 2125 50  0001 C CNN
+F 3 "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra" H 6900 4475 50  0001 C CNN
+	3    7300 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-led:LED_RGBA D6
+U 1 1 5D15DF05
+P 10725 1725
+F 0 "D6" V 10950 2125 50  0000 R CNN
+F 1 "LED_RGBA" V 10875 2125 50  0000 R CNN
+F 2 "josh-led:LED_0606" H 10725 1675 50  0001 C CNN
+F 3 "~" H 10725 1675 50  0001 C CNN
+	1    10725 1725
+	0    -1   -1   0   
+$EndComp
+$Comp
+L josh-mechnanical:Feather J3
+U 1 1 5D18E7FC
+P 10075 4200
+F 0 "J3" H 10100 5165 50  0000 C CNN
+F 1 "Feather" H 10100 5074 50  0000 C CNN
+F 2 "josh-connectors:featherwing" H 10275 3250 50  0001 C CNN
+F 3 "" H 10275 3250 50  0001 C CNN
+	1    10075 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-power:MCP73831-2-OT U1
+U 1 1 5D1900C1
+P 1400 5050
+F 0 "U1" H 1100 5300 50  0000 L CNN
+F 1 "MCP73831-2-OT" H 1425 5300 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1450 4800 50  0001 L CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf" H 1250 5000 50  0001 C CNN
+	1    1400 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-memory:W25Q32JVZP U2
+U 1 1 5D1A5CE7
+P 4200 5175
+F 0 "U2" H 4050 5642 50  0000 C CNN
+F 1 "W25Q32JVZP" H 4050 5551 50  0000 C CNN
+F 2 "josh-soic-sot-etc:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm" H 4200 5175 50  0001 C CNN
+F 3 "http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf" H 4200 5175 50  0001 C CNN
+	1    4200 5175
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-oscillator:DSC6101CI1A X1
+U 1 1 5D1A645F
+P 3575 6700
+F 0 "X1" H 3575 7115 50  0000 C CNN
+F 1 "DSC6101CI1A" H 3575 7024 50  0000 C CNN
+F 2 "josh-oscillators:CDFN_3.2x2.5mm_XO" H 3475 7300 100 0001 C CNN
+F 3 "" H 3475 7300 100 0001 C CNN
+F 4 "DSC6101CI1A-012.0000T" H 3475 7300 100 0001 C CNN "MPN"
+	1    3575 6700
+	1    0    0    -1  
+$EndComp
+$Comp
+L josh-passive:Ferrite_Bead_PWR FB1
+U 1 1 5D168C93
+P 1775 1200
+F 0 "FB1" H 1650 1250 50  0000 C CNN
+F 1 "600R" H 1900 1125 50  0000 C CNN
+F 2 "josh-passives-smt:Ferrite_Bead_0603" H 1775 1130 50  0001 C CNN
+F 3 "~" V 1775 1200 50  0001 C CNN
+	1    1775 1200
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
