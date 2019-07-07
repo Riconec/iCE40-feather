@@ -1656,12 +1656,9 @@ Wire Wire Line
 Wire Wire Line
 	9875 5850 10000 5850
 NoConn ~ 6900 1900
-NoConn ~ 6900 2500
-NoConn ~ 8525 2350
 NoConn ~ 8525 2250
 NoConn ~ 8525 2150
-NoConn ~ 8525 2050
-NoConn ~ 6900 3275
+NoConn ~ 8525 2350
 Wire Wire Line
 	625  3100 975  3100
 $Comp
@@ -1947,7 +1944,6 @@ Wire Wire Line
 	10925 1975 10875 1975
 Wire Wire Line
 	10875 1975 10875 2025
-NoConn ~ 6900 3675
 Wire Wire Line
 	10700 1050 10725 1050
 Wire Wire Line
@@ -2097,4 +2093,56 @@ Wire Wire Line
 Connection ~ 4000 3300
 Wire Wire Line
 	4000 3300 4050 3300
+$Comp
+L Connector:TestPoint TP3
+U 1 1 5D23FA3D
+P 6600 3675
+F 0 "TP3" V 6650 3925 50  0000 C CNN
+F 1 "23" V 6550 3925 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6800 3675 50  0001 C CNN
+F 3 "~" H 6800 3675 50  0001 C CNN
+	1    6600 3675
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6600 3675 6900 3675
+$Comp
+L Connector:TestPoint TP2
+U 1 1 5D26AE62
+P 6600 3275
+F 0 "TP2" V 6650 3500 50  0000 C CNN
+F 1 "20" V 6550 3500 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6800 3275 50  0001 C CNN
+F 3 "~" H 6800 3275 50  0001 C CNN
+	1    6600 3275
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6600 3275 6900 3275
+$Comp
+L Connector:TestPoint TP1
+U 1 1 5D28130D
+P 6500 2500
+F 0 "TP1" V 6550 2725 50  0000 C CNN
+F 1 "22" V 6450 2750 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6700 2500 50  0001 C CNN
+F 3 "~" H 6700 2500 50  0001 C CNN
+	1    6500 2500
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6500 2500 6900 2500
+$Comp
+L Connector:TestPoint TP4
+U 1 1 5D2B0957
+P 9050 2050
+F 0 "TP4" V 8975 2275 50  0000 C CNN
+F 1 "21" V 9075 2275 50  0000 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9250 2050 50  0001 C CNN
+F 3 "~" H 9250 2050 50  0001 C CNN
+	1    9050 2050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9050 2050 8525 2050
 $EndSCHEMATC

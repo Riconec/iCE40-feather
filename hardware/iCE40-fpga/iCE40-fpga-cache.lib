@@ -21,6 +21,23 @@ X Pin_2 2 200 -100 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
+# Connector_TestPoint
+#
+DEF Connector_TestPoint TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "Connector_TestPoint" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_USB_B_Micro
 #
 DEF Connector_USB_B_Micro J 0 40 Y Y 1 F N
@@ -611,7 +628,7 @@ ENDDEF
 # josh-passive_RN
 #
 DEF josh-passive_RN RN 0 0 N Y 4 F N
-F0 "RN" 0 -100 50 H V C CNN
+F0 "RN" 0 70 50 H V C CNN
 F1 "josh-passive_RN" 0 0 50 H V C CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
