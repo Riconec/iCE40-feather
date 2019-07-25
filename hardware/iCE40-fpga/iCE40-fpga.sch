@@ -329,12 +329,8 @@ F 3 "" H 10725 1500 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10875 2425 10875 2900
-Text Label 10875 2900 1    50   ~ 0
-nLED_BLUE
 Wire Wire Line
 	10775 2425 10775 2900
-Text Label 10775 2900 1    50   ~ 0
-nLED_GREEN
 Wire Wire Line
 	10575 2425 10575 2900
 Text Label 10575 2900 1    50   ~ 0
@@ -501,11 +497,11 @@ iCE40UP5K FPGA IO
 Wire Wire Line
 	6900 2600 6425 2600
 Text Label 6425 2600 0    50   ~ 0
-nLED_BLUE
+nLED_BLU
 Wire Wire Line
 	6900 2700 6425 2700
 Text Label 6425 2700 0    50   ~ 0
-nLED_GREEN
+nLED_GRN
 Wire Wire Line
 	6900 2800 6425 2800
 Text Label 6425 2800 0    50   ~ 0
@@ -618,7 +614,7 @@ nICE_CRESET
 Wire Wire Line
 	3575 1350 4300 1350
 Text Label 4300 1350 2    50   ~ 0
-ICE_SCK
+FLASH_SCK
 Wire Wire Line
 	3575 1475 4300 1475
 Text Label 4300 1475 2    50   ~ 0
@@ -630,7 +626,7 @@ FLASH_MISO|IO1
 Wire Wire Line
 	3575 1700 4300 1700
 Text Label 4300 1700 2    50   ~ 0
-ICE_SS
+FLASH_SS
 Wire Wire Line
 	3575 1800 4300 1800
 Text Label 4300 1800 2    50   ~ 0
@@ -642,13 +638,13 @@ nICE_CRESET
 Text Label 2075 2175 0    50   ~ 0
 ICE_CLK
 Text Label 4300 2200 2    50   ~ 0
-TX_FPGA
+UART_TX
 Text Label 4300 2125 2    50   ~ 0
-RX_FPGA
+UART_RX
 Text Label 9025 1950 2    50   ~ 0
-TX_FPGA
+UART_TX
 Text Label 6425 1300 0    50   ~ 0
-RX_FPGA
+UART_RX
 Wire Wire Line
 	8575 1050 8525 1050
 $Comp
@@ -903,17 +899,6 @@ Wire Wire Line
 	1550 6575 1550 6500
 Wire Wire Line
 	1450 6575 1550 6575
-$Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 617F1813
-P 1250 6675
-F 0 "J2" H 1250 6375 50  0000 C CNN
-F 1 "JST_PH" H 1350 6450 50  0000 C CNN
-F 2 "josh-connectors:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 1250 6675 50  0001 C CNN
-F 3 "~" H 1250 6675 50  0001 C CNN
-	1    1250 6675
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	10725 1500 10725 1525
 Wire Notes Line
@@ -1358,7 +1343,7 @@ $EndComp
 Wire Wire Line
 	8525 2650 9175 2650
 Text Label 9175 2650 2    50   ~ 0
-ICE_SCK
+FLASH_SCK
 Wire Wire Line
 	8525 2450 9175 2450
 Text Label 9175 2450 2    50   ~ 0
@@ -1368,7 +1353,7 @@ Wire Wire Line
 Text Label 9175 2550 2    50   ~ 0
 FLASH_MISO|IO1
 Text Label 9175 2750 2    50   ~ 0
-ICE_SS
+FLASH_SS
 Wire Wire Line
 	9175 2750 8525 2750
 Wire Wire Line
@@ -1427,146 +1412,108 @@ Wire Wire Line
 	6425 1300 6900 1300
 Wire Wire Line
 	9025 1950 8525 1950
-Text Label 10900 4600 2    50   ~ 0
-IO0
 Wire Wire Line
 	10900 4600 10625 4600
-Text Label 10900 4500 2    50   ~ 0
-IO1
 Wire Wire Line
 	10900 4500 10625 4500
-Text Label 10900 4400 2    50   ~ 0
-IO2
 Wire Wire Line
 	10900 4400 10625 4400
-Text Label 10900 4300 2    50   ~ 0
-IO3
 Wire Wire Line
 	10900 4300 10625 4300
-Text Label 6425 1200 0    50   ~ 0
-IO0
 Wire Wire Line
 	6425 1200 6900 1200
 Text Label 6425 1500 0    50   ~ 0
-IO1
+IO_1
 Wire Wire Line
 	6425 1500 6900 1500
 Text Label 6425 1400 0    50   ~ 0
-IO2
+IO_2
 Wire Wire Line
 	6425 1400 6900 1400
 Text Label 6425 1600 0    50   ~ 0
-IO3
+IO_3
 Wire Wire Line
 	6425 1600 6900 1600
-Text Label 10900 4200 2    50   ~ 0
-IO4
 Wire Wire Line
 	10900 4200 10625 4200
-Text Label 10900 4100 2    50   ~ 0
-IO5
 Wire Wire Line
 	10900 4100 10625 4100
 Text Label 6425 2200 0    50   ~ 0
-IO4
+IO_4
 Wire Wire Line
 	6425 2200 6900 2200
 Text Label 6425 1700 0    50   ~ 0
-IO5
+IO_5
 Wire Wire Line
 	6425 1700 6900 1700
 Text Label 6425 1800 0    50   ~ 0
-IO6
+IO_6
 Wire Wire Line
 	6425 1800 6900 1800
-Text Label 10900 4000 2    50   ~ 0
-IO6
 Wire Wire Line
 	10900 4000 10625 4000
-Text Label 9300 4300 0    50   ~ 0
-IO19
 Wire Wire Line
 	9300 4300 9575 4300
-Text Label 9300 4200 0    50   ~ 0
-IO18
 Wire Wire Line
 	9300 4200 9575 4200
-Text Label 9300 4100 0    50   ~ 0
-IO17
 Wire Wire Line
 	9300 4100 9575 4100
-Text Label 9300 4000 0    50   ~ 0
-IO16
 Wire Wire Line
 	9300 4000 9575 4000
-Text Label 9300 3900 0    50   ~ 0
-IO15
 Wire Wire Line
 	9300 3900 9575 3900
-Text Label 9300 3800 0    50   ~ 0
-IO14
 Wire Wire Line
 	9300 3800 9575 3800
-Text Label 9300 3700 0    50   ~ 0
-IO13
 Wire Wire Line
 	9300 3700 9575 3700
-Text Label 9300 3600 0    50   ~ 0
-IO12
 Wire Wire Line
 	9300 3600 9575 3600
-Text Label 9300 3500 0    50   ~ 0
-IO11
 Wire Wire Line
 	9300 3500 9575 3500
-Text Label 10900 3800 2    50   ~ 0
-IO8
 Wire Wire Line
 	10900 3800 10625 3800
-Text Label 10900 3700 2    50   ~ 0
-IO9
 Wire Wire Line
 	10900 3700 10625 3700
 Text Label 9025 1850 2    50   ~ 0
-IO19
+IO_19
 Wire Wire Line
 	9025 1850 8525 1850
 Text Label 9025 1750 2    50   ~ 0
-IO18
+IO_18
 Wire Wire Line
 	9025 1750 8525 1750
 Text Label 9025 1650 2    50   ~ 0
-IO17
+IO_17
 Wire Wire Line
 	9025 1650 8525 1650
 Text Label 9025 1550 2    50   ~ 0
-IO16
+IO_16
 Wire Wire Line
 	9025 1550 8525 1550
 Text Label 9025 1450 2    50   ~ 0
-IO15
+IO_15
 Wire Wire Line
 	9025 1450 8525 1450
 Text Label 6625 3875 0    50   ~ 0
-IO14
+IO_14
 Wire Wire Line
 	6625 3875 6900 3875
 Text Label 6625 3975 0    50   ~ 0
-IO13
+IO_13
 Wire Wire Line
 	6625 3975 6900 3975
 Text Label 6625 3775 0    50   ~ 0
-IO12
+IO_12
 Wire Wire Line
 	6625 3775 6900 3775
 Text Label 6625 3575 0    50   ~ 0
-IO11
+IO_11
 Wire Wire Line
 	6625 3575 6900 3575
 Text Label 6425 2400 0    50   ~ 0
-IO8
+IO_8
 Text Label 6425 2300 0    50   ~ 0
-IO9
+IO_9
 Wire Wire Line
 	6425 2300 6900 2300
 Wire Wire Line
@@ -1575,20 +1522,16 @@ Wire Wire Line
 	6625 3375 6900 3375
 Wire Wire Line
 	10900 3600 10625 3600
-Text Label 10900 3600 2    50   ~ 0
-IO10
 Wire Wire Line
 	10900 3900 10625 3900
-Text Label 10900 3900 2    50   ~ 0
-IO7
 Wire Wire Line
 	6625 3475 6900 3475
 Text Label 6625 3475 0    50   ~ 0
-IO10
+IO_10
 Wire Wire Line
 	6425 2000 6900 2000
 Text Label 6425 2000 0    50   ~ 0
-IO7
+IO_7
 $Comp
 L Device:LED D8
 U 1 1 5D13C806
@@ -1600,10 +1543,6 @@ F 3 "~" H 9725 5850 50  0001 C CNN
 	1    9725 5850
 	1    0    0    -1  
 $EndComp
-Text Label 10800 6050 2    50   ~ 0
-TX_FPGA
-Text Label 10800 5850 2    50   ~ 0
-RX_FPGA
 Wire Wire Line
 	9575 5850 9425 5850
 Wire Wire Line
@@ -1878,12 +1817,12 @@ $EndComp
 $Comp
 L josh-passive:RN RN4
 U 4 1 5D4398FC
-P 10200 6400
-F 0 "RN4" H 10200 6475 50  0000 C CNN
-F 1 "2K2" H 10200 6400 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 10200 6400 50  0001 C CNN
-F 3 "~" V 10200 6400 50  0001 C CNN
-	4    10200 6400
+P 8575 6050
+F 0 "RN4" H 8575 6125 50  0000 C CNN
+F 1 "2K2" H 8575 6050 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 8575 6050 50  0001 C CNN
+F 3 "~" V 8575 6050 50  0001 C CNN
+	4    8575 6050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1902,19 +1841,19 @@ Wire Wire Line
 $Comp
 L power:+3V3 #PWR0108
 U 1 1 5D85EEC4
-P 10475 6325
-F 0 "#PWR0108" H 10475 6175 50  0001 C CNN
-F 1 "+3V3" H 10490 6498 50  0000 C CNN
-F 2 "" H 10475 6325 50  0001 C CNN
-F 3 "" H 10475 6325 50  0001 C CNN
-	1    10475 6325
+P 8850 5975
+F 0 "#PWR0108" H 8850 5825 50  0001 C CNN
+F 1 "+3V3" H 8865 6148 50  0000 C CNN
+F 2 "" H 8850 5975 50  0001 C CNN
+F 3 "" H 8850 5975 50  0001 C CNN
+	1    8850 5975
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10475 6325 10475 6400
+	8850 5975 8850 6050
 Wire Wire Line
-	10475 6400 10400 6400
-NoConn ~ 10000 6400
+	8850 6050 8775 6050
+NoConn ~ 8375 6050
 Wire Wire Line
 	10525 1925 10525 1975
 Wire Wire Line
@@ -1951,23 +1890,23 @@ Wire Wire Line
 $Comp
 L josh-passive:RN RN5
 U 2 1 5D221617
-P 8750 6325
-F 0 "RN5" H 8750 6400 50  0000 C CNN
-F 1 "2K2" H 8750 6325 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 8750 6325 50  0001 C CNN
-F 3 "~" V 8750 6325 50  0001 C CNN
-	2    8750 6325
+P 8575 6225
+F 0 "RN5" H 8575 6300 50  0000 C CNN
+F 1 "2K2" H 8575 6225 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 8575 6225 50  0001 C CNN
+F 3 "~" V 8575 6225 50  0001 C CNN
+	2    8575 6225
 	1    0    0    -1  
 $EndComp
 $Comp
 L josh-passive:RN RN5
 U 3 1 5D220693
-P 8750 6475
-F 0 "RN5" H 8750 6550 50  0000 C CNN
-F 1 "2K2" H 8750 6475 50  0000 C CNN
-F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 8750 6475 50  0001 C CNN
-F 3 "~" V 8750 6475 50  0001 C CNN
-	3    8750 6475
+P 8575 6400
+F 0 "RN5" H 8575 6475 50  0000 C CNN
+F 1 "2K2" H 8575 6400 50  0000 C CNN
+F 2 "Resistor_SMD:R_Array_Convex_4x0402" V 8575 6400 50  0001 C CNN
+F 3 "~" V 8575 6400 50  0001 C CNN
+	3    8575 6400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1993,10 +1932,10 @@ F 3 "~" V 950 4950 50  0001 C CNN
 	4    950  4950
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 8950 6325
-NoConn ~ 8950 6475
-NoConn ~ 8550 6475
-NoConn ~ 8550 6325
+NoConn ~ 8775 6225
+NoConn ~ 8775 6400
+NoConn ~ 8375 6400
+NoConn ~ 8375 6225
 Text Label 2050 3525 0    50   ~ 0
 LDO_EN
 Wire Wire Line
@@ -2098,7 +2037,7 @@ L Connector:TestPoint TP3
 U 1 1 5D23FA3D
 P 6600 3675
 F 0 "TP3" V 6650 3925 50  0000 C CNN
-F 1 "23" V 6550 3925 50  0000 C CNN
+F 1 "IO_23" V 6575 3950 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6800 3675 50  0001 C CNN
 F 3 "~" H 6800 3675 50  0001 C CNN
 	1    6600 3675
@@ -2111,7 +2050,7 @@ L Connector:TestPoint TP2
 U 1 1 5D26AE62
 P 6600 3275
 F 0 "TP2" V 6650 3500 50  0000 C CNN
-F 1 "20" V 6550 3500 50  0000 C CNN
+F 1 "IO_20" V 6575 3550 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6800 3275 50  0001 C CNN
 F 3 "~" H 6800 3275 50  0001 C CNN
 	1    6600 3275
@@ -2124,7 +2063,7 @@ L Connector:TestPoint TP1
 U 1 1 5D28130D
 P 6500 2500
 F 0 "TP1" V 6550 2725 50  0000 C CNN
-F 1 "22" V 6450 2750 50  0000 C CNN
+F 1 "IO_22" V 6475 2775 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 6700 2500 50  0001 C CNN
 F 3 "~" H 6700 2500 50  0001 C CNN
 	1    6500 2500
@@ -2137,7 +2076,7 @@ L Connector:TestPoint TP4
 U 1 1 5D2B0957
 P 9050 2050
 F 0 "TP4" V 8975 2275 50  0000 C CNN
-F 1 "21" V 9075 2275 50  0000 C CNN
+F 1 "IO_21" V 9050 2325 50  0000 C CNN
 F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 9250 2050 50  0001 C CNN
 F 3 "~" H 9250 2050 50  0001 C CNN
 	1    9050 2050
@@ -2145,4 +2084,65 @@ F 3 "~" H 9250 2050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9050 2050 8525 2050
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5D367D4D
+P 1250 6575
+F 0 "J2" H 1250 6750 50  0000 C CNN
+F 1 "JST_PH" H 1325 6675 50  0000 C CNN
+F 2 "josh-connectors:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 1250 6575 50  0001 C CNN
+F 3 "~" H 1250 6575 50  0001 C CNN
+	1    1250 6575
+	1    0    0    -1  
+$EndComp
+Text Label 10800 5850 2    50   ~ 0
+UART_RX
+Text Label 10800 6050 2    50   ~ 0
+UART_TX
+Text Label 10775 2900 1    50   ~ 0
+nLED_GRN
+Text Label 10875 2900 1    50   ~ 0
+nLED_BLU
+Text Label 6425 1200 0    50   ~ 0
+IO_0
+Text Label 10900 4600 2    50   ~ 0
+IO_0
+Text Label 10900 4500 2    50   ~ 0
+IO_1
+Text Label 10900 4400 2    50   ~ 0
+IO_2
+Text Label 10900 4300 2    50   ~ 0
+IO_3
+Text Label 10900 4200 2    50   ~ 0
+IO_4
+Text Label 10900 4100 2    50   ~ 0
+IO_5
+Text Label 10900 4000 2    50   ~ 0
+IO_6
+Text Label 10900 3900 2    50   ~ 0
+IO_7
+Text Label 10900 3800 2    50   ~ 0
+IO_8
+Text Label 10900 3700 2    50   ~ 0
+IO_9
+Text Label 10900 3600 2    50   ~ 0
+IO_10
+Text Label 9300 3500 0    50   ~ 0
+IO_11
+Text Label 9300 3600 0    50   ~ 0
+IO_12
+Text Label 9300 3800 0    50   ~ 0
+IO_14
+Text Label 9300 3700 0    50   ~ 0
+IO_13
+Text Label 9300 3900 0    50   ~ 0
+IO_15
+Text Label 9300 4000 0    50   ~ 0
+IO_16
+Text Label 9300 4100 0    50   ~ 0
+IO_17
+Text Label 9300 4200 0    50   ~ 0
+IO_18
+Text Label 9300 4300 0    50   ~ 0
+IO_19
 $EndSCHEMATC

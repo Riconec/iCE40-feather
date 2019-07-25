@@ -1463,4 +1463,5 @@ Text Label 10275 5400 1    50   ~ 0
 COL_2
 Text Label 10275 4700 1    50   ~ 0
 C2
+NoConn ~ 5250 3025
 $EndSCHEMATC
