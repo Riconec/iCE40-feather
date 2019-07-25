@@ -1,2 +1,2 @@
 # iCE40-fpga
-My attempt at making an iCE40 FPGA board
+An iCE40UP5k FPGA in a feather form factor. 
