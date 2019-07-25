@@ -116,20 +116,7 @@ F 3 "" H 3750 3700 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	3750 3300 3675 3300
-Wire Wire Line
-	3675 3300 3675 3250
 Connection ~ 3750 3300
-$Comp
-L power:+5V #PWR026
-U 1 1 5D32F56D
-P 3675 3250
-F 0 "#PWR026" H 3675 3100 50  0001 C CNN
-F 1 "+5V" H 3690 3423 50  0000 C CNN
-F 2 "" H 3675 3250 50  0001 C CNN
-F 3 "" H 3675 3250 50  0001 C CNN
-	1    3675 3250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5000 3300 5000 3250
 Connection ~ 5000 3300
@@ -841,7 +828,7 @@ LDO_EN
 Wire Wire Line
 	9575 4500 9250 4500
 Wire Wire Line
-	1750 3425 2075 3425
+	1750 3425 1825 3425
 Connection ~ 1750 3425
 Wire Notes Line
 	5225 2575 5225 4150
@@ -2145,4 +2132,13 @@ Text Label 9300 4200 0    50   ~ 0
 IO_18
 Text Label 9300 4300 0    50   ~ 0
 IO_19
+Wire Wire Line
+	1825 3425 1825 3075
+Connection ~ 1825 3425
+Wire Wire Line
+	1825 3425 2075 3425
+Wire Wire Line
+	3675 3075 3675 3300
+Wire Wire Line
+	1825 3075 3675 3075
 $EndSCHEMATC
