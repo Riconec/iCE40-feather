@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\led-wing\led-wing.sch</source>
+    <date>28/07/2019 15:58:11</date>
+    <tool>Eeschema (5.1.2)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company>Josh Johnson</company>
+        <rev>0</rev>
+        <date/>
+        <source>led-wing.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Feather</value>
+      <footprint>josh-connectors:featherwing</footprint>
+      <libsource lib="josh-connector" part="Feather" description="Adafruit Feather Footprint"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D20421C</tstamp>
+    </comp>
+    <comp ref="SW1">
+      <value>SW_Push</value>
+      <footprint>josh-buttons-switches:BT_PTS815</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D205861</tstamp>
+    </comp>
+    <comp ref="SW2">
+      <value>SW_Push</value>
+      <footprint>josh-buttons-switches:BT_PTS815</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D206564</tstamp>
+    </comp>
+    <comp ref="SW3">
+      <value>SW_Push</value>
+      <footprint>josh-buttons-switches:BT_PTS815</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D206937</tstamp>
+    </comp>
+    <comp ref="SW4">
+      <value>SW_Push</value>
+      <footprint>josh-buttons-switches:BT_PTS815</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Switch" part="SW_Push" description="Push button switch, generic, two pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D206EA2</tstamp>
+    </comp>
+    <comp ref="RN1">
+      <value>10K</value>
+      <footprint>Resistor_SMD:R_Array_Convex_4x0402</footprint>
+      <libsource lib="josh-passive" part="RN" description="Resistor Network"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2076FD</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>CD74HC4050</value>
+      <footprint>Package_SO:TSSOP-16_4.4x5mm_P0.65mm</footprint>
+      <datasheet>http://www.ti.com/lit/ds/symlink/cd74hc4049.pdf</datasheet>
+      <fields>
+        <field name="MPN">CD74HC4050PWR</field>
+      </fields>
+      <libsource lib="josh-logic" part="CD74HC4050" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D22D6AA</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D22F090</tstamp>
+    </comp>
+    <comp ref="D8">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D22FBF3</tstamp>
+    </comp>
+    <comp ref="D14">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2309DA</tstamp>
+    </comp>
+    <comp ref="D20">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2309E0</tstamp>
+    </comp>
+    <comp ref="D26">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D231C7C</tstamp>
+    </comp>
+    <comp ref="D32">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D231C82</tstamp>
+    </comp>
+    <comp ref="D3">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23A7C5</tstamp>
+    </comp>
+    <comp ref="D9">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23A7CB</tstamp>
+    </comp>
+    <comp ref="D15">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23A7D1</tstamp>
+    </comp>
+    <comp ref="D21">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23A7D7</tstamp>
+    </comp>
+    <comp ref="D27">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23A7DD</tstamp>
+    </comp>
+    <comp ref="D33">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23A7E3</tstamp>
+    </comp>
+    <comp ref="D4">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23ECBB</tstamp>
+    </comp>
+    <comp ref="D10">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23ECC1</tstamp>
+    </comp>
+    <comp ref="D16">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23ECC7</tstamp>
+    </comp>
+    <comp ref="D22">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23ECCD</tstamp>
+    </comp>
+    <comp ref="D28">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23ECD3</tstamp>
+    </comp>
+    <comp ref="D34">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D23ECD9</tstamp>
+    </comp>
+    <comp ref="D5">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E47</tstamp>
+    </comp>
+    <comp ref="D11">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E4D</tstamp>
+    </comp>
+    <comp ref="D17">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E53</tstamp>
+    </comp>
+    <comp ref="D23">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E59</tstamp>
+    </comp>
+    <comp ref="D29">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E5F</tstamp>
+    </comp>
+    <comp ref="D35">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E65</tstamp>
+    </comp>
+    <comp ref="D6">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E7D</tstamp>
+    </comp>
+    <comp ref="D12">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E83</tstamp>
+    </comp>
+    <comp ref="D18">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E89</tstamp>
+    </comp>
+    <comp ref="D24">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E8F</tstamp>
+    </comp>
+    <comp ref="D30">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E95</tstamp>
+    </comp>
+    <comp ref="D36">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253E9B</tstamp>
+    </comp>
+    <comp ref="D7">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253EB2</tstamp>
+    </comp>
+    <comp ref="D13">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253EB8</tstamp>
+    </comp>
+    <comp ref="D19">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253EBE</tstamp>
+    </comp>
+    <comp ref="D25">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253EC4</tstamp>
+    </comp>
+    <comp ref="D31">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253ECA</tstamp>
+    </comp>
+    <comp ref="D37">
+      <value>LED</value>
+      <footprint>josh-led:LED_0603_1608Metric_45_noSilk</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D253ED0</tstamp>
+    </comp>
+    <comp ref="RN4">
+      <value>330R</value>
+      <footprint>Resistor_SMD:R_Array_Convex_4x0402</footprint>
+      <libsource lib="josh-passive" part="RN" description="Resistor Network"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D408291</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>100n</value>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D4E123F</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>LED_RGBA</value>
+      <footprint>josh-led:LED_ARGB_PLCC4_1210</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="josh-led" part="LED_RGBA" description="RGB LED, anode/red/green/blue"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D883AC0</tstamp>
+    </comp>
+    <comp ref="RN2">
+      <value>330R</value>
+      <footprint>Resistor_SMD:R_Array_Convex_4x0402</footprint>
+      <libsource lib="josh-passive" part="RN" description="Resistor Network"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D2FDB87</tstamp>
+    </comp>
+    <comp ref="RN3">
+      <value>330R</value>
+      <footprint>Resistor_SMD:R_Array_Convex_4x0402</footprint>
+      <libsource lib="josh-passive" part="RN" description="Resistor Network"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>5D33A9E1</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Switch" part="SW_Push">
+      <description>Push button switch, generic, two pins</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_Push</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="josh-connector" part="Feather">
+      <description>Adafruit Feather Footprint</description>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Feather</field>
+        <field name="Footprint">josh-connectors:featherwing</field>
+      </fields>
+      <pins>
+        <pin num="1" name="nRST" type="BiDi"/>
+        <pin num="2" name="3V3" type="power_out"/>
+        <pin num="3" name="ARef" type="BiDi"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="5" name="IO0" type="BiDi"/>
+        <pin num="6" name="IO1" type="BiDi"/>
+        <pin num="7" name="IO2" type="BiDi"/>
+        <pin num="8" name="IO3" type="BiDi"/>
+        <pin num="9" name="IO4" type="BiDi"/>
+        <pin num="10" name="IO5" type="BiDi"/>
+        <pin num="11" name="IO6|SCK" type="BiDi"/>
+        <pin num="12" name="IO7|MOSI" type="BiDi"/>
+        <pin num="13" name="IO8|MISO" type="BiDi"/>
+        <pin num="14" name="IO9|RX" type="BiDi"/>
+        <pin num="15" name="IO10|TX" type="BiDi"/>
+        <pin num="16" name="NC" type="power_out"/>
+        <pin num="17" name="IO11|SDA" type="BiDi"/>
+        <pin num="18" name="IO12|SCL" type="BiDi"/>
+        <pin num="19" name="IO13" type="BiDi"/>
+        <pin num="20" name="IO14" type="BiDi"/>
+        <pin num="21" name="IO15" type="BiDi"/>
+        <pin num="22" name="IO16" type="BiDi"/>
+        <pin num="23" name="IO17" type="BiDi"/>
+        <pin num="24" name="IO18" type="BiDi"/>
+        <pin num="25" name="IO19" type="BiDi"/>
+        <pin num="26" name="VBUS" type="power_out"/>
+        <pin num="27" name="EN" type="BiDi"/>
+        <pin num="28" name="VBAT" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="josh-led" part="LED_RGBA">
+      <description>RGB LED, anode/red/green/blue</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED_RGBA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="RK" type="passive"/>
+        <pin num="2" name="GK" type="passive"/>
+        <pin num="3" name="BK" type="passive"/>
+        <pin num="4" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="josh-logic" part="CD74HC4050">
+      <docs>http://www.ti.com/lit/ds/symlink/cd74hc4049.pdf</docs>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CD74HC4050</field>
+        <field name="Footprint">Package_SO:TSSOP-16_4.4x5mm_P0.65mm</field>
+        <field name="MPN">CD74HC4050PWR</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VCC" type="power_in"/>
+        <pin num="2" name="1Y" type="BiDi"/>
+        <pin num="3" name="1A" type="BiDi"/>
+        <pin num="4" name="2Y" type="BiDi"/>
+        <pin num="5" name="2A" type="BiDi"/>
+        <pin num="6" name="3Y" type="BiDi"/>
+        <pin num="7" name="3A" type="BiDi"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="4A" type="BiDi"/>
+        <pin num="10" name="4Y" type="BiDi"/>
+        <pin num="11" name="5A" type="BiDi"/>
+        <pin num="12" name="5Y" type="BiDi"/>
+        <pin num="13" name="NC" type="NotConnected"/>
+        <pin num="14" name="6A" type="BiDi"/>
+        <pin num="15" name="6Y" type="BiDi"/>
+        <pin num="16" name="NC" type="NotConnected"/>
+      </pins>
+    </libpart>
+    <libpart lib="josh-passive" part="RN">
+      <description>Resistor Network</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">RN</field>
+        <field name="Value">RN</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+        <pin num="3" name="~" type="passive"/>
+        <pin num="4" name="~" type="passive"/>
+        <pin num="5" name="~" type="passive"/>
+        <pin num="6" name="~" type="passive"/>
+        <pin num="7" name="~" type="passive"/>
+        <pin num="8" name="~" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Switch">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Switch.lib</uri>
+    </library>
+    <library logical="josh-connector">
+      <uri>C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\led-wing/../../josh-kicad-lib/josh-connector.lib</uri>
+    </library>
+    <library logical="josh-led">
+      <uri>C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\led-wing/../../josh-kicad-lib/josh-led.lib</uri>
+    </library>
+    <library logical="josh-logic">
+      <uri>C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\led-wing/../../josh-kicad-lib/josh-logic.lib</uri>
+    </library>
+    <library logical="josh-passive">
+      <uri>C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\led-wing/../../josh-kicad-lib/josh-passive.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/R4">
+      <node ref="D23" pin="2"/>
+      <node ref="D17" pin="2"/>
+      <node ref="U1" pin="10"/>
+      <node ref="D11" pin="2"/>
+      <node ref="D5" pin="2"/>
+      <node ref="D29" pin="2"/>
+      <node ref="D35" pin="2"/>
+    </net>
+    <net code="2" name="/ROW_2">
+      <node ref="J1" pin="12"/>
+      <node ref="U1" pin="5"/>
+    </net>
+    <net code="3" name="/ROW_1">
+      <node ref="U1" pin="3"/>
+      <node ref="J1" pin="13"/>
+    </net>
+    <net code="4" name="/ROW_6">
+      <node ref="U1" pin="11"/>
+      <node ref="J1" pin="5"/>
+    </net>
+    <net code="5" name="/ROW_5">
+      <node ref="J1" pin="7"/>
+      <node ref="U1" pin="14"/>
+    </net>
+    <net code="6" name="/nLED_G">
+      <node ref="J1" pin="20"/>
+      <node ref="RN3" pin="3"/>
+    </net>
+    <net code="7" name="Net-(D1-Pad2)">
+      <node ref="RN3" pin="6"/>
+      <node ref="D1" pin="2"/>
+    </net>
+    <net code="8" name="Net-(D1-Pad3)">
+      <node ref="RN3" pin="7"/>
+      <node ref="D1" pin="3"/>
+    </net>
+    <net code="9" name="/COL_2">
+      <node ref="RN2" pin="4"/>
+      <node ref="J1" pin="9"/>
+    </net>
+    <net code="10" name="/COL_1">
+      <node ref="J1" pin="8"/>
+      <node ref="RN2" pin="3"/>
+    </net>
+    <net code="11" name="/ROW_4">
+      <node ref="J1" pin="6"/>
+      <node ref="U1" pin="9"/>
+    </net>
+    <net code="12" name="/ROW_3">
+      <node ref="J1" pin="11"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="13" name="/COL_5">
+      <node ref="RN4" pin="3"/>
+      <node ref="J1" pin="24"/>
+    </net>
+    <net code="14" name="/COL_6">
+      <node ref="RN4" pin="4"/>
+      <node ref="J1" pin="25"/>
+    </net>
+    <net code="15" name="/COL_4">
+      <node ref="J1" pin="23"/>
+      <node ref="RN4" pin="2"/>
+    </net>
+    <net code="16" name="/COL_3">
+      <node ref="RN4" pin="1"/>
+      <node ref="J1" pin="22"/>
+    </net>
+    <net code="17" name="Net-(J1-Pad10)">
+      <node ref="J1" pin="10"/>
+    </net>
+    <net code="18" name="/nLED_B">
+      <node ref="RN3" pin="2"/>
+      <node ref="J1" pin="19"/>
+    </net>
+    <net code="19" name="/BT3">
+      <node ref="RN1" pin="7"/>
+      <node ref="SW3" pin="2"/>
+      <node ref="J1" pin="18"/>
+    </net>
+    <net code="20" name="/BT4">
+      <node ref="SW4" pin="2"/>
+      <node ref="J1" pin="17"/>
+      <node ref="RN1" pin="6"/>
+    </net>
+    <net code="21" name="/nLED_R">
+      <node ref="RN3" pin="4"/>
+      <node ref="J1" pin="21"/>
+    </net>
+    <net code="22" name="/BT2">
+      <node ref="SW2" pin="2"/>
+      <node ref="J1" pin="15"/>
+      <node ref="RN1" pin="5"/>
+    </net>
+    <net code="23" name="/BT1">
+      <node ref="RN1" pin="8"/>
+      <node ref="J1" pin="14"/>
+      <node ref="SW1" pin="2"/>
+    </net>
+    <net code="24" name="+3V3">
+      <node ref="U1" pin="1"/>
+      <node ref="SW4" pin="1"/>
+      <node ref="SW1" pin="1"/>
+      <node ref="SW2" pin="1"/>
+      <node ref="SW3" pin="1"/>
+      <node ref="J1" pin="2"/>
+      <node ref="D1" pin="4"/>
+      <node ref="C1" pin="1"/>
+    </net>
+    <net code="25" name="GND">
+      <node ref="RN1" pin="4"/>
+      <node ref="RN1" pin="3"/>
+      <node ref="RN1" pin="2"/>
+      <node ref="RN1" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="U1" pin="8"/>
+      <node ref="J1" pin="4"/>
+      <node ref="J1" pin="16"/>
+    </net>
+    <net code="26" name="Net-(D1-Pad1)">
+      <node ref="D1" pin="1"/>
+      <node ref="RN3" pin="5"/>
+    </net>
+    <net code="27" name="Net-(J1-Pad28)">
+      <node ref="J1" pin="28"/>
+    </net>
+    <net code="28" name="Net-(J1-Pad27)">
+      <node ref="J1" pin="27"/>
+    </net>
+    <net code="29" name="Net-(J1-Pad26)">
+      <node ref="J1" pin="26"/>
+    </net>
+    <net code="30" name="Net-(J1-Pad3)">
+      <node ref="J1" pin="3"/>
+    </net>
+    <net code="31" name="Net-(J1-Pad1)">
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="32" name="Net-(U1-Pad13)">
+      <node ref="U1" pin="13"/>
+    </net>
+    <net code="33" name="Net-(U1-Pad16)">
+      <node ref="U1" pin="16"/>
+    </net>
+    <net code="34" name="/C3">
+      <node ref="D23" pin="1"/>
+      <node ref="D24" pin="1"/>
+      <node ref="RN4" pin="8"/>
+      <node ref="D20" pin="1"/>
+      <node ref="D21" pin="1"/>
+      <node ref="D25" pin="1"/>
+      <node ref="D22" pin="1"/>
+    </net>
+    <net code="35" name="/C2">
+      <node ref="D31" pin="1"/>
+      <node ref="D26" pin="1"/>
+      <node ref="D30" pin="1"/>
+      <node ref="D27" pin="1"/>
+      <node ref="D28" pin="1"/>
+      <node ref="RN2" pin="5"/>
+      <node ref="D29" pin="1"/>
+    </net>
+    <net code="36" name="/C1">
+      <node ref="RN2" pin="6"/>
+      <node ref="D37" pin="1"/>
+      <node ref="D32" pin="1"/>
+      <node ref="D34" pin="1"/>
+      <node ref="D33" pin="1"/>
+      <node ref="D35" pin="1"/>
+      <node ref="D36" pin="1"/>
+    </net>
+    <net code="37" name="/R1">
+      <node ref="D32" pin="2"/>
+      <node ref="D26" pin="2"/>
+      <node ref="D2" pin="2"/>
+      <node ref="D8" pin="2"/>
+      <node ref="D14" pin="2"/>
+      <node ref="U1" pin="2"/>
+      <node ref="D20" pin="2"/>
+    </net>
+    <net code="38" name="/R5">
+      <node ref="D6" pin="2"/>
+      <node ref="D12" pin="2"/>
+      <node ref="D18" pin="2"/>
+      <node ref="D24" pin="2"/>
+      <node ref="D30" pin="2"/>
+      <node ref="D36" pin="2"/>
+      <node ref="U1" pin="15"/>
+    </net>
+    <net code="39" name="/C6">
+      <node ref="D2" pin="1"/>
+      <node ref="D4" pin="1"/>
+      <node ref="D6" pin="1"/>
+      <node ref="D7" pin="1"/>
+      <node ref="D5" pin="1"/>
+      <node ref="RN4" pin="5"/>
+      <node ref="D3" pin="1"/>
+    </net>
+    <net code="40" name="/C5">
+      <node ref="D13" pin="1"/>
+      <node ref="RN4" pin="6"/>
+      <node ref="D9" pin="1"/>
+      <node ref="D11" pin="1"/>
+      <node ref="D10" pin="1"/>
+      <node ref="D8" pin="1"/>
+      <node ref="D12" pin="1"/>
+    </net>
+    <net code="41" name="/C4">
+      <node ref="D15" pin="1"/>
+      <node ref="D17" pin="1"/>
+      <node ref="D16" pin="1"/>
+      <node ref="D19" pin="1"/>
+      <node ref="RN4" pin="7"/>
+      <node ref="D14" pin="1"/>
+      <node ref="D18" pin="1"/>
+    </net>
+    <net code="42" name="/R6">
+      <node ref="D19" pin="2"/>
+      <node ref="D25" pin="2"/>
+      <node ref="D37" pin="2"/>
+      <node ref="D31" pin="2"/>
+      <node ref="U1" pin="12"/>
+      <node ref="D7" pin="2"/>
+      <node ref="D13" pin="2"/>
+    </net>
+    <net code="43" name="/R2">
+      <node ref="D9" pin="2"/>
+      <node ref="D21" pin="2"/>
+      <node ref="D15" pin="2"/>
+      <node ref="D33" pin="2"/>
+      <node ref="D27" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="D3" pin="2"/>
+    </net>
+    <net code="44" name="/R3">
+      <node ref="D34" pin="2"/>
+      <node ref="D28" pin="2"/>
+      <node ref="D22" pin="2"/>
+      <node ref="D16" pin="2"/>
+      <node ref="D10" pin="2"/>
+      <node ref="D4" pin="2"/>
+      <node ref="U1" pin="6"/>
+    </net>
+  </nets>
+</export>

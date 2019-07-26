@@ -1,23 +1,110 @@
-Qty,Reference(s),Value,LibPart,Footprint,MPN
-10,"C1, C2, C4, C10, C18",10u,Device:C,Capacitor_SMD:C_0603_1608Metric,JMK107ABJ106MA-T
-10,"C5, C6",1u,Device:C,Capacitor_SMD:C_0603_1608Metric,CL10A105MP8NNNC
-10,C28,4u7,Device:C,Capacitor_SMD:C_0603_1608Metric,CL10A475KQ8NNNC
-5,D4,CDBU0520,Device:D,Diode_SMD:D_SOD-523,CDBU0520
-5,D6,LED_RGBA,josh-led:LED_RGBA,josh-led:LED_0606,LTST-C19HE1WT
-10,"FB1, FB2, FB3",600R,josh-passive:Ferrite_Bead_PWR,josh-passives-smt:Ferrite_Bead_0603,BLM18TG601TN1D
-10,R6,100R,Device:R,Resistor_SMD:R_0603_1608Metric,RMCF0603JT100R
-10,R13,2K2,Device:R,Resistor_SMD:R_0603_1608Metric,RMCF0603JT2K20
-10,"RN1, RN2",10K,Device:R_Pack04,Resistor_SMD:R_Array_Convex_4x0402,RP104PJ103CS
-10,RN3,330R,Device:R_Pack04,Resistor_SMD:R_Array_Convex_4x0402,RAVF104DJT330R
-10,"RN4, RN5",2K2,josh-passive:RN,Resistor_SMD:R_Array_Convex_4x0402,YC124-JR-072K2L
-2,U1,MCP73831-2-OT,josh-power:MCP73831-2-OT,Package_TO_SOT_SMD:SOT-23-5,MCP73831T-2ACI/OT
-1,U2,W25Q32JVZP,josh-memory:W25Q32JVZP,josh-soic-sot-etc:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm,W25Q32JVZP
-1,U4,ICE40UP5K-SG48ITR,josh-ic:ICE40UP5K-SG48ITR,josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm_ThermalVias,ICE40UP5K-SG48I
-1,U5,,,,NCV8114ASN120T1G
-1,U6,93C46B,josh-memory:93C46B,Package_TO_SOT_SMD:SOT-23-6,93C46BT-I/OT
-1,U7,FT2232H,josh-ic:FT2232H,josh-dfn-qfn:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias,FT2232HQ-REEL
-1,X1,DSC6101CI1A,josh-oscillator:DSC6101CI1A,josh-oscillators:CDFN_3.2x2.5mm_XO,DSC6101CI1A-012.0000T
-1,,,,,W25Q128JVPIQ TR
-100,,,,,1N4148WX-TP
-1,,,,,W25Q16JVSSIQ
-5,,,,,74LVC2G17GW-Q100H
+"Source:","C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\iCE40-fpga\iCE40-fpga.sch"
+"Date:","28/07/2019 15:57:15"
+"Tool:","Eeschema (5.1.2)-1"
+"Generator:","C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_grouped_by_value.py"
+"Component Count:","62"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","MPN"
+"","","C1","10u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C2","10u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C3","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C4","10u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C5","1u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C6","1u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C7","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C8","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C10","10u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C11","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C16","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C18","10u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C19","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C21","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C22","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C24","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C26","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C28","4u7","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C30","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C31","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C32","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C33","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C34","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C35","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","C36","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"","","D1","ORG","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"","","D2","MBR120","Device:D_Schottky","Diode_SMD:D_SOD-123F","~",""
+"","","D3","GRN","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"","","D4","CDBU0520","Device:D","Diode_SMD:D_SOD-523","~",""
+"","","D5","BLU","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"","","D6","LED_RGBA","josh-led:LED_RGBA","josh-led:LED_0606","~",""
+"","","D7","LED","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"","","D8","GRN","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"","","F1","500mA","Device:Polyfuse","josh-passives-smt:Fuse_0805_2012Metric","~",""
+"","","FB1","600R","josh-passive:Ferrite_Bead_PWR","josh-passives-smt:Ferrite_Bead_0603","~",""
+"","","FB2","600R","josh-passive:Ferrite_Bead_PWR","josh-passives-smt:Ferrite_Bead_0603","~",""
+"","","FB3","600R","josh-passive:Ferrite_Bead_PWR","josh-passives-smt:Ferrite_Bead_0603","~",""
+"","","J1","USB_B_Micro","Connector:USB_B_Micro","josh-connectors:USB_Micro_Aliexpress","~",""
+"","","J2","JST_PH","Connector:Conn_01x02_Male","josh-connectors:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal","~",""
+"","","J3","Feather","josh-connector:Feather","josh-connectors:featherwing","",""
+"","","Q1","DMP2045U","Device:Q_PMOS_GSD","Package_TO_SOT_SMD:SOT-23","~",""
+"","","R1","100K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R3","10K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R4","100K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R5","10K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R6","100R","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R13","2K2","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R14","10K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","R15","12K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"","","RN1","10K","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~",""
+"","","RN2","10K","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~",""
+"","","RN3","330R","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~",""
+"","","RN4","2K2","josh-passive:RN","Resistor_SMD:R_Array_Convex_4x0402","",""
+"","","RN5","2K2","josh-passive:RN","Resistor_SMD:R_Array_Convex_4x0402","",""
+"","","U1","MCP73831-2-OT","josh-power:MCP73831-2-OT","Package_TO_SOT_SMD:SOT-23-5","http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf",""
+"","","U2","W25Q32JVZP","josh-memory:W25Q32JVZP","josh-soic-sot-etc:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm","http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf",""
+"","","U3","AP2112K-3.3","Regulator_Linear:AP2112K-3.3","Package_TO_SOT_SMD:SOT-23-5","https://www.diodes.com/assets/Datasheets/AP2112.pdf",""
+"","","U4","ICE40UP5K-SG48ITR","josh-ic:ICE40UP5K-SG48ITR","josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm_ThermalVias","http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra",""
+"","","U5","NCV8114ASN120T1G","Regulator_Linear:NCV8114ASN120T1G","Package_TO_SOT_SMD:TSOT-23-5","https://ru.mouser.com/datasheet/2/308/NCV8114-D-1107616.pdf",""
+"","","U6","93C46B","josh-memory:93C46B","Package_TO_SOT_SMD:SOT-23-6","http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf",""
+"","","U7","FT2232H","josh-ic:FT2232H","josh-dfn-qfn:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias","",""
+"","","X1","DSC6101CI1A","josh-oscillator:DSC6101CI1A","josh-oscillators:CDFN_3.2x2.5mm_XO","","DSC6101CI1A-012.0000T"
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet","MPN"
+"1","5","C1, C2, C4, C10, C18","10u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"2","17","C3, C7, C8, C11, C16, C19, C21, C22, C24, C26, C30, C31, C32, C33, C34, C35, C36","100n","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"3","2","C5, C6","1u","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"4","1","C28","4u7","Device:C","Capacitor_SMD:C_0603_1608Metric","~",""
+"5","1","D1","ORG","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"6","1","D2","MBR120","Device:D_Schottky","Diode_SMD:D_SOD-123F","~",""
+"7","2","D3, D8","GRN","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"8","1","D4","CDBU0520","Device:D","Diode_SMD:D_SOD-523","~",""
+"9","1","D5","BLU","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"10","1","D6","LED_RGBA","josh-led:LED_RGBA","josh-led:LED_0606","~",""
+"11","1","D7","LED","Device:LED","LED_SMD:LED_0603_1608Metric","~",""
+"12","1","F1","500mA","Device:Polyfuse","josh-passives-smt:Fuse_0805_2012Metric","~",""
+"13","3","FB1, FB2, FB3","600R","josh-passive:Ferrite_Bead_PWR","josh-passives-smt:Ferrite_Bead_0603","~",""
+"14","1","J1","USB_B_Micro","Connector:USB_B_Micro","josh-connectors:USB_Micro_Aliexpress","~",""
+"15","1","J2","JST_PH","Connector:Conn_01x02_Male","josh-connectors:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal","~",""
+"16","1","J3","Feather","josh-connector:Feather","josh-connectors:featherwing","",""
+"17","1","Q1","DMP2045U","Device:Q_PMOS_GSD","Package_TO_SOT_SMD:SOT-23","~",""
+"18","2","R1, R4","100K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"19","3","R3, R5, R14","10K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"20","1","R6","100R","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"21","1","R13","2K2","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"22","1","R15","12K","Device:R","Resistor_SMD:R_0603_1608Metric","~",""
+"23","2","RN1, RN2","10K","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~",""
+"24","1","RN3","330R","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~",""
+"25","2","RN4, RN5","2K2","josh-passive:RN","Resistor_SMD:R_Array_Convex_4x0402","",""
+"26","1","U1","MCP73831-2-OT","josh-power:MCP73831-2-OT","Package_TO_SOT_SMD:SOT-23-5","http://ww1.microchip.com/downloads/en/DeviceDoc/20001984g.pdf",""
+"27","1","U2","W25Q32JVZP","josh-memory:W25Q32JVZP","josh-soic-sot-etc:WSON-8-1EP_6x5mm_P1.27mm_EP3.4x4.3mm","http://www.winbond.com/resource-files/w25q32jv%20revg%2003272018%20plus.pdf",""
+"28","1","U3","AP2112K-3.3","Regulator_Linear:AP2112K-3.3","Package_TO_SOT_SMD:SOT-23-5","https://www.diodes.com/assets/Datasheets/AP2112.pdf",""
+"29","1","U4","ICE40UP5K-SG48ITR","josh-ic:ICE40UP5K-SG48ITR","josh-dfn-qfn:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm_ThermalVias","http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra",""
+"30","1","U5","NCV8114ASN120T1G","Regulator_Linear:NCV8114ASN120T1G","Package_TO_SOT_SMD:TSOT-23-5","https://ru.mouser.com/datasheet/2/308/NCV8114-D-1107616.pdf",""
+"31","1","U6","93C46B","josh-memory:93C46B","Package_TO_SOT_SMD:SOT-23-6","http://ww1.microchip.com/downloads/en/DeviceDoc/20001749K.pdf",""
+"32","1","U7","FT2232H","josh-ic:FT2232H","josh-dfn-qfn:QFN-64-1EP_9x9mm_P0.5mm_EP4.7x4.7mm_ThermalVias","",""
+"33","1","X1","DSC6101CI1A","josh-oscillator:DSC6101CI1A","josh-oscillators:CDFN_3.2x2.5mm_XO","","DSC6101CI1A-012.0000T"

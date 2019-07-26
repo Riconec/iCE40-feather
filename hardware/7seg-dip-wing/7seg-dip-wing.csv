@@ -1,0 +1,31 @@
+"Source:","C:\Users\Josh Johnson\Dropbox\Projects\FPGA\iCE40-feather\hardware\7seg-dip-wing\7seg-dip-wing.sch"
+"Date:","28/07/2019 15:57:35"
+"Tool:","Eeschema (5.1.2)-1"
+"Generator:","C:\Program Files\KiCad\bin\scripting\plugins/bom_csv_grouped_by_value.py"
+"Component Count:","9"
+
+"Individual Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"","","J1","Feather","josh-connector:Feather","josh-connectors:featherwing",""
+"","","RN1","10K","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~"
+"","","RN2","10K","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~"
+"","","RN3","330R","josh-passive:RN","Resistor_SMD:R_Array_Convex_4x0402",""
+"","","RN4","330R","josh-passive:RN","Resistor_SMD:R_Array_Convex_4x0402",""
+"","","SW1","SW_DIP_x08","Switch:SW_DIP_x08","Button_Switch_THT:SW_DIP_SPSTx08_Slide_9.78x22.5mm_W7.62mm_P2.54mm","~"
+"","","SW2","SW_SPDT","Switch:SW_SPDT","josh-buttons-switches:SW_SPDT_PCM12","~"
+"","","U1","LTD-5623Ax","josh-led:LTD-5623Ax","Display_7Segment:DA56-11SEKWA","https://docs.broadcom.com/docs/AV02-1589EN"
+"","","U2","74LVC2G17","josh-logic:74LVC2G17","Package_TO_SOT_SMD:SOT-363_SC-70-6",""
+
+
+
+"Collated Components:"
+
+"Item","Qty","Reference(s)","Value","LibPart","Footprint","Datasheet"
+"1","1","J1","Feather","josh-connector:Feather","josh-connectors:featherwing",""
+"2","2","RN1, RN2","10K","Device:R_Pack04","Resistor_SMD:R_Array_Convex_4x0402","~"
+"3","2","RN3, RN4","330R","josh-passive:RN","Resistor_SMD:R_Array_Convex_4x0402",""
+"4","1","SW1","SW_DIP_x08","Switch:SW_DIP_x08","Button_Switch_THT:SW_DIP_SPSTx08_Slide_9.78x22.5mm_W7.62mm_P2.54mm","~"
+"5","1","SW2","SW_SPDT","Switch:SW_SPDT","josh-buttons-switches:SW_SPDT_PCM12","~"
+"6","1","U1","LTD-5623Ax","josh-led:LTD-5623Ax","Display_7Segment:DA56-11SEKWA","https://docs.broadcom.com/docs/AV02-1589EN"
+"7","1","U2","74LVC2G17","josh-logic:74LVC2G17","Package_TO_SOT_SMD:SOT-363_SC-70-6",""
