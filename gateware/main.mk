@@ -44,8 +44,14 @@ sudo-prog: $(PROJ).bin
 	@echo 'Executing prog as root!!!'
 	sudo iceprog $<
 
+simulate:
+	iverilog -Wall -o sim/$(PROJ)_tb $(PROJ)_tb.v
+	vvp sim/$(PROJ)_tb -lxt2
+	mv $(PROJ)_tb.lxt sim/$(PROJ)_tb.lxt
+	gtkwave sim/$(PROJ)_tb.lxt sim/gtkwaveConfig.gtkw
+
 clean:
-	rm -f $(PROJ).blif $(PROJ).asc $(PROJ).rpt $(PROJ).bin $(PROJ).json $(PROJ).log $(ADD_CLEAN)
+	rm -f $(PROJ).blif $(PROJ).asc $(PROJ).rpt $(PROJ).bin $(PROJ).json $(PROJ).log sim/$(PROJ)_tb sim/$(PROJ)_tb.lxt $(ADD_CLEAN)
 
 .SECONDARY:
 .PHONY: all prog clean

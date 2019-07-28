@@ -1,8 +1,5 @@
-`timescale 1ns / 1ps
 `default_nettype none
-// Below includes are for SublimeLinter
-// Ensure they are commented out before building
-// `include "clockDividerHertz.v"
+`include "../src/clockDividerHertz.v"
 
 module top(
     input clk,
@@ -41,11 +38,17 @@ module top(
 	clockDividerHz #(
 			.FREQUENCY(5)
 		) inst_clockDividerHz (
+	reg [8:0] counter = 0;
+	reg [1:0] rgbCounter = 0;
+		
+	clockDividerHertz #(
+			.FREQUENCY(5)
+		) inst_clockDividerHertz (
 			.clk        	(clk),
 			.rst        	(1'b0),
 			.enable     	(1'b1),
 			.dividedClk 	(dividedClk),
-			.dividedPulse 	(dividedPulse)
+			.dividedPulse 	()
 		);
 
 	assign nLED = dividedClk;
