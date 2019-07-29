@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Mon Jul 29 04:15:14 2019
+[*]
+[dumpfile] "/home/josh/Documents/fpga/iCE40-feather/gateware/ledMatrix/sim/ledMatrix_tb.lxt"
+[dumpfile_mtime] "Mon Jul 29 04:13:36 2019"
+[dumpfile_size] 11080023
+[savefile] "/home/josh/Documents/fpga/iCE40-feather/gateware/ledMatrix/sim/gtkwaveConfig.gtkw"
+[timestart] 0
+[size] 2602 1713
+[pos] -1 -1
+*-27.000000 10038000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] ledMatrix_tb.
+[treeopen] ledMatrix_tb.inst_top.
+[sst_width] 378
+[signals_width] 414
+[sst_expanded] 1
+[sst_vpaned_height] 518
+@28
+ledMatrix_tb.inst_top.dividedPulse[0]
+@24
+ledMatrix_tb.inst_top.rowPos[2:0]
+@28
+ledMatrix_tb.inst_top.col[5:0]
+ledMatrix_tb.inst_top.row[5:0]
+[pattern_trace] 1
+[pattern_trace] 0

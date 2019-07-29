@@ -11,7 +11,7 @@ module clockDividerHertz #(
 );	
 
 	localparam CLK_FREQ = 32'd12_000_000;
-	localparam THRESHOLD = CLK_FREQ / FREQUENCY;
+	localparam THRESHOLD = CLK_FREQ / FREQUENCY / 2;
 	
 	reg [31:0] counter = 0;
 
