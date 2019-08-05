@@ -3,6 +3,7 @@
 
 module top(
     input clk,
+    input UART_RX,
     output nLED,
     output nLED_RED,
     output nLED_GRN,
@@ -26,32 +27,28 @@ module top(
     output IO_16,
     output IO_17,
     output IO_18,
-    output IO_19
+    output IO_19,
+    output UART_TX
 );
 
 	localparam NUM_PINS	= 8'd20;
 	wire dividedClk;
 	wire dividedPulse;
-	reg [8:0] counter;
-	reg [1:0] rgbCounter;
-		
-	clockDividerHz #(
-			.FREQUENCY(5)
-		) inst_clockDividerHz (
 	reg [8:0] counter = 0;
 	reg [1:0] rgbCounter = 0;
 		
 	clockDividerHertz #(
-			.FREQUENCY(5)
-		) inst_clockDividerHertz (
-			.clk        	(clk),
-			.rst        	(1'b0),
-			.enable     	(1'b1),
-			.dividedClk 	(dividedClk),
-			.dividedPulse 	()
-		);
+		.FREQUENCY(5)
+	) inst_clockDividerHertz (
+		.clk        	(clk),
+		.rst        	(1'b0),
+		.enable     	(1'b1),
+		.dividedClk 	(dividedClk),
+		.dividedPulse 	()
+	);
 
 	assign nLED = dividedClk;
+	assign UART_TX = UART_RX;
 
 	always @(posedge dividedClk) begin
 		rgbCounter = rgbCounter + 1;
