@@ -4,6 +4,8 @@
 module sevenSeg_tb();
 
 	logic clk;
+	reg [7:0] sw;
+	reg switch = 0;
 
 	// Clock
 	initial begin
@@ -11,7 +13,37 @@ module sevenSeg_tb();
 		forever #(42) clk = ~clk;
 	end
 
-	top inst_top (.clk(clk));
+	initial begin
+		sw = 8'd0;
+		#900
+		sw = 8'd1;
+		#900
+		sw = 8'd2;
+		#900
+		sw = 8'd3;
+		#900
+		sw = 8'd4;
+		#900
+		sw = 8'd5;
+
+		#900
+		sw = 8'd35;
+		#900
+		sw = 8'd45;
+		#900
+		sw = 8'd32;
+		#900
+		sw = 8'd99;
+		#900
+		sw = 8'd100;
+		#900
+		sw = 8'd120;
+
+	end
+
+
+
+	top inst_top (.clk(clk), .sw(sw),. switch(switch));
 
 	// Dump wave
 	initial begin
@@ -20,7 +52,7 @@ module sevenSeg_tb();
 	end
 	
 	// Count in 10% increments and finish sim when time is up
-	localparam SIM_TIME_MS = 100;
+	localparam SIM_TIME_MS = 10;
 	localparam SIM_TIME = SIM_TIME_MS * 1000_000; // @ 1 ns / unit
 	initial begin
 		$display("Simulation Started");

@@ -10,14 +10,17 @@ module clockDividerHertz #(
 	output reg dividedPulse = 0
 );	
 
+	// calculate threshold value from frequency
 	localparam CLK_FREQ = 32'd12_000_000;
 	localparam THRESHOLD = CLK_FREQ / FREQUENCY / 2;
 	
 	reg [31:0] counter = 0;
 
+	// accumulator counting up / resetting
 	always @(posedge clk) begin
-		if (rst | counter >= THRESHOLD - 1) begin
+		if (rst || (counter >= THRESHOLD - 1)) begin
 			counter <= 0;
+			// give a pulse for one clock cycle only
 			dividedPulse <= (1 & ~dividedClk);
 		end
 		else if (enable) begin
@@ -26,6 +29,7 @@ module clockDividerHertz #(
 		end
 	end
 
+	// generate divided down clock
 	always @(posedge clk) begin
 		if (rst) begin
 			dividedClk <= 0;

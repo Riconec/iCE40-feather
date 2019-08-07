@@ -1,48 +1,60 @@
 `default_nettype none
 `include "../src/clockDividerHertz.v"
-`include "nibble_decode.v"
+`include "nibbleDecode.v"
+`include "displaySelect.v"
 
 module top(
     input clk,
     input [7:0] sw,
+    input switch,
     output reg [6:0] seg,
-    output reg [1:0] com,
-    output UART_RX,
-    output UART_TX
+    output reg [1:0] com
 );
 
-	localparam comAnode = 1;
+	// params / wires
+	localparam COM_ANODE = 1;
 	wire dividedClk;
 	wire [6:0] disp0, disp1;
+	wire [3:0] nibbleMS, nibbleLS;
 
-	// mux displays
+	// mux displays together
 	always @(posedge clk) begin
 		case (dividedClk)
 			0:begin
 				seg<=disp1;
-				com = 2'b01;
+				com <= 2'b01;
 				end
 			1:begin
 				seg<=disp0;
-				com = 2'b10;
+				com <= 2'b10;
 				end
 		endcase
 	end
 
-	// decode upper nibble
-	nibble_decode nibble_decode_right (
-		.clk(clk), 
-		.nibblein(sw[3:0]), 
-		.comAnode(comAnode[0]),
-		.segout(disp0)
+	// choose what number to show on display
+	displaySelect inst_displaySelect (
+		.clk 		(clk), 
+		.sw 		(sw), 
+		.switch 	(switch), 
+		.nibbleMS 	(nibbleMS), 
+		.nibbleLS 	(nibbleLS)
 	);
 
-	// decode lower nibble
-	nibble_decode nibble_decode_left (
-		.clk(clk), 
-		.nibblein(sw[7:4]), 
-		.comAnode(comAnode[0]),
-		.segout(disp1)
+	// decodes nibble to 7 segment display
+	nibbleDecode #(
+			.COM_ANODE 	(COM_ANODE)
+		) nibbleDecodeMSD (
+			.clk 		(clk), 
+		 	.nibblein 	(nibbleMS), 
+			.segout 	(disp1)
+	);
+	
+	nibbleDecode #(
+			.COM_ANODE 	(COM_ANODE)
+		) nibbleDecodeLSD (
+			.clk 		(clk), 
+		 	.nibblein 	(nibbleLS), 
+			.segout 	(disp0)
 	);
 
 	// generate clock for switching displays
@@ -55,10 +67,6 @@ module top(
 			.dividedClk 	(dividedClk),
 			.dividedPulse	()
 	);
-
-	// keep UART LEDs off
-	assign UART_RX = 0;
-	assign UART_TX = 0;
 
 endmodule
 

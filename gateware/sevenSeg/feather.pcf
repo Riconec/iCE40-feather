@@ -33,6 +33,9 @@ set_io -nowarn sw[5]     	9
 set_io -nowarn sw[6]     	10
 set_io -nowarn sw[7]     	11
 
+# SEL Sw
+set_io -nowarn switch 		12
+
 # GPIO
 set_io -nowarn IO_0 		25
 set_io -nowarn IO_1 		26
