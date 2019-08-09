@@ -19,7 +19,7 @@
 * Compatible with the open source [IceStorm](http://www.clifford.at/icestorm/#install) toolchain
 * Thanks to [Piotr Esden-Tempski](https://twitter.com/esden) and his [iCEBreaker examples](https://github.com/icebreaker-fpga/icebreaker-examples) as a starting point for the firmware development.
 
-### Additional Photos
+### Additional Images
 ![alt-text](docs/img/bottom_render.PNG "Bottom")  
 
 ![alt-text](docs/img/ledMatrix_render.PNG "7 Segment")  
