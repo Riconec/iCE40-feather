@@ -1,7 +1,7 @@
 # iCE40-feather
 ![alt-text](docs/img/top_render.PNG "Top")  
 
-## An iCE40UP5K FPGA in an Adafruit Feather form factor
+## An iCE40UP5K FPGA in an Feather compatible form factor
 
 * iCE40UP5k FPGA in a QFN-48 package
     * 5280 Logic Cells
