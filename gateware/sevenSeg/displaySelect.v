@@ -17,11 +17,13 @@ module displaySelect(
             nibbleMS <= sw[7:4];
             nibbleLS <= sw[3:0]; 
         end else begin
-            // if in dec mode, limit display to 99
-            if (sw > 99) begin
-                dispNum = 0; 
-            end else begin
+            // if in dec mode, only show last two characters
+            if (sw <= 99) begin
                 dispNum = sw;
+            end else if (sw <= 199) begin
+                dispNum = sw - 100;
+            end else begin
+                dispNum = sw - 200;
             end
             // determine value to display in most significant display
             if ((dispNum >= 7'd90) && (sw <= 99)) begin

@@ -25,7 +25,6 @@ module sevenSeg_tb();
 		sw = 8'd4;
 		#900
 		sw = 8'd5;
-
 		#900
 		sw = 8'd35;
 		#900
@@ -38,6 +37,14 @@ module sevenSeg_tb();
 		sw = 8'd100;
 		#900
 		sw = 8'd120;
+		#900
+		sw = 8'd127;
+		#900
+		sw = 8'd128;
+		#900
+		sw = 8'd210;
+		#900
+		sw = 8'd255;
 
 	end
 
