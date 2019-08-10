@@ -9,8 +9,7 @@ module top(
     output nLED_RED_fw,
     output nLED_GRN_fw,
     output nLED_BLU_fw,
-    output UART_RX,
-    output UART_TX
+    output nLED
 );
 	wire dividedPulse;
 	reg [2:0] rowPos = 0;
@@ -37,6 +36,7 @@ module top(
 	assign row = (1 << rowPos);
 	assign col = ~(1 << colPos);
 
+	assign nLED = ~btn[0];
 	assign nLED_RED_fw = ~btn[1];
 	assign nLED_GRN_fw = ~btn[2];
 	assign nLED_BLU_fw = ~btn[3];
@@ -50,10 +50,6 @@ module top(
 			.dividedClk 	(),
 			.dividedPulse	(dividedPulse)
 		);
-
-	// Keep UART LEDs off
-	assign UART_RX = 0;
-	assign UART_TX = 0;
 
 endmodule
 
