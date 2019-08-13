@@ -9,7 +9,7 @@ module top(
 	wire dividedClk;
 		
 	clockDividerHertz #(
-			.FREQUENCY(15)
+			.FREQUENCY(5)
 		) inst_clockDividerHz (
 			.clk        	(clk),
 			.rst        	(1'b0),
