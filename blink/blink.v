@@ -1,5 +1,5 @@
 `default_nettype none
-`include "../src/clockDividerHertz.v"
+`include "clockDividerHertz.v"
 
 module top(
     input clk,
@@ -19,5 +19,6 @@ module top(
 		);
 
 	assign nLED = dividedClk;
+
 endmodule
 
