@@ -21,13 +21,21 @@ module top(
 	always @(posedge clk) begin
 		case (dividedClk)
 			0:begin
-				seg<=disp1;
-				com <= 2'b01;
+				seg <= disp1;
+				if (COM_ANODE) begin
+					com <= 2'b01;
+				end else begin
+					com <= 2'b10;
 				end
+			end
 			1:begin
-				seg<=disp0;
-				com <= 2'b10;
+				seg <= disp0;
+				if (COM_ANODE) begin
+					com <= 2'b10;
+				end else begin
+					com <= 2'b01;
 				end
+			end
 		endcase
 	end
 
@@ -41,21 +49,24 @@ module top(
 	);
 
 	// decodes nibble to 7 segment display
+
 	nibbleDecode #(
 			.COM_ANODE 	(COM_ANODE)
 		) nibbleDecodeMSD (
 			.clk 		(clk), 
 		 	.nibblein 	(nibbleMS), 
-			.segout 	(disp1)
+			.segout 	(disp0)
 	);
-	
+
 	nibbleDecode #(
 			.COM_ANODE 	(COM_ANODE)
 		) nibbleDecodeLSD (
 			.clk 		(clk), 
 		 	.nibblein 	(nibbleLS), 
-			.segout 	(disp0)
+			.segout 	(disp1)
 	);
+	
+
 
 	// generate clock for switching displays
 	clockDividerHertz #(

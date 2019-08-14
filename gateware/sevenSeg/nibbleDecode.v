@@ -13,9 +13,9 @@ module nibbleDecode #(
     // invert display for common anode / cathode
     always @(*) begin
         if (COM_ANODE) begin
-            segout[6:0] = seg[6:0];
-        end else begin
             segout[6:0] = ~seg[6:0];
+        end else begin
+            segout[6:0] = seg[6:0];
         end
     end
 
