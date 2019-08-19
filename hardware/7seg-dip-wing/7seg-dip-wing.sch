@@ -358,9 +358,9 @@ Wire Wire Line
 	9675 2225 10100 2225
 Wire Wire Line
 	9675 2325 10100 2325
-Text Label 10100 2225 2    50   ~ 0
-ANODE_1
 Text Label 10100 2325 2    50   ~ 0
+ANODE_1
+Text Label 10100 2225 2    50   ~ 0
 ANODE_2
 Text Label 6250 2325 2    50   ~ 0
 SEG_A
@@ -398,9 +398,9 @@ Wire Wire Line
 	5925 3025 6275 3025
 Wire Wire Line
 	5925 3125 6275 3125
-Text Label 6275 3025 2    50   ~ 0
-ANODE_1
 Text Label 6275 3125 2    50   ~ 0
+ANODE_1
+Text Label 6275 3025 2    50   ~ 0
 ANODE_2
 Wire Wire Line
 	9125 2225 8950 2225
@@ -561,7 +561,7 @@ L josh-led:LTD-5623Ax U1
 U 1 1 5D176950
 P 8175 2175
 F 0 "U1" H 8175 2842 50  0000 C CNN
-F 1 "LTD-5623Ax" H 8175 2751 50  0000 C CNN
+F 1 "LTD-6910HR" H 8175 2751 50  0000 C CNN
 F 2 "Display_7Segment:DA56-11SEKWA" H 8175 1575 50  0001 C CNN
 F 3 "https://docs.broadcom.com/docs/AV02-1589EN" H 7955 2275 50  0001 C CNN
 	1    8175 2175

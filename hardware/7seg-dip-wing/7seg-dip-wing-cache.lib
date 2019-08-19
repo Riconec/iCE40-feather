@@ -246,7 +246,7 @@ ENDDEF
 # josh-passive_RN
 #
 DEF josh-passive_RN RN 0 0 N Y 4 F N
-F0 "RN" 0 -100 50 H V C CNN
+F0 "RN" 0 70 50 H V C CNN
 F1 "josh-passive_RN" 0 0 50 H V C CNN
 F2 "" 0 0 50 V I C CNN
 F3 "" 0 0 50 V I C CNN
