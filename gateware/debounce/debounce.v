@@ -1,3 +1,10 @@
+// Debounces an active high button, using a shift register approach. 
+// This results in ~50ms of latency which is unperceivable to almost everyone.
+// @input button: button to be debounced
+// @output button_db: debounced button
+// @output button_rising: one clock pulse upon rising edge of button_db
+// @output button_falling: one clock pulse upon falling edge of button_db
+
 `default_nettype none
 `include "../src/clockDividerHertz.v"
 

@@ -1,3 +1,8 @@
+// Decodes a 4 bit nibble into hex values to be displayed on seven segment display
+// @input nibblein: nibble to be decoded. MSB:LSB
+// @input COM_ANODE: change between common anode and common cathode
+// @output segout: segments required to be lit for char to be displayed correctly
+
 `default_nettype none
 
 module nibbleDecode #(

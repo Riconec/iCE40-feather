@@ -1,3 +1,5 @@
+// Test script used during assembly to confirm that all IO and UART are functioning correctly
+
 `default_nettype none
 `include "../src/clockDividerHertz.v"
 

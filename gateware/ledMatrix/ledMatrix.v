@@ -1,3 +1,9 @@
+// Example code for LED FeatherWing
+// Currently scans through row / col, and lights up LEDs when buttons are pressed
+// @input [3:0] btn: four buttons on FeatherWing
+// @output nLEDx: RGB LED on FeatherWing + user led on Feather. 
+// @output row, col: row and col of LED matrix
+
 `default_nettype none
 `include "../src/clockDividerHertz.v"
 

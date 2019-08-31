@@ -1,3 +1,10 @@
+// Seven segment decoder from binary to hex and dec 
+// Can be configured for common anode or cathode display by adjusting COM_ANODE to 1 or 0
+// @input sw: 8 dip switches on FeatherWing
+// @input switch: slide switch on side of FeatherWing
+// @output seg: pins for seven segment A:G connections
+// @output com: common (anode / cathode) pins for each seven segment display
+
 `default_nettype none
 `include "../src/clockDividerHertz.v"
 `include "nibbleDecode.v"
@@ -9,7 +16,7 @@ module top(
     input switch,
     output reg [6:0] seg,
     output reg [1:0] com
-);
+	);
 
 	// params / wires
 	localparam COM_ANODE = 1;
@@ -49,7 +56,6 @@ module top(
 	);
 
 	// decodes nibble to 7 segment display
-
 	nibbleDecode #(
 			.COM_ANODE 	(COM_ANODE)
 		) nibbleDecodeMSD (
@@ -66,8 +72,6 @@ module top(
 			.segout 	(disp1)
 	);
 	
-
-
 	// generate clock for switching displays
 	clockDividerHertz #(
 			.FREQUENCY(100)

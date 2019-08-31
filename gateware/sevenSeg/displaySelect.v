@@ -1,3 +1,9 @@
+// Chooses what numbers to display on the seven segment displays depending on state of slide switch
+// @input sw: dip switch values MSB:LSB
+// @input switch: slide switch 
+// @output nibbleMS: most significant nibble to be displayed
+// @output nibbleLS: least significant nibble to be displayed
+
 `default_nettype none
 
 module displaySelect(

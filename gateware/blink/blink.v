@@ -1,3 +1,6 @@
+// Verilog implementation of a blinking LED. 
+// Utilises the clockDividerHertz module to divide refrence clock down to human visable speeds. 
+// @output nLED: led to blink
 `default_nettype none
 `include "../src/clockDividerHertz.v"
 
