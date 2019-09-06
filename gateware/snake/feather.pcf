@@ -22,12 +22,12 @@ set_io -nowarn row[3]		26
 set_io -nowarn row[4]		27
 set_io -nowarn row[5]		25
 
-set_io -nowarn col[0]		28
-set_io -nowarn col[1]		36
-set_io -nowarn col[2]		9
-set_io -nowarn col[3]		10
-set_io -nowarn col[4]		11
-set_io -nowarn col[5]		12
+set_io -nowarn col[5]		28
+set_io -nowarn col[4]		36
+set_io -nowarn col[3]		9
+set_io -nowarn col[2]		10
+set_io -nowarn col[1]		11
+set_io -nowarn col[0]		12
 
 set_io -nowarn btn_up 		43
 set_io -nowarn btn_left		44

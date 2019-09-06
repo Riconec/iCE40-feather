@@ -24,32 +24,49 @@ module top(
 	parameter DIM_Y = 6;
 	reg [2:0] pos_x = 0;
 	reg [2:0] pos_y = 0;
-	wire [35:0] img;
+	reg [35:0] img;
+	reg change = 1;
 
 	// move position within bounds of display
 	always @(posedge clk) begin
 		if (btn_up_rising) begin
-			if (pos_y < DIM_Y - 1) begin
-				pos_y <= pos_y + 1;
+			if (pos_y > 0) begin
+				pos_y <= pos_y - 1;
+				change <= 1;
 			end 
 		end else if (btn_left_rising) begin
 			if (pos_x > 0) begin
 				pos_x <= pos_x - 1;
+				change <= 1;
 			end 
 		end else if (btn_right_rising) begin
 			if (pos_x < DIM_X - 1) begin
 				pos_x <= pos_x + 1;
+				change <= 1;
 			end 
 		end else if (btn_down_rising) begin
-			if (pos_y > 0) begin
-				pos_y <= pos_y - 1;
+			if (pos_y < DIM_Y - 1) begin
+				pos_y <= pos_y + 1;
+				change <= 1;
 			end 
 		end 
 	end
 
 	// generate img to be sent over
-	assign img = pos_x * pos_y;
-
+	always @(posedge clk) begin
+		if (change) begin
+			img = 0;
+			case (pos_y)
+				3'd0: img [5:0] 	= 1 << DIM_X - 1 - pos_x;
+				3'd1: img [11:6] 	= 1 << DIM_X - 1 - pos_x;
+				3'd2: img [17:12] 	= 1 << DIM_X - 1 - pos_x;
+				3'd3: img [23:18] 	= 1 << DIM_X - 1 - pos_x;
+				3'd4: img [29:24] 	= 1 << DIM_X - 1 - pos_x;
+				3'd5: img [35:30] 	= 1 << DIM_X - 1 - pos_x;
+				default: img 		= 0;
+			endcase
+		end
+	end
 
 	// led matrix
 	ledMatrix inst_ledMatrix (

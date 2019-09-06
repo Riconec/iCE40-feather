@@ -34,7 +34,7 @@ module ledMatrix(
 		end
 	end
 
-	assign row = rowCnt;
+	assign row = 1 << rowCnt;
 
 	always @(*) begin
 		case (rowCnt)
