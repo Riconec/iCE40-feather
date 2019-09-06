@@ -1,5 +1,4 @@
 `default_nettype none
-`include "clockDividerHertz.v"
 
 module debounce(
     input clk,

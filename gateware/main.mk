@@ -9,7 +9,7 @@ all: $(PROJ).rpt $(PROJ).bin
 
 ifeq ($(USE_ARACHNEPNR),)
 %.asc: $(PIN_DEF) %.json
-	nextpnr-ice40 -q --$(DEVICE) --json $(filter-out $<,$^) --pcf $< --asc $@
+	nextpnr-ice40 --$(DEVICE) --json $(filter-out $<,$^) --pcf $< --asc $@ --package sg48
 else
 %.asc: $(PIN_DEF) %.blif
 	arachne-pnr -d $(subst up,,$(subst hx,,$(subst lp,,$(DEVICE)))) -o $@ -p $^

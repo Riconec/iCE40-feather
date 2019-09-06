@@ -3,13 +3,51 @@
 
 module snake_tb();
 
-	reg clk;
-	reg btn_up, btn_left, btn_right, btn_down;
+	logic clk;
+	reg btn_up = 0;
+	reg btn_left = 0;
+	reg btn_right = 0;
+	reg btn_down = 0;
+
 	// Clock
 	initial begin
 		clk = 0;
 		forever #(42) clk = ~clk;
 	end
+
+	initial begin
+		#(50_000); // 50 us
+		btn_right = 1;
+		#(50_000_000); // 50ms
+		btn_right = 0;
+		#(50_000); // 50 us
+
+		btn_up = 1;
+		#(50_000_000); // 50ms
+		btn_up = 0;
+		#(50_000); // 50 us
+
+		btn_left = 1;
+		#(50_000_000); // 50ms
+		btn_left = 0;
+		#(90_000_000); // 90 ms
+
+		btn_left = 1;
+		#(50_000_000); // 50ms
+		btn_left = 0;
+		#(50_000); // 50 us
+
+		btn_down = 1;
+		#(50_000_000); // 50ms
+		btn_down = 0;
+		#(50_000); // 50 us
+
+		btn_left = 1;
+		#(50_000_000); // 50ms
+		btn_left = 0;
+		#(50_000); // 50 us
+	end
+
 
 	top inst_top
 	(
@@ -18,44 +56,9 @@ module snake_tb();
 		.btn_left  (btn_left),
 		.btn_right (btn_right),
 		.btn_down  (btn_down),
-		.row       (row),
-		.col       (col)
+		.row       (),
+		.col       ()
 	);
-
-	initial begin
-		btn_right = 1;
-		#(50_000_000) // 50ms
-		btn_right = 0;
-		#(50_000) // 50 us
-
-		btn_up = 1;
-		#(50_000_000) // 50ms
-		btn_up = 0;
-		#(50_000) // 50 us
-
-		btn_left = 1;
-		#(50_000_000) // 50ms
-		btn_left = 0;
-		#(50_000) // 50 us
-
-		btn_left = 1;
-		#(50_000_000) // 50ms
-		btn_left = 0;
-		#(50_000) // 50 us
-
-		btn_down = 1;
-		#(50_000_000) // 50ms
-		btn_down = 0;
-		#(50_000) // 50 us
-
-		btn_left = 1;
-		#(50_000_000) // 50ms
-		btn_left = 0;
-		#(50_000) // 50 us
-	end
-
-
-
 
 	// Dump wave
 	initial begin

@@ -39,4 +39,3 @@ module clockDividerHertz #(
 		end
 	end
 endmodule
-
