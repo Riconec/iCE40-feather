@@ -1,4 +1,20 @@
+// -----------------------------------------------------------------------------
+// Copyright (c) 2019 All rights reserved
+// -----------------------------------------------------------------------------
+// Author      : Josh Johnson <josh@joshajohnson.com>
+// File        : debounce.v
+// Description : Debounces button, outputting debounced button, and single
+//               clock pulses on rising and falling edges of debounced signal
+// Created     : 2019-09-06 19:13:56
+// Revised     : 2019-09-06 19:13:56
+// Editor      : sublime text3, tab size (4)
+// -----------------------------------------------------------------------------
+
+`ifndef _debounce_v_
+`define _debounce_v_
+
 `default_nettype none
+`include "../src/clockDividerHertz.v"
 
 module debounce(
     input clk,
@@ -59,3 +75,4 @@ module debounce(
 
 endmodule
 
+`endif

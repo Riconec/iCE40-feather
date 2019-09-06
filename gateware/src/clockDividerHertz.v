@@ -1,4 +1,18 @@
+// -----------------------------------------------------------------------------
+// Copyright (c) 2019 All rights reserved
+// -----------------------------------------------------------------------------
+// Author      : Josh Johnson <josh@joshajohnson.com>
+// File        : clockDividerHertz.v
+// Description : Divides 12 MHz system clock outputs divided and single pulse
+// Created     : 2019-09-06 19:17:20
+// Revised     : 2019-09-06 19:17:20
+// Editor      : sublime text3, tab size (4)
+// -----------------------------------------------------------------------------
+
 `default_nettype none
+
+`ifndef _clockDividerHertz_v_
+`define _clockDividerHertz_v_
 
 module clockDividerHertz #(
 	parameter integer FREQUENCY = 1
@@ -39,3 +53,5 @@ module clockDividerHertz #(
 		end
 	end
 endmodule
+
+`endif

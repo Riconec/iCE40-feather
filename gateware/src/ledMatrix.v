@@ -1,14 +1,29 @@
-// Example code to drive LED FeatherWing
+// -----------------------------------------------------------------------------
+// Copyright (c) 2019 All rights reserved
+// -----------------------------------------------------------------------------
+// Author      : Josh Johnson <josh@joshajohnson.com>
+// File        : ledMatrix.v
+// Description : Handles display of input 'img' on multiplexed array featherwing
+// Created     : 2019-09-06 19:11:33
+// Revised     : 2019-09-06 19:11:33
+// Editor      : sublime text3, tab size (4)
+// 
 // @input [35:0] img: 6x6 image to be displayed, mapping as below
-// 0  1  2  3  4  5
-// 6  7  8  9  10 11
+// 31 32 33 34 35 36
+// 25 26 27 28 29 30
+// 19 20 21 22 23 24
+// 13 14 15 16 17 18 
 // 12 13 14 15 16 17
-// 18 19 20 21 22 23
-// 24 25 26 27 28 29
-// 30 31 32 33 34 35
-// @output row, col: row and col of LED matrix, col is active low
+//  6  7  8  9 10 11
+//  5  4  3  2  1  0
+// -----------------------------------------------------------------------------
+
+
+`ifndef _ledMatrix_v_
+`define _ledMatrix_v_
 
 `default_nettype none
+`include "../src/clockDividerHertz.v"
 
 module ledMatrix(
     input clk,
@@ -38,12 +53,12 @@ module ledMatrix(
 
 	always @(*) begin
 		case (rowCnt)
-			3'd0: colOut = img [5:0];
-			3'd1: colOut = img [11:6];
-			3'd2: colOut = img [17:12];
-			3'd3: colOut = img [23:18];
-			3'd4: colOut = img [29:24];
 			3'd5: colOut = img [35:30];
+			3'd4: colOut = img [29:24];
+			3'd3: colOut = img [23:18];	
+			3'd2: colOut = img [17:12];
+			3'd1: colOut = img [11:6];
+			3'd0: colOut = img [5:0];
 			default: colOut = 6'b111111;
 		endcase
 	end
@@ -61,4 +76,6 @@ module ledMatrix(
 	);
 
 endmodule
+
+`endif
 
