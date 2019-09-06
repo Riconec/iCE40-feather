@@ -1,7 +1,7 @@
 `default_nettype none
 `include "clockDividerHertz.v"
 
-module top(
+module debounce(
     input clk,
     input button,
     output button_db,
