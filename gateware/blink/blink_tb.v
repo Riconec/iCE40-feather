@@ -4,7 +4,7 @@
 module blink_tb();
 
 	logic clk;
-	wire nLED_RED;
+	wire nLED;
 
 	// Clock
 	initial begin
@@ -12,7 +12,7 @@ module blink_tb();
 		forever #(42) clk = ~clk;
 	end
 
-	top inst_top (.clk(clk), .nLED_RED(nLED_RED));
+	top inst_top (.clk(clk), .nLED(nLED));
 
 	// Dump wave
 	initial begin
