@@ -5,9 +5,9 @@ set_io -nowarn clk        	35
 set_io -nowarn nLED 		47
 
 # RGB LED
-set_io -nowarn nLED_RED  	39
+set_io -nowarn nLED_RED  	41
 set_io -nowarn nLED_GRN  	40
-set_io -nowarn nLED_BLU  	41
+set_io -nowarn nLED_BLU  	39
 
 # 7 Segment Pins
 # In order A B C D E F G
@@ -71,5 +71,3 @@ set_io -nowarn FLASH_SCK  	15
 set_io -nowarn FLASH_SS  	16
 set_io -nowarn FLASH_MOSI  	14
 set_io -nowarn FLASH_MISO  	17
-
-
