@@ -6,7 +6,7 @@
 // @output button_falling: one clock pulse upon falling edge of button_db
 
 `default_nettype none
-`include "../src/clockDividerHertz.v"
+`include "../src/clkDivHz.v"
 
 module top(
     input clk,
@@ -55,7 +55,7 @@ module top(
 	end
 
 	// clock for input sampling
-	clockDividerHertz #(
+	clkDivHz #(
 			.FREQUENCY(200)
 		) inst_clockDividerHz (
 			.clk        	(clk),

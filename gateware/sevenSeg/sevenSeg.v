@@ -6,7 +6,7 @@
 // @output com: common (anode / cathode) pins for each seven segment display
 
 `default_nettype none
-`include "../src/clockDividerHertz.v"
+`include "../src/clkDivHz.v"
 `include "nibbleDecode.v"
 `include "displaySelect.v"
 
@@ -73,9 +73,9 @@ module top(
 	);
 	
 	// generate clock for switching displays
-	clockDividerHertz #(
+	clkDivHz #(
 			.FREQUENCY(100)
-		) inst_clockDividerHertz (
+		) inst_clkDivHz (
 			.clk        	(clk),
 			.rst        	(1'b0),
 			.enable     	(1'b1),

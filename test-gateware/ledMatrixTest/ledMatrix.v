@@ -5,7 +5,7 @@
 // @output row, col: row and col of LED matrix
 
 `default_nettype none
-`include "../src/clockDividerHertz.v"
+`include "../src/clkDivHz.v"
 
 module top(
     input clk,
@@ -47,7 +47,7 @@ module top(
 	assign nLED_GRN_fw = ~btn[2];
 	assign nLED_BLU_fw = ~btn[3];
 		
-	clockDividerHertz #(
+	clkDivHz #(
 			.FREQUENCY(36)
 		) inst_clockDividerHz (
 			.clk        	(clk),

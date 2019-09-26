@@ -9,15 +9,15 @@ all: $(PROJ).rpt $(PROJ).bin
 
 ifeq ($(USE_ARACHNEPNR),)
 %.asc: $(PIN_DEF) %.json
-	nextpnr-ice40 --$(DEVICE) --json $(filter-out $<,$^) --pcf $< --asc $@ --package sg48
+	nextpnr-ice40 -q --$(DEVICE) --json $(filter-out $<,$^) --pcf $< --asc $@ --package sg48
 else
 %.asc: $(PIN_DEF) %.blif
 	arachne-pnr -d $(subst up,,$(subst hx,,$(subst lp,,$(DEVICE)))) -o $@ -p $^
 endif
 
-
 %.bin: %.asc
 	icepack $< $@
+	icebox_stat $(PROJ).asc
 
 %.rpt: %.asc
 	icetime -d $(DEVICE) -mtr $@ $<
@@ -54,7 +54,6 @@ new:
 	cp -r blink $(NAME) && cd $(NAME) && \
 	find ./ -type f -exec sed -i 's/blink/$(NAME)/' * \; && \
 	rename 's/blink/$(NAME)/' *.v
-	
 	
 clean:
 	rm -f $(PROJ).blif $(PROJ).asc $(PROJ).rpt $(PROJ).bin $(PROJ).json $(PROJ).log sim/$(PROJ)_tb sim/$(PROJ)_tb.lxt $(ADD_CLEAN)

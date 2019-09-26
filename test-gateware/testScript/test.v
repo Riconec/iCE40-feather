@@ -1,7 +1,7 @@
 // Test script used during assembly to confirm that all IO and UART are functioning correctly
 
 `default_nettype none
-`include "../src/clockDividerHertz.v"
+`include "../src/clkDivHz.v"
 
 module top(
     input clk,
@@ -39,7 +39,7 @@ module top(
 	reg [8:0] counter = 0;
 	reg [1:0] rgbCounter = 0;
 		
-	clockDividerHertz #(
+	clkDivHz #(
 		.FREQUENCY(5)
 	) inst_clockDividerHertz (
 		.clk        	(clk),

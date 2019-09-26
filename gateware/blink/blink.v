@@ -1,8 +1,16 @@
-// Verilog implementation of a blinking LED. 
-// Utilises the clockDividerHertz module to divide refrence clock down to human visable speeds. 
-// @output nLED: led to blink
+// -----------------------------------------------------------------------------
+// Copyright (c) 2019 All rights reserved
+// -----------------------------------------------------------------------------
+// Author      : Josh Johnson <josh@joshajohnson.com>
+// File        : blink.v
+// Description : Blinking a LED using the clkDivHz.v module
+// Created     : 2019-09-26 22:46:11
+// Revised     : 2019-09-26 22:46:11
+// Editor      : sublime text3, tab size (4)
+// -----------------------------------------------------------------------------
+
 `default_nettype none
-`include "../src/clockDividerHertz.v"
+`include "../src/clkDivHz.v"
 
 module top(
     input clk,
@@ -11,7 +19,7 @@ module top(
 
 	wire dividedClk;
 		
-	clockDividerHertz #(
+	clkDivHz #(
 			.FREQUENCY(15)
 		) inst_clockDividerHz (
 			.clk        	(clk),

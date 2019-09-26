@@ -2,7 +2,7 @@
 // Copyright (c) 2019 All rights reserved
 // -----------------------------------------------------------------------------
 // Author      : Josh Johnson <josh@joshajohnson.com>
-// File        : clockDividerHertz.v
+// File        : clkDivHz.v
 // Description : Divides 12 MHz system clock outputs divided and single pulse
 // Created     : 2019-09-06 19:17:20
 // Revised     : 2019-09-06 19:17:20
@@ -11,10 +11,10 @@
 
 `default_nettype none
 
-`ifndef _clockDividerHertz_v_
-`define _clockDividerHertz_v_
+`ifndef _clkDivHz_v_
+`define _clkDivHz_v_
 
-module clockDividerHertz #(
+module clkDivHz #(
 	parameter integer FREQUENCY = 1
 	)(
 	input clk,
@@ -35,7 +35,7 @@ module clockDividerHertz #(
 		if (rst || (counter >= THRESHOLD - 1)) begin
 			counter <= 0;
 			// give a pulse for one clock cycle only
-			dividedPulse <= (1 & ~dividedClk);
+			dividedPulse <= (1 & dividedClk);
 		end
 		else if (enable) begin
 			counter <= counter + 1;
