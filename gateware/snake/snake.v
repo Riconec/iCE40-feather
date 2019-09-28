@@ -19,8 +19,8 @@ module top(
     input btn_left,
     input btn_right,
     input btn_down,
-    output [5:0] row,
-    output [5:0] col
+    output wire [5:0] row,
+    output wire [5:0] col
 );
 	parameter DIM_X = 6;
 	parameter DIM_Y = 6;
@@ -37,22 +37,18 @@ module top(
 		if (btn_up_rising) begin
 			if (pos_y < DIM_Y - 1) begin
 					pos_y <= pos_y + 1;
-					change <= 1;
 				end 
 		end else if (btn_left_rising) begin
 			if (pos_x > 0) begin
 				pos_x <= pos_x - 1;
-				change <= 1;
 			end 
 		end else if (btn_right_rising) begin
 			if (pos_x < DIM_X - 1) begin
 				pos_x <= pos_x + 1;
-				change <= 1;
 			end 
 		end else if (btn_down_rising) begin
 			if (pos_y > 0) begin
 				pos_y <= pos_y - 1;
-				change <= 1;
 			end 
 		end 
 	end
@@ -60,18 +56,16 @@ module top(
 	reg [35:0] img;
 	// generate img to be sent over
 	always @(posedge clk) begin
-		if (change) begin
-			img = 0;
-			case (pos_y)
-				3'd0: img [35:30] 	= 1 << pos_x;
-				3'd1: img [29:24] 	= 1 << pos_x;
-				3'd2: img [23:18] 	= 1 << pos_x;
-				3'd3: img [17:12] 	= 1 << pos_x;
-				3'd4: img [11:6] 	= 1 << pos_x;
-				3'd5: img [5:0] 	= 1 << pos_x;
-				default: img 		= 0;
-			endcase
-		end
+		img = 0;
+		case (5 - pos_y)
+			3'd0: img [5:0] 	= 1 << (5 - pos_x);
+			3'd1: img [11:6] 	= 1 << (5 - pos_x);
+			3'd2: img [17:12] 	= 1 << (5 - pos_x);
+			3'd3: img [23:18] 	= 1 << (5 - pos_x);
+			3'd4: img [29:24] 	= 1 << (5 - pos_x);
+			3'd5: img [35:30] 	= 1 << (5 - pos_x);
+			default: img 		= 36'd0;
+		endcase
 	end
 
 	// led matrix

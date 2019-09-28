@@ -8,6 +8,7 @@ module snake_tb();
 	reg btn_left = 0;
 	reg btn_right = 0;
 	reg btn_down = 0;
+	wire [5:0] row, col;
 
 	// Clock
 	initial begin
@@ -16,36 +17,36 @@ module snake_tb();
 	end
 
 	initial begin
-		#(50_000); // 50 us
-		btn_right = 1;
-		#(50_000_000); // 50ms
-		btn_right = 0;
-		#(50_000); // 50 us
+		// #(50_000); // 50 us
+		// btn_right = 1;
+		// #(50_000_000); // 50ms
+		// btn_right = 0;
+		// #(50_000); // 50 us
 
-		btn_up = 1;
-		#(50_000_000); // 50ms
-		btn_up = 0;
-		#(50_000); // 50 us
+		// btn_up = 1;
+		// #(50_000_000); // 50ms
+		// btn_up = 0;
+		// #(50_000); // 50 us
 
-		btn_left = 1;
-		#(50_000_000); // 50ms
-		btn_left = 0;
-		#(90_000_000); // 90 ms
+		// btn_left = 1;
+		// #(50_000_000); // 50ms
+		// btn_left = 0;
+		// #(90_000_000); // 90 ms
 
-		btn_left = 1;
-		#(50_000_000); // 50ms
-		btn_left = 0;
-		#(50_000); // 50 us
+		// btn_left = 1;
+		// #(50_000_000); // 50ms
+		// btn_left = 0;
+		// #(50_000); // 50 us
 
-		btn_down = 1;
-		#(50_000_000); // 50ms
-		btn_down = 0;
-		#(50_000); // 50 us
+		// btn_down = 1;
+		// #(50_000_000); // 50ms
+		// btn_down = 0;
+		// #(50_000); // 50 us
 
-		btn_left = 1;
-		#(50_000_000); // 50ms
-		btn_left = 0;
-		#(50_000); // 50 us
+		// btn_left = 1;
+		// #(50_000_000); // 50ms
+		// btn_left = 0;
+		// #(50_000); // 50 us
 	end
 
 
@@ -56,8 +57,8 @@ module snake_tb();
 		.btn_left  (btn_left),
 		.btn_right (btn_right),
 		.btn_down  (btn_down),
-		.row       (),
-		.col       ()
+		.row       (row),
+		.col       (col)
 	);
 
 	// Dump wave
@@ -67,7 +68,7 @@ module snake_tb();
 	end
 	
 	// Count in 10% increments and finish sim when time is up
-	localparam SIM_TIME_MS = 500;
+	localparam SIM_TIME_MS = 100;
 	localparam SIM_TIME = SIM_TIME_MS * 1000_000; // @ 1 ns / unit
 	initial begin
 		$display("Simulation Started");
