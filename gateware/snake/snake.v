@@ -19,39 +19,93 @@ module top(
     input btn_left,
     input btn_right,
     input btn_down,
+    output wire nLED_RED_fw,
     output wire [5:0] row,
     output wire [5:0] col
 );
+	// Size of matrix
 	parameter DIM_X = 6;
 	parameter DIM_Y = 6;
 
+	// Wires and regs are here
 	wire btn_up_rising, btn_left_rising, btn_right_rising, btn_down_rising;
-	
+	reg error = 0;
+
+	// Direction of snake
+	parameter UP = 	4'b0001;
+	parameter DOWN = 4'b0010;
+	parameter LEFT = 4'b0100;
+	parameter RIGHT = 4'b1000;
+	// Initial direction of snake
+	reg [3:0] direction = UP;
+
 	// position state machine
 	reg [2:0] pos_x = 0;
 	reg [2:0] pos_y = 0;
 	reg change = 1;
 
-	// move position within bounds of display
+	// change direction after button press
 	always @(posedge clk) begin
 		if (btn_up_rising) begin
-			if (pos_y < DIM_Y - 1) begin
-					pos_y <= pos_y + 1;
-				end 
+				direction <= UP;
 		end else if (btn_left_rising) begin
-			if (pos_x > 0) begin
-				pos_x <= pos_x - 1;
-			end 
+				direction <= LEFT;
 		end else if (btn_right_rising) begin
-			if (pos_x < DIM_X - 1) begin
-				pos_x <= pos_x + 1;
-			end 
+				direction <= RIGHT;
 		end else if (btn_down_rising) begin
-			if (pos_y > 0) begin
-				pos_y <= pos_y - 1;
-			end 
+				direction <= DOWN;
 		end 
 	end
+
+	// move snake every clock cycle
+	wire pulse_1Hz;
+	always @(posedge clk) begin
+		if (pulse_1Hz) begin
+			case(direction)
+			UP: 	if (pos_y < DIM_Y) begin
+						if (pos_y < DIM_Y - 1) begin
+							pos_y <= pos_y + 1;
+							error <= 1'b0;
+						end else begin
+							error <= 1'b1;
+						end
+					end 
+
+			LEFT: 	if (pos_x >= 0) begin
+						if (pos_x > 0) begin
+							pos_x <= pos_x - 1;
+							error <= 1'b0;
+				  		end else begin
+				  			error <= 1'b1;
+				  		end
+
+				  	end 
+
+			RIGHT: 	if (pos_x < DIM_X) begin
+						if (pos_x < DIM_X - 1) begin
+							pos_x <= pos_x + 1;
+							error <= 1'b0;
+						end else begin
+							error <= 1'b1;
+						end
+					end
+
+			DOWN: 	if (pos_y >= 0) begin
+						if (pos_y > 0) begin
+							pos_y <= pos_y - 1;
+							error <= 1'b0;
+				  		end else begin
+				  			error <= 1'b1;
+				  		end
+
+				  	end 
+
+			default: pos_x = pos_x;
+			endcase
+		end
+	end
+
+	assign nLED_RED_fw = ~error;
 
 	reg [35:0] img;
 	// generate img to be sent over
@@ -74,6 +128,17 @@ module top(
 		.img	(img), 
 		.row 	(row), 
 		.col 	(col)
+	);
+
+	// 1Hz clock
+	clkDivHz #(
+		.FREQUENCY(1)
+	) inst_clkDivHz (
+		.clk          (clk),
+		.rst          (1'b0),
+		.enable       (1'b1),
+		.dividedClk   (),
+		.dividedPulse (pulse_1Hz)
 	);
 
 	// debonce buttons
