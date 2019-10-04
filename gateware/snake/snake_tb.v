@@ -17,8 +17,10 @@ module snake_tb();
 	end
 
 	initial begin
-		// #(50_000); // 50 us
-		// btn_right = 1;
+		#(50_000); // 50 us
+		btn_up = 1;
+		#(43)
+		btn_down = 0;
 		// #(50_000_000); // 50ms
 		// btn_right = 0;
 		// #(50_000); // 50 us

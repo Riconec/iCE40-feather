@@ -19,7 +19,7 @@ module top(
     input btn_left,
     input btn_right,
     input btn_down,
-    output wire nLED_RED_fw,
+    // output reg nLED_RED_fw,
     output wire [5:0] row,
     output wire [5:0] col
 );
@@ -30,6 +30,77 @@ module top(
 	// Wires and regs are here
 	wire btn_up_rising, btn_left_rising, btn_right_rising, btn_down_rising;
 	reg error = 0;
+	reg reset_game = 1;
+
+	// Mode State Machine
+	parameter IDLE 	= 4'b0000;
+	parameter BEGIN = 4'b0010;
+	parameter PLAY 	= 4'b0100;
+	parameter END 	= 4'b1000;
+
+	reg [3:0] state = IDLE;
+	reg [3:0] next_state;
+
+
+	// Display control variables
+	reg [3:0] display = 0;
+	reg [2:0] countdown = 0;
+
+	parameter START	= 4'b0000;
+	parameter ONE	= 4'b0001;
+	parameter TWO	= 4'b0010;
+	parameter THREE	= 4'b0011;
+	parameter GAME 	= 4'b0100;
+	parameter DEAD 	= 4'b1000;
+
+	always @(posedge clk) begin
+		state <= next_state;
+	end
+
+	always @(posedge clk) begin
+		case (state)
+			IDLE : begin
+				// Move to begin once a key is pressed
+				display <= START;
+				reset_game <= 0;
+				if (btn_up_rising || btn_right_rising || btn_left_rising || btn_down_rising) begin
+					next_state = BEGIN;
+					countdown <= 3;
+				end
+			end
+
+			BEGIN : begin
+				// Display 3,2,1 on screen before beginning game
+				if (pulse_1Hz) begin
+					countdown <= countdown - 1;
+					display <= countdown;
+				end
+
+				if (countdown == 0 && pulse_1Hz) begin
+					next_state <= PLAY;
+				end
+			end
+
+			PLAY : begin
+				// Play snake util it ends
+				display <= GAME;
+				if (error) begin
+					next_state <= END;
+				end
+			end
+
+			END : begin
+				display <= DEAD;
+				if (btn_up_rising || btn_left_rising || btn_right_rising || btn_down_rising) begin
+					next_state <= IDLE;
+					reset_game <= 1;
+				end
+			end
+
+			default: next_state <= IDLE;
+		endcase
+	end
+
 
 	// Direction of snake
 	parameter UP = 	4'b0001;
@@ -46,7 +117,9 @@ module top(
 
 	// change direction after button press
 	always @(posedge clk) begin
-		if (btn_up_rising) begin
+		if (reset_game) begin
+			direction <= UP;
+		end else if (btn_up_rising) begin
 				direction <= UP;
 		end else if (btn_left_rising) begin
 				direction <= LEFT;
@@ -60,7 +133,11 @@ module top(
 	// move snake every clock cycle
 	wire pulse_1Hz;
 	always @(posedge clk) begin
-		if (pulse_1Hz) begin
+		if (reset_game) begin
+			error <= 1'b0;
+			pos_x <= 1'b0;
+			pos_y <= 1'b0;
+		end else if (pulse_1Hz && (state == PLAY)) begin
 			case(direction)
 			UP: 	if (pos_y < DIM_Y) begin
 						if (pos_y < DIM_Y - 1) begin
@@ -105,20 +182,75 @@ module top(
 		end
 	end
 
-	assign nLED_RED_fw = ~error;
-
 	reg [35:0] img;
 	// generate img to be sent over
 	always @(posedge clk) begin
-		img = 0;
-		case (5 - pos_y)
-			3'd0: img [5:0] 	= 1 << (5 - pos_x);
-			3'd1: img [11:6] 	= 1 << (5 - pos_x);
-			3'd2: img [17:12] 	= 1 << (5 - pos_x);
-			3'd3: img [23:18] 	= 1 << (5 - pos_x);
-			3'd4: img [29:24] 	= 1 << (5 - pos_x);
-			3'd5: img [35:30] 	= 1 << (5 - pos_x);
-			default: img 		= 36'd0;
+		case (display)
+			START :	begin
+					img [5:0] 		= 6'b101010;
+					img [11:6] 		= 6'b010101;
+					img [17:12] 	= 6'b101010;
+					img [23:18] 	= 6'b010101;
+					img [29:24] 	= 6'b101010;
+					img [35:30] 	= 6'b010101;
+			end 
+
+			ONE : 	begin
+					img [5:0] 		= 6'b000000;
+					img [11:6] 		= 6'b011100;
+					img [17:12] 	= 6'b000100;
+					img [23:18] 	= 6'b000100;
+					img [29:24] 	= 6'b000100;
+					img [35:30] 	= 6'b011110;
+			end
+
+			TWO : 	begin
+					img [5:0] 		= 6'b111100;
+					img [11:6] 		= 6'b000010;
+					img [17:12] 	= 6'b011100;
+					img [23:18] 	= 6'b100000;
+					img [29:24] 	= 6'b100000;
+					img [35:30] 	= 6'b011110;
+			end
+
+			THREE : begin
+					img [5:0] 		= 6'b011110;
+					img [11:6] 		= 6'b000010;
+					img [17:12] 	= 6'b011110;
+					img [23:18] 	= 6'b000010;
+					img [29:24] 	= 6'b000010;
+					img [35:30] 	= 6'b011110;
+			end
+
+			GAME : begin
+				img = 0;
+				case (5 - pos_y)
+					3'd0: img [5:0] 	= 1 << (5 - pos_x);
+					3'd1: img [11:6] 	= 1 << (5 - pos_x);
+					3'd2: img [17:12] 	= 1 << (5 - pos_x);
+					3'd3: img [23:18] 	= 1 << (5 - pos_x);
+					3'd4: img [29:24] 	= 1 << (5 - pos_x);
+					3'd5: img [35:30] 	= 1 << (5 - pos_x);
+					default: img 		= 36'd0;
+				endcase
+				end
+
+			DEAD : begin
+				img [5:0] 		= 6'b000000;
+				img [11:6] 		= 6'b010010;
+				img [17:12] 	= 6'b000000;
+				img [23:18] 	= 6'b001100;
+				img [29:24] 	= 6'b010010;
+				img [35:30] 	= 6'b100001;
+			end
+			default : begin
+					img [5:0] 		= 6'b000000;
+					img [11:6] 		= 6'b000000;
+					img [17:12] 	= 6'b000000;
+					img [23:18] 	= 6'b000000;
+					img [29:24] 	= 6'b000000;
+					img [35:30] 	= 6'b000000;
+			end 
 		endcase
 	end
 
