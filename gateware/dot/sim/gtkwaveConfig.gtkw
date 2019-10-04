@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.86 (w)1999-2017 BSI
+[*] Sat Sep 28 10:24:37 2019
+[*]
+[dumpfile] "/home/josh/Documents/fpga/iCE40-feather/gateware/snake/sim/snake_tb.lxt"
+[dumpfile_mtime] "Sat Sep 28 10:24:13 2019"
+[dumpfile_size] 11082438
+[savefile] "/home/josh/Documents/fpga/iCE40-feather/gateware/snake/sim/gtkwaveConfig.gtkw"
+[timestart] 0
+[size] 2602 1713
+[pos] -1 -1
+*-27.364088 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] snake_tb.
+[treeopen] snake_tb.inst_top.
+[treeopen] snake_tb.inst_top.inst_ledMatrix.
+[sst_width] 378
+[signals_width] 364
+[sst_expanded] 1
+[sst_vpaned_height] 537
+@28
+snake_tb.inst_top.clk[0]
+snake_tb.inst_top.btn_up[0]
+snake_tb.inst_top.btn_left[0]
+snake_tb.inst_top.btn_right[0]
+snake_tb.inst_top.btn_down[0]
+snake_tb.inst_top.inst_ledMatrix.row[5:0]
+snake_tb.inst_top.inst_ledMatrix.col[5:0]
+[pattern_trace] 1
+[pattern_trace] 0
