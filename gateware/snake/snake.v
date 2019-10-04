@@ -19,18 +19,18 @@ module top(
     input btn_left,
     input btn_right,
     input btn_down,
-    // output reg nLED_RED_fw,
     output wire [5:0] row,
     output wire [5:0] col
 );
-	// Size of matrix
-	parameter DIM_X = 6;
-	parameter DIM_Y = 6;
 
-	// Wires and regs are here
 	wire btn_up_rising, btn_left_rising, btn_right_rising, btn_down_rising;
 	reg error = 0;
 	reg reset_game = 1;
+	reg clk_1Hz_rst = 0;
+
+	// Matrix dimensions
+	parameter DIM_X = 6;
+	parameter DIM_Y = 6;
 
 	// Mode State Machine
 	parameter IDLE 	= 4'b0000;
@@ -41,8 +41,7 @@ module top(
 	reg [3:0] state = IDLE;
 	reg [3:0] next_state;
 
-
-	// Display control variables
+	// Display control
 	reg [3:0] display = 0;
 	reg [2:0] countdown = 0;
 
@@ -53,16 +52,19 @@ module top(
 	parameter GAME 	= 4'b0100;
 	parameter DEAD 	= 4'b1000;
 
-	always @(posedge clk) begin
+	// Drive state machine
+	always @(*) begin
 		state <= next_state;
 	end
 
+	// Mode state machine
 	always @(posedge clk) begin
 		case (state)
 			IDLE : begin
 				// Move to begin once a key is pressed
 				display <= START;
 				reset_game <= 0;
+				clk_1Hz_rst <= 1;
 				if (btn_up_rising || btn_right_rising || btn_left_rising || btn_down_rising) begin
 					next_state = BEGIN;
 					countdown <= 3;
@@ -71,12 +73,13 @@ module top(
 
 			BEGIN : begin
 				// Display 3,2,1 on screen before beginning game
+				clk_1Hz_rst <= 0;
+				display <= countdown;
 				if (pulse_1Hz) begin
 					countdown <= countdown - 1;
-					display <= countdown;
 				end
 
-				if (countdown == 0 && pulse_1Hz) begin
+				if (countdown == 0) begin
 					next_state <= PLAY;
 				end
 			end
@@ -90,6 +93,7 @@ module top(
 			end
 
 			END : begin
+				// Display sad face until button pressed 
 				display <= DEAD;
 				if (btn_up_rising || btn_left_rising || btn_right_rising || btn_down_rising) begin
 					next_state <= IDLE;
@@ -101,21 +105,20 @@ module top(
 		endcase
 	end
 
-
 	// Direction of snake
 	parameter UP = 	4'b0001;
 	parameter DOWN = 4'b0010;
 	parameter LEFT = 4'b0100;
 	parameter RIGHT = 4'b1000;
+
 	// Initial direction of snake
 	reg [3:0] direction = UP;
 
-	// position state machine
+	// Position
 	reg [2:0] pos_x = 0;
 	reg [2:0] pos_y = 0;
-	reg change = 1;
 
-	// change direction after button press
+	// Change direction after button press
 	always @(posedge clk) begin
 		if (reset_game) begin
 			direction <= UP;
@@ -130,7 +133,7 @@ module top(
 		end 
 	end
 
-	// move snake every clock cycle
+	// Move snake every clock cycle only if playing snake
 	wire pulse_1Hz;
 	always @(posedge clk) begin
 		if (reset_game) begin
@@ -182,17 +185,17 @@ module top(
 		end
 	end
 
+	// Display image on screen
 	reg [35:0] img;
-	// generate img to be sent over
 	always @(posedge clk) begin
 		case (display)
 			START :	begin
-					img [5:0] 		= 6'b101010;
-					img [11:6] 		= 6'b010101;
-					img [17:12] 	= 6'b101010;
-					img [23:18] 	= 6'b010101;
-					img [29:24] 	= 6'b101010;
-					img [35:30] 	= 6'b010101;
+					img [5:0] 		= 6'b000000;
+					img [11:6] 		= 6'b010010;
+					img [17:12] 	= 6'b000000;
+					img [23:18] 	= 6'b100001;
+					img [29:24] 	= 6'b011110;
+					img [35:30] 	= 6'b000000;
 			end 
 
 			ONE : 	begin
@@ -236,12 +239,12 @@ module top(
 				end
 
 			DEAD : begin
-				img [5:0] 		= 6'b000000;
-				img [11:6] 		= 6'b010010;
-				img [17:12] 	= 6'b000000;
-				img [23:18] 	= 6'b001100;
-				img [29:24] 	= 6'b010010;
-				img [35:30] 	= 6'b100001;
+					img [5:0] 		= 6'b000000;
+					img [11:6] 		= 6'b010010;
+					img [17:12] 	= 6'b000000;
+					img [23:18] 	= 6'b000000;
+					img [29:24] 	= 6'b011110;
+					img [35:30] 	= 6'b000000;
 			end
 			default : begin
 					img [5:0] 		= 6'b000000;
@@ -254,7 +257,7 @@ module top(
 		endcase
 	end
 
-	// led matrix
+	// Drive matrix
 	ledMatrix inst_ledMatrix (
 		.clk	(clk), 
 		.img	(img), 
@@ -262,12 +265,31 @@ module top(
 		.col 	(col)
 	);
 
+`ifdef SIMULATION
+	// Increase the 1Hz clock speed
+	clkDivHz #(
+		.FREQUENCY(100)
+	) inst_clkDivHz (
+		.clk          (clk),
+		.rst          (clk_1Hz_rst),
+		.enable       (1'b1),
+		.dividedClk   (),
+		.dividedPulse (pulse_1Hz)
+	);
+
+	// pass buttons through without debounce
+	assign btn_up_rising = btn_up;
+	assign btn_down_rising = btn_down;
+	assign btn_right_rising = btn_right;
+	assign btn_left_rising = btn_left;
+
+`else
 	// 1Hz clock
 	clkDivHz #(
 		.FREQUENCY(1)
 	) inst_clkDivHz (
 		.clk          (clk),
-		.rst          (1'b0),
+		.rst          (clk_1Hz_rst),
 		.enable       (1'b1),
 		.dividedClk   (),
 		.dividedPulse (pulse_1Hz)
@@ -309,6 +331,6 @@ module top(
 		.button_rising  (btn_down_rising),
 		.button_falling ()
 	);
-
+`endif
 endmodule
 
