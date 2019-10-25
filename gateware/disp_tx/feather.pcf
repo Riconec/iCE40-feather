@@ -9,6 +9,31 @@ set_io -nowarn nLED_RED  	41
 set_io -nowarn nLED_GRN  	40
 set_io -nowarn nLED_BLU  	39
 
+# LED Matrix RGB LED
+set_io -nowarn nLED_RED_fw  6
+set_io -nowarn nLED_GRN_fw  4
+set_io -nowarn nLED_BLU_fw	3
+
+# LED Matrix Pins
+set_io -nowarn row[0]		38
+set_io -nowarn row[1]		37
+set_io -nowarn row[2]		32
+set_io -nowarn row[3]		26
+set_io -nowarn row[4]		27
+set_io -nowarn row[5]		25
+
+set_io -nowarn col[0]		12
+set_io -nowarn col[1]		11
+set_io -nowarn col[2]		10
+set_io -nowarn col[3]		9
+set_io -nowarn col[4]		36
+set_io -nowarn col[5]		28
+
+set_io -nowarn btn_up 		43
+set_io -nowarn btn_left		44
+set_io -nowarn btn_right	2
+set_io -nowarn btn_down 	48
+
 # GPIO
 set_io -nowarn IO_0 		25
 set_io -nowarn IO_1 		26

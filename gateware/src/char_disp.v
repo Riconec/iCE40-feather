@@ -19,7 +19,8 @@ module char_disp(
     input [7:0] data,
     output reg [35:0] img
 );
-
+	
+	// Set img based upon ASCII input data
 	always @(posedge clk) begin
 		case (data)
 		"A" : begin
@@ -37,7 +38,7 @@ module char_disp(
 			img [17:12] = 6'b100001;
 			img [23:18] = 6'b111110;
 			img [29:24] = 6'b100001;
-			img [35:30] = 6'b111111;
+			img [35:30] = 6'b111110;
 		end
 
 		"C" : begin

@@ -49,12 +49,12 @@ module top(
 	always @(posedge clk) begin
 		case (state)
 			IDLE : begin
+				uart_ready <= 1'b0;
 				// Wait until falling edge on UART to begin
 				if (uart_edge) begin
 					next_state <= START;
 					uart_data[7:0] <= 8'b0;
 					clk_rst <= 1'b0;
-					uart_ready <= 0;
 				end
 				
 			end
@@ -74,7 +74,6 @@ module top(
 			end
 
 			BIT1 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[1] <= uart_buf[1];
 					next_state <= BIT2;
@@ -82,7 +81,6 @@ module top(
 			end
 
 			BIT2 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[2] <= uart_buf[1];
 					next_state <= BIT3;
@@ -90,7 +88,6 @@ module top(
 			end
 
 			BIT3 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[3] <= uart_buf[1];
 					next_state <= BIT4;
@@ -98,7 +95,6 @@ module top(
 			end
 
 			BIT4 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[4] <= uart_buf[1];
 					next_state <= BIT5;
@@ -106,7 +102,6 @@ module top(
 			end
 
 			BIT5 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[5] <= uart_buf[1];
 					next_state <= BIT6;
@@ -114,7 +109,6 @@ module top(
 			end
 
 			BIT6 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[6] <= uart_buf[1];
 					next_state <= BIT7;
@@ -122,7 +116,6 @@ module top(
 			end
 
 			BIT7 : begin
-				// Sample first bit
 				if (sample_now) begin
 					uart_data[7] <= uart_buf[1];
 					next_state <= STOP;
@@ -130,8 +123,11 @@ module top(
 			end
 
 			STOP : begin
-				uart_ready <= 1'b1;
-				next_state <= IDLE;
+				if (sample_now) begin
+					uart_ready <= 1'b1;
+					next_state <= IDLE;
+				end
+				
 			end
 
 			default: next_state <= IDLE;

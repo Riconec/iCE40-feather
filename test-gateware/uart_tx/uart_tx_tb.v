@@ -4,7 +4,9 @@
 module uart_tx_tb();
 
 	logic clk;
-	wire nLED;
+	wire uart_tx, ready;
+	reg [7:0] data;
+	reg send = 0;
 
 	// Clock
 	initial begin
@@ -12,7 +14,28 @@ module uart_tx_tb();
 		forever #(42) clk = ~clk;
 	end
 
-	top inst_top (.clk(clk), .nLED(nLED));
+	top inst_top (
+		.clk(clk), 
+		.data(data), 
+		.send(send), 
+		.uart_tx(uart_tx), 
+		.ready(ready)
+	);
+
+	initial begin
+		data[7:0] = "H";
+		#(100_000)
+		send <= 1;
+		#(86)
+		send <= 0;
+
+		#(2000_000)
+		data[7:0] = "i";
+		send <= 1;
+		#(86)
+		send <= 0;
+	end
+
 
 	// Dump wave
 	initial begin
@@ -21,7 +44,7 @@ module uart_tx_tb();
 	end
 	
 	// Count in 10% increments and finish sim when time is up
-	localparam SIM_TIME_MS = 100;
+	localparam SIM_TIME_MS = 4;
 	localparam SIM_TIME = SIM_TIME_MS * 1000_000; // @ 1 ns / unit
 	initial begin
 		$display("Simulation Started");

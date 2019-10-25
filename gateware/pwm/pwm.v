@@ -22,6 +22,7 @@ module top(
 	reg countUp = 1;
 	wire dividedPulse;
 
+	// Fade up / down to "heartbeat" LED
 	always @(posedge clk) begin
 		if (dividedPulse) begin
 			if (dutyCycle == 1) begin

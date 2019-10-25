@@ -59,7 +59,7 @@ module uart_rx_tb();
 
 		// Stop bit
 		uart_rx <= 1;
-		#(104167) // 1/9600 ns
+		#(204167)
 
 		// Start bit
 		uart_rx <= 0;

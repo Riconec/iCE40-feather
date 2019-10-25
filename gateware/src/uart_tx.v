@@ -2,24 +2,24 @@
 // Copyright (c) 2019 All rights reserved
 // -----------------------------------------------------------------------------
 // Author      : Josh Johnson <josh@joshajohnson.com>
-// File        : uart_rx.v
-// Description : 9600 baud uart receiver
-// Created     : 2019-10-25 12:19:35
-// Revised     : 2019-10-25 12:19:35
+// File        : uart_tx.v
+// Description : 9600 Baud UART Transmitter
+// Created     : 2019-10-25 16:14:50
+// Revised     : 2019-10-25 16:14:50
 // Editor      : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
-`ifndef _uart_rx_v_
-`define _uart_rx_v_
+`ifndef _uart_tx_v_
+`define _uart_tx_v_
 
 `default_nettype none
 `include "../src/clkDivHz.v"
 
-module uart_rx(
-    input wire clk,
-    input wire rst,
-    input wire uart_rx,
-    output reg ready,
-    output reg [7:0] data
+module uart_tx(
+    input clk,
+    input [7:0] data,
+    input send,
+    output reg uart_tx,
+    output reg ready
 );
 
 	localparam BAUD_RATE = 9600;
@@ -28,7 +28,7 @@ module uart_rx(
 	localparam [3:0] IDLE 	= 4'b0000;
 	localparam [3:0] START 	= 4'b0001;
 	localparam [3:0] BIT0 	= 4'b0010;
-	localparam [3:0] BIT1 	= 4'b0011;
+	localparam [3:0] BIT1 	= 4'b0011;	
 	localparam [3:0] BIT2 	= 4'b0100;
 	localparam [3:0] BIT3 	= 4'b0101;
 	localparam [3:0] BIT4 	= 4'b0110;
@@ -49,125 +49,106 @@ module uart_rx(
 	always @(posedge clk) begin
 		case (state)
 			IDLE : begin
-				ready <= 1'b0;
-				// Wait until falling edge on UART to begin
-				if (uart_edge) begin
+			ready <= 1'b1;
+			uart_tx <= 1'b1;
+				// Wait until told to transmit
+				if (send) begin
 					next_state <= START;
-					data[7:0] <= 8'b0;
 					clk_rst <= 1'b0;
 				end
 				
 			end
 
 			START : begin
-				// Hold off half period
-				if (sample_now)
+				// Send start bit
+				uart_tx <= 1'b0;
+				ready <= 1'b0;
+				if (next_bit)
 					next_state <= BIT0;
 			end
 
 			BIT0 : begin
-				// Sample first bit
-				if (sample_now) begin
-					data[0] <= uart_buf[1];
+				// Send bits
+				uart_tx <= data[0];
+				if (next_bit) begin
 					next_state <= BIT1;
 				end
 			end
 
 			BIT1 : begin
-				if (sample_now) begin
-					data[1] <= uart_buf[1];
+				uart_tx <= data[1];
+				if (next_bit) begin
 					next_state <= BIT2;
 				end
 			end
 
 			BIT2 : begin
-				if (sample_now) begin
-					data[2] <= uart_buf[1];
+				uart_tx <= data[2];
+				if (next_bit) begin
 					next_state <= BIT3;
 				end
 			end
 
 			BIT3 : begin
-				if (sample_now) begin
-					data[3] <= uart_buf[1];
+				uart_tx <= data[3];
+				if (next_bit) begin
 					next_state <= BIT4;
 				end
 			end
 
 			BIT4 : begin
-				if (sample_now) begin
-					data[4] <= uart_buf[1];
+				uart_tx <= data[4];
+				if (next_bit) begin
 					next_state <= BIT5;
 				end
 			end
 
 			BIT5 : begin
-				if (sample_now) begin
-					data[5] <= uart_buf[1];
+				uart_tx <= data[5];
+				if (next_bit) begin
 					next_state <= BIT6;
 				end
 			end
 
 			BIT6 : begin
-				if (sample_now) begin
-					data[6] <= uart_buf[1];
+				uart_tx <= data[6];
+				if (next_bit) begin
 					next_state <= BIT7;
 				end
 			end
 
 			BIT7 : begin
-				if (sample_now) begin
-					data[7] <= uart_buf[1];
+				uart_tx <= data[7];
+				if (next_bit) begin
 					next_state <= STOP;
 				end
 			end
 
 			STOP : begin
-				if (sample_now) begin
-					ready <= 1'b1;
+				uart_tx <= 1'b1;
+				if (next_bit) begin
 					next_state <= IDLE;
+					clk_rst <= 1'b1;
+					ready <= 1'b1;
 				end
-				
 			end
 
 			default: next_state <= IDLE;
 		endcase
 	end
-
-
-	// Input buffering / edge detection
-	reg uart_buf [1:0];
-	reg uart_edge = 0;
-
-	always @(posedge clk) begin
-		uart_buf[0] <= uart_rx;
-		uart_buf[1] <= uart_buf[0];
-		uart_edge <= (uart_buf[0] == 1'b0 && uart_buf[1] == 1'b1) ? 1 : 0;
-	end
-
-	// Uart Clock
-	wire dividedPulse;
-	reg sample_now = 0;
-	reg clk_rst = 1'b1;
-
+	
+	wire next_bit;
+	reg clk_rst = 1;
 	clkDivHz #(
-			.FREQUENCY(BAUD_RATE * 2)
+			.FREQUENCY(BAUD_RATE)
 		) inst_clockDividerHz (
 			.clk        	(clk),
 			.rst        	(clk_rst),
 			.enable     	(1'b1),
 			.dividedClk 	(),
-			.dividedPulse	(dividedPulse)
+			.dividedPulse	(next_bit)
 		);
 
-	// Generate sampling pulses
-	reg counter = 1;
-	always @(posedge clk) begin
-		sample_now <= counter && dividedPulse; 
-		if (dividedPulse) begin
-			counter <= counter + 1;
-		end
-	end
 
 endmodule
 

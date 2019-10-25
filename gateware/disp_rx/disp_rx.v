@@ -24,7 +24,7 @@ module top(
 	wire [35:0] img;
 	reg [35:0] img_show;
 
-	// Wait for vaild UART char
+	// Display whatever char recently arrived
 	always @(posedge clk) begin
 		if (ready) begin
 			img_show <= img;
@@ -34,7 +34,6 @@ module top(
 	// Uart RX 
 	wire ready;
 	wire [7:0] data;
-
 	uart_rx inst_uart_rx (
 		.clk(clk), 
 		.rst(1'b0), 
@@ -43,6 +42,7 @@ module top(
 		.data(data)
 	);
 
+	// Display lookup table
 	char_disp inst_char_disp (
 		.clk(clk), 
 		.data(data), 
