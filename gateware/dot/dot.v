@@ -24,19 +24,19 @@ module top(
 );
 
 	wire btn_up_rising, btn_left_rising, btn_right_rising, btn_down_rising;
-	reg error = 0;
-	reg reset_game = 1;
+	reg error 		= 0;
+	reg reset_game 	= 1;
 	reg clk_1Hz_rst = 0;
 
 	// Matrix dimensions
-	parameter DIM_X = 6;
-	parameter DIM_Y = 6;
+	localparam DIM_X = 6;
+	localparam DIM_Y = 6;
 
 	// Mode State Machine
-	parameter IDLE 	= 4'b0000;
-	parameter BEGIN = 4'b0010;
-	parameter PLAY 	= 4'b0100;
-	parameter END 	= 4'b1000;
+	localparam IDLE 	= 4'b0000;
+	localparam BEGIN 	= 4'b0010;
+	localparam PLAY 	= 4'b0100;
+	localparam END 		= 4'b1000;
 
 	reg [3:0] state = IDLE;
 	reg [3:0] next_state;
@@ -45,12 +45,12 @@ module top(
 	reg [3:0] display = 0;
 	reg [2:0] countdown = 0;
 
-	parameter START	= 4'b0000;
-	parameter ONE	= 4'b0001;
-	parameter TWO	= 4'b0010;
-	parameter THREE	= 4'b0011;
-	parameter GAME 	= 4'b0100;
-	parameter DEAD 	= 4'b1000;
+	localparam START	= 4'b0000;
+	localparam ONE		= 4'b0001;
+	localparam TWO		= 4'b0010;
+	localparam THREE	= 4'b0011;
+	localparam GAME 	= 4'b0100;
+	localparam DEAD 	= 4'b1000;
 
 	// Drive state machine
 	always @(*) begin
@@ -106,10 +106,10 @@ module top(
 	end
 
 	// Direction of dot
-	parameter UP = 	4'b0001;
-	parameter DOWN = 4'b0010;
-	parameter LEFT = 4'b0100;
-	parameter RIGHT = 4'b1000;
+	localparam UP 		= 4'b0001;
+	localparam DOWN 	= 4'b0010;
+	localparam LEFT 	= 4'b0100;
+	localparam RIGHT 	= 4'b1000;
 
 	// Initial direction of dot
 	reg [3:0] direction, prev_direction;
