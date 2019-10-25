@@ -1,4 +1,4 @@
-PROJ = snake
+PROJ = dot
 ADD_SRC =
 
 PIN_DEF = feather.pcf

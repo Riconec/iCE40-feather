@@ -2,8 +2,8 @@
 // Copyright (c) 2019 All rights reserved
 // -----------------------------------------------------------------------------
 // Author      : Josh Johnson <josh@joshajohnson.com>
-// File        : snake.v
-// Description : WIP game of snake of the LED matrix FeatherWing
+// File        : dot.v
+// Description : WIP game of ~snake~ dot of the LED matrix FeatherWing
 // Created     : 2019-09-06 19:22:27
 // Revised     : 2019-09-06 19:22:27
 // Editor      : sublime text3, tab size (4)
@@ -63,10 +63,10 @@ module top(
 			IDLE : begin
 				// Move to begin once a key is pressed
 				display <= START;
-				reset_game <= 0;
 				clk_1Hz_rst <= 1;
 				if (btn_up_rising || btn_right_rising || btn_left_rising || btn_down_rising) begin
-					next_state = BEGIN;
+					next_state <= BEGIN;
+					reset_game <= 0;
 					countdown <= 3;
 				end
 			end
@@ -85,7 +85,7 @@ module top(
 			end
 
 			PLAY : begin
-				// Play snake util it ends
+				// Play dot util it ends
 				display <= GAME;
 				if (error) begin
 					next_state <= END;
@@ -105,14 +105,14 @@ module top(
 		endcase
 	end
 
-	// Direction of snake
+	// Direction of dot
 	parameter UP = 	4'b0001;
 	parameter DOWN = 4'b0010;
 	parameter LEFT = 4'b0100;
 	parameter RIGHT = 4'b1000;
 
-	// Initial direction of snake
-	reg [3:0] direction = UP;
+	// Initial direction of dot
+	reg [3:0] direction, prev_direction;
 
 	// Position
 	reg [2:0] pos_x = 0;
@@ -121,25 +121,32 @@ module top(
 	// Change direction after button press
 	always @(posedge clk) begin
 		if (reset_game) begin
+			direction <= (1<<start_dir); // Pseudo random initial direction
+		end else if (btn_up_rising && ~(prev_direction == DOWN)) begin
 			direction <= UP;
-		end else if (btn_up_rising) begin
-				direction <= UP;
-		end else if (btn_left_rising) begin
-				direction <= LEFT;
-		end else if (btn_right_rising) begin
-				direction <= RIGHT;
-		end else if (btn_down_rising) begin
-				direction <= DOWN;
+		end else if (btn_left_rising && ~(prev_direction == RIGHT)) begin
+			direction <= LEFT;
+		end else if (btn_right_rising && ~(prev_direction == LEFT)) begin
+			direction <= RIGHT;
+		end else if (btn_down_rising && ~(prev_direction == UP)) begin
+			direction <= DOWN;
 		end 
 	end
 
-	// Move snake every clock cycle only if playing snake
+	// Update prev position every move to prevent cheat of double press in timestep
+	always @(posedge clk) begin
+		if(pulse_1Hz) begin
+			prev_direction <= direction;
+		end
+	end
+
+	// Move dot every clock cycle only if playing dot
 	wire pulse_1Hz;
 	always @(posedge clk) begin
 		if (reset_game) begin
 			error <= 1'b0;
-			pos_x <= 1'b0;
-			pos_y <= 1'b0;
+			pos_x <= start_x + 1; // Pseudo random initial state
+			pos_y <= start_y + 1;
 		end else if (pulse_1Hz && (state == PLAY)) begin
 			case(direction)
 			UP: 	if (pos_y < DIM_Y) begin
@@ -199,8 +206,8 @@ module top(
 			end 
 
 			ONE : 	begin
-					img [5:0] 		= 6'b000000;
-					img [11:6] 		= 6'b011100;
+					img [5:0] 		= 6'b011100;
+					img [11:6] 		= 6'b000100;
 					img [17:12] 	= 6'b000100;
 					img [23:18] 	= 6'b000100;
 					img [29:24] 	= 6'b000100;
@@ -208,21 +215,21 @@ module top(
 			end
 
 			TWO : 	begin
-					img [5:0] 		= 6'b111100;
-					img [11:6] 		= 6'b000010;
-					img [17:12] 	= 6'b011100;
+					img [5:0] 		= 6'b111110;
+					img [11:6] 		= 6'b000001;
+					img [17:12] 	= 6'b011110;
 					img [23:18] 	= 6'b100000;
 					img [29:24] 	= 6'b100000;
 					img [35:30] 	= 6'b011110;
 			end
 
 			THREE : begin
-					img [5:0] 		= 6'b011110;
-					img [11:6] 		= 6'b000010;
-					img [17:12] 	= 6'b011110;
-					img [23:18] 	= 6'b000010;
-					img [29:24] 	= 6'b000010;
-					img [35:30] 	= 6'b011110;
+					img [5:0] 		= 6'b111111;
+					img [11:6] 		= 6'b000001;
+					img [17:12] 	= 6'b111111;
+					img [23:18] 	= 6'b000001;
+					img [29:24] 	= 6'b000001;
+					img [35:30] 	= 6'b111111;
 			end
 
 			GAME : begin
@@ -265,10 +272,36 @@ module top(
 		.col 	(col)
 	);
 
+	// Generate random starting position for x, y, and direction
+	reg [1:0] start_x = 0; 
+	reg [1:0] start_y = 0;
+	reg [1:0] start_dir = 0;
+	wire pulse_random;
+	always @(posedge clk) begin
+		if (pulse_random) begin
+			start_x <= start_x + 1;
+			start_dir <= start_dir - 1;
+			if (start_x == 2'd2) begin
+				start_y <= start_y + 1;
+			end
+		end
+	end
+
+	// For pseudorandom generator
+	clkDivHz #(
+		.FREQUENCY(2001)
+	) inst_clkDivHz_1 (
+		.clk          (clk),
+		.rst          (1'b0),
+		.enable       (1'b1),
+		.dividedClk   (),
+		.dividedPulse (pulse_random)
+	);
+
 `ifdef SIMULATION
 	// Increase the 1Hz clock speed
 	clkDivHz #(
-		.FREQUENCY(100)
+		.FREQUENCY(1000)
 	) inst_clkDivHz (
 		.clk          (clk),
 		.rst          (clk_1Hz_rst),
@@ -287,7 +320,7 @@ module top(
 	// 1Hz clock
 	clkDivHz #(
 		.FREQUENCY(1)
-	) inst_clkDivHz (
+	) inst_clkDivHz_0 (
 		.clk          (clk),
 		.rst          (clk_1Hz_rst),
 		.enable       (1'b1),

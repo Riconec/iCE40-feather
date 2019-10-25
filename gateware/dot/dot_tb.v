@@ -1,7 +1,10 @@
 `timescale 1ns/1ps
-`include "snake.v"
 
-module snake_tb();
+`define SIMULATION
+
+`include "dot.v"
+
+module dot_tb();
 
 	logic clk;
 	reg btn_up = 0;
@@ -17,36 +20,25 @@ module snake_tb();
 	end
 
 	initial begin
-		// #(50_000); // 50 us
-		// btn_right = 1;
-		// #(50_000_000); // 50ms
-		// btn_right = 0;
-		// #(50_000); // 50 us
+		#(5_000_000); // 5 ms
+		btn_up = 1;
+		#(84)
+		btn_up = 0;
 
-		// btn_up = 1;
-		// #(50_000_000); // 50ms
-		// btn_up = 0;
-		// #(50_000); // 50 us
+		#(55_000_000) // 55 ms
+		btn_right = 1;
+		#(84)
+		btn_right = 0;
 
-		// btn_left = 1;
-		// #(50_000_000); // 50ms
-		// btn_left = 0;
-		// #(90_000_000); // 90 ms
+		#(22_000_000) // 22 ms
+		btn_down = 1;
+		#(84)
+		btn_down = 0;
 
-		// btn_left = 1;
-		// #(50_000_000); // 50ms
-		// btn_left = 0;
-		// #(50_000); // 50 us
-
-		// btn_down = 1;
-		// #(50_000_000); // 50ms
-		// btn_down = 0;
-		// #(50_000); // 50 us
-
-		// btn_left = 1;
-		// #(50_000_000); // 50ms
-		// btn_left = 0;
-		// #(50_000); // 50 us
+		#(35_000_000) // 35 ms
+		btn_down = 1;
+		#(84)
+		btn_down = 0;
 	end
 
 
@@ -63,12 +55,12 @@ module snake_tb();
 
 	// Dump wave
 	initial begin
-		$dumpfile("snake_tb.lxt");
-		$dumpvars(0,snake_tb);
+		$dumpfile("dot_tb.lxt");
+		$dumpvars(0,dot_tb);
 	end
 	
 	// Count in 10% increments and finish sim when time is up
-	localparam SIM_TIME_MS = 100;
+	localparam SIM_TIME_MS = 150;
 	localparam SIM_TIME = SIM_TIME_MS * 1000_000; // @ 1 ns / unit
 	initial begin
 		$display("Simulation Started");
