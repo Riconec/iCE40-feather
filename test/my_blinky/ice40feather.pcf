@@ -1,0 +1,46 @@
+# 12 MHz clock
+set_io clk                  35
+
+# RS232
+set_io ser_rx               23
+set_io ser_tx               21
+
+# SPI Flash
+set_io flash_clk            15
+set_io flash_csb            16
+set_io flash_io0            14
+set_io flash_io1            17
+set_io flash_io2            6   # connect to spi flash for quad mode
+set_io flash_io3            9   # connect to spi flash for quad mode
+
+# Onboard LEDs
+set_io ledr_n               41
+set_io ledg_n               40
+set_io ledb_n               39
+set_io led_user             47
+
+# GPIO from feather
+set_io -nowarn i_rst_n 		25
+set_io -nowarn IO_1 		26
+set_io -nowarn IO_2 		27
+set_io -nowarn IO_3 		28
+set_io -nowarn IO_4 		36
+set_io -nowarn IO_5 		31
+set_io -nowarn IO_6 		32
+set_io -nowarn IO_7 		37
+set_io -nowarn IO_8 		38
+set_io -nowarn IO_9 		43
+set_io -nowarn IO_10 		44
+set_io -nowarn IO_11 		48
+set_io -nowarn IO_12 		2
+set_io -nowarn IO_13 		3
+set_io -nowarn IO_14 		4
+#set_io -nowarn IO_15 		6
+#set_io -nowarn IO_16 		9
+set_io -nowarn IO_17		10
+set_io -nowarn IO_18		11
+set_io -nowarn IO_19 		12
+set_io -nowarn IO_20 		46
+set_io -nowarn IO_21 		13
+set_io -nowarn IO_22 		42
+set_io -nowarn IO_23 		45
